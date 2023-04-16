@@ -1,0 +1,34 @@
+/* Source Courgette */
+@include font-face('#{$source-courgette}', '#{$path-cour}-Regular');
+
+body {
+  font-family: $main-font;
+
+  .page-name {
+    font-family: $source-courgette, cursive;
+  }
+
+  .pages-nav__item--small {
+    font-family: $source-courgette, cursive;
+  }
+
+  .language-cour {
+    font-family: $source-courgette, cursive;
+  }
+}
+
+h2 {
+  font-family: '#{$main-font}-Medium';
+  color: $font-color-fallback;
+}
+h3 {
+  font-family: '#{$main-font}-Bold';
+}
+
+h2 {
+  @include set-fonts($fs-28, $ls-2, $lh-33);
+}
+
+h3 {
+  @include set-fonts($fs-20, $ls-3, $lh-26);
+}

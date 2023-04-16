@@ -1,0 +1,251 @@
+.portfolio-wrapper {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  %flex-settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .accordion {
+    .portfolio-item {
+      background-color: $portfolio-background;
+      border-radius: 0.4rem;
+      margin-bottom: 0.1rem;
+      padding: 0.2rem 1rem;
+      box-shadow: 0.5rem 2px 0.5rem rgba(0, 0, 0, 0.1);
+
+      a {
+        @extend %flex-settings;
+        font-size: 1.4rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        background-color: $portfolio-background;
+        width: 100%;
+        padding: 1rem 0;
+
+        svg {
+          &.active {
+            color: $bulb-light;
+          }
+        }
+
+        &:hover {
+          color: $font-color-fallback;
+        }
+      }
+
+      .content {
+        max-height: 0rem;
+        overflow: hidden;
+        position: relative;
+        background-color: #212838;
+        border-radius: 5px;
+        transition: max-height 0.65s linear;
+        @extend %flex-settings;
+
+        svg {
+          display: none;
+        }
+
+        > div {
+          width: 70%;
+          min-height: 30vh;
+          text-align: justify;
+
+          p {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 1rem 2rem;
+          }
+        }
+
+        .portfolio-image {
+          width: 30%;
+          padding: 2vh;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        &.active {
+          max-height: 20rem;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0.3%;
+          height: 90%;
+          background-color: $bulb-light;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .portfolio-wrapper {
+    .accordion {
+      .portfolio-item {
+        .content {
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1000px) {
+  .portfolio-wrapper {
+    .accordion {
+      .portfolio-item {
+        a {
+          font-size: 1.1rem;
+        }
+        .content {
+          > div {
+            width: 60%;
+            min-height: 22vh;
+
+            p {
+              font-size: 1rem;
+            }
+          }
+
+          .portfolio-image {
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 750px) {
+  .portfolio-wrapper {
+    .accordion {
+      .portfolio-item {
+        a {
+          font-size: 1.2rem;
+        }
+
+        %svg-settings {
+          display: inline;
+          cursor: pointer;
+          font-size: $fs-28;
+          color: $font-color-fallback;
+        }
+
+        .content {
+          flex-direction: column;
+
+          .open-icon {
+            text-align: end;
+            width: 94%;
+            margin-bottom: 0.5vh;
+            svg {
+              @extend %svg-settings;
+            }
+          }
+
+          div {
+            width: 100%;
+          }
+
+          svg {
+            @extend %svg-settings;
+          }
+
+          .portfolio-image {
+            width: 100%;
+            position: absolute;
+            transition: left 2s ease;
+            left: 100%;
+            padding: 1vh 0;
+            height: 100%;
+
+            &.transform-active {
+              left: 0%;
+            }
+
+            img {
+              height: 100%;
+            }
+
+            .close-icon {
+              position: absolute;
+              background-color: white;
+              border-radius: 50%;
+            }
+          }
+
+          p {
+            font-size: 1rem;
+            padding: 1rem 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 550px) {
+  .portfolio-wrapper {
+    .accordion {
+      .portfolio-item {
+        a {
+          font-size: 1rem;
+        }
+
+        .content {
+          > div {
+            .open-icon {
+              width: 96%;
+            }
+            p {
+              font-size: 0.8rem;
+              padding: 0.7rem 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 450px) {
+  .portfolio-wrapper {
+    .accordion {
+      .portfolio-item {
+        padding: 0.2rem 0.5rem;
+        a {
+          font-size: 0.9rem;
+          padding: 8px 6px;
+        }
+
+        .content {
+          > div {
+            svg {
+              font-size: $fs-18;
+            }
+
+            p {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

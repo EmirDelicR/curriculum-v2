@@ -1,0 +1,123 @@
+.home-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10vh 0;
+  font-size: $fs-20;
+
+  $particleSize: 15vmin;
+  $animationDuration: 20s;
+  $amount: 10;
+
+  .background {
+    position: absolute;
+    top: 0vh;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1000;
+
+    span {
+      width: $particleSize;
+      height: $particleSize;
+      border-radius: $particleSize;
+      position: absolute;
+      animation: move $animationDuration linear infinite;
+
+      $colors: (
+        $light-border-color-alpha-1,
+        $light-border-color-alpha-3,
+        $light-border-color-alpha-6
+      );
+      @for $i from 1 through $amount {
+        &:nth-child(#{$i}) {
+          color: nth($colors, random(length($colors)));
+          top: random(100) * 1%;
+          left: random(100) * 1%;
+          animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+          animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+          transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+          $blurRadius: (random() + 0.5) * $particleSize * 0.2;
+          $x: if(random() > 0.5, -1, 1);
+          box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+        }
+      }
+    }
+  }
+
+  @keyframes move {
+    100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+  }
+
+  .my-img {
+    min-height: 50vh;
+    width: 45vh;
+    border: 1px solid $light-border-color-alpha-6;
+    background-image: url(../images/sl1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5%;
+    box-shadow: 3px -3px 0px $box-shadow;
+  }
+  .my-description {
+    width: 50%;
+    p {
+      padding: 2vh;
+      line-height: 28px;
+
+      a {
+        @extend %all-links-extension;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1050px) {
+  .home-wrapper {
+    font-size: $fs-16;
+    .my-img {
+      min-height: 40vh;
+      width: 30vh;
+    }
+  }
+}
+
+@media screen and(max-width: 750px) {
+  .home-wrapper {
+    font-size: $fs-14;
+    flex-direction: column;
+    padding: 6vh 2vh;
+
+    .my-img {
+      min-height: 30vh;
+      width: 30vh;
+      margin-bottom: 2vh;
+    }
+
+    .my-description {
+      width: 100%;
+      p {
+        padding: 1vh;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 550px) {
+  .home-wrapper {
+    .my-img {
+      min-height: 26vh;
+      width: 25vh;
+    }
+
+    .my-description {
+      p {
+        padding: 0.4vh;
+        line-height: 18px;
+      }
+    }
+  }
+}
