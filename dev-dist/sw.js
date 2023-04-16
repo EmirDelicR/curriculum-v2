@@ -81,6 +81,12 @@ define(['./workbox-148cb7e5'], (function (workbox) { 'use strict';
     "url": "registerSW.js",
     "revision": "3ca0b8505b4bec776b69afdba2768812"
   }, {
+    "url": "sw.js.map",
+    "revision": "2b21b8faaa6ad2688c8c5619104e6eaa"
+  }, {
+    "url": "workbox-148cb7e5.js.map",
+    "revision": null
+  }, {
     "revision": null,
     "url": "index.html"
   }], {});
