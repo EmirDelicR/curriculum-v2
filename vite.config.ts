@@ -1,10 +1,10 @@
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
-import { VitePWA } from 'vite-plugin-pwa';
 import eslint from 'vite-plugin-eslint';
+import { VitePWA } from 'vite-plugin-pwa';
 
-const pwaPlugin = VitePWA({
+export const vitePWA = VitePWA({
   registerType: 'autoUpdate',
   // cache all the imports
   workbox: {
@@ -116,7 +116,7 @@ const viteEslint = eslint({
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), viteEslint, pwaPlugin],
+  plugins: [react(), viteEslint, vitePWA],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
