@@ -1,7 +1,111 @@
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
 import eslint from 'vite-plugin-eslint';
+
+const pwaPlugin = VitePWA({
+  registerType: 'autoUpdate',
+  // cache all the imports
+  workbox: {
+    globPatterns: ['**/*'],
+    sourcemap: true,
+  },
+  // cache all the static assets in the public folder
+  includeAssets: ['**/*'],
+  devOptions: {
+    enabled: true,
+  },
+  manifest: {
+    name: 'Curriculum',
+    short_name: 'CV',
+    background_color: '#2a2b30',
+    theme_color: '#3e70ff',
+    orientation: 'portrait-primary',
+    display: 'standalone',
+    scope: '/',
+    start_url: '/',
+    description: 'Curriculum web page application',
+    icons: [
+      {
+        src: 'images/icons/icon-72x72.png',
+        sizes: '72x72',
+        type: 'image/png',
+      },
+      {
+        src: 'images/icons/icon-96x96.png',
+        sizes: '96x96',
+        type: 'image/png',
+      },
+      {
+        src: 'images/icons/icon-128x128.png',
+        sizes: '128x128',
+        type: 'image/png',
+      },
+      {
+        src: 'images/icons/icon-144x144.png',
+        sizes: '144x144',
+        type: 'image/png',
+      },
+      {
+        src: 'images/icons/icon-152x152.png',
+        sizes: '152x152',
+        type: 'image/png',
+      },
+      {
+        src: 'images/icons/icon-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        src: 'images/icons/icon-384x384.png',
+        sizes: '384x384',
+        type: 'image/png',
+      },
+      {
+        src: 'images/icons/icon-512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
+      {
+        src: 'images/icons/android-icon-36x36.png',
+        sizes: '36x36',
+        type: 'image/png',
+        density: '0.75',
+      },
+      {
+        src: 'images/icons/android-icon-48x48.png',
+        sizes: '48x48',
+        type: 'image/png',
+        density: '1.0',
+      },
+      {
+        src: 'images/icons/android-icon-72x72.png',
+        sizes: '72x72',
+        type: 'image/png',
+        density: '1.5',
+      },
+      {
+        src: 'images/icons/android-icon-96x96.png',
+        sizes: '96x96',
+        type: 'image/png',
+        density: '2.0',
+      },
+      {
+        src: 'images/icons/android-icon-144x144.png',
+        sizes: '144x144',
+        type: 'image/png',
+        density: '3.0',
+      },
+      {
+        src: 'images/icons/android-icon-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+        density: '4.0',
+      },
+    ],
+  },
+});
 
 const viteEslint = eslint({
   include: [
@@ -12,7 +116,7 @@ const viteEslint = eslint({
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), viteEslint],
+  plugins: [react(), viteEslint, pwaPlugin],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

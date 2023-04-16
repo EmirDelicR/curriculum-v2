@@ -22,9 +22,9 @@
       "@elements/*": ["src/UI/elements/*"],
       "@pages/*": ["src/UI/pages/*"],
       "@assets/*": ["src/assets/*"]
-    }
+    },
+    "types": ["node", "vite-plugin-pwa/client"]
   },
-  "types": ["node"],
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
