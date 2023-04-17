@@ -1,11 +1,19 @@
-import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '@components/languageSwitcher/LanguageSwitcher';
+import Navigation from '@elements/navigation/Navigation';
+import MainPage from '@pages/Main';
 
 function App() {
-  const { t } = useTranslation();
   return (
     <div className="App">
-      <p>{t('navBar.skill')}</p>
+      <Navigation />
+      {/* <MainPage />
+      <button className="menu-button">
+        <span>Menu</span>
+      </button> */}
+      {/* <Main />
+      <MenuButton />
+      <LanguageSwitcher />
+      <PwaInstallButton /> */}
 
       <LanguageSwitcher />
     </div>

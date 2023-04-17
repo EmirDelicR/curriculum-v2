@@ -124,7 +124,8 @@ export default defineConfig({
       '@components': path.resolve(__dirname, './src/UI/components'),
       '@elements': path.resolve(__dirname, './src/UI/elements'),
       '@pages': path.resolve(__dirname, './src/UI/pages'),
-      '@plugins': path.resolve(__dirname, './src/plugins')
+      '@plugins': path.resolve(__dirname, './src/plugins'),
+      '@utils': path.resolve(__dirname, './src/utils')
     }
   }
 });
