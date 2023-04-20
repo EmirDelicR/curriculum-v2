@@ -5,17 +5,10 @@ import MainPage from '@pages/Main';
 function App() {
   return (
     <div className="App">
-      <Navigation />
-      {/* <MainPage />
-      <button className="menu-button">
-        <span>Menu</span>
-      </button> */}
-      {/* <Main />
-      <MenuButton />
-      <LanguageSwitcher />
-      <PwaInstallButton /> */}
+      <MainPage />
 
-      <LanguageSwitcher />
+      {/* <LanguageSwitcher />
+      <PwaInstallButton /> */}
     </div>
   );
 }

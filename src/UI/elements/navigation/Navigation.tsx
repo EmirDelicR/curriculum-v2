@@ -2,6 +2,7 @@ import { NORMAL_PAGES, SMALL_PAGES, SOCIAL_PAGES } from '@utils/constants';
 
 import classes from './Navigation.module.scss';
 import { useTranslation } from 'react-i18next';
+import { forwardRef } from 'react';
 
 interface NavLinkProps {
   item: {
@@ -61,9 +62,9 @@ function SocialLink({ item: { name, icon } }: SocialLinkProps) {
   );
 }
 
-export default function Navigation() {
+const Navigation = forwardRef(function Navigation(_props, ref: any) {
   return (
-    <nav className={classes.nav}>
+    <nav className={classes.nav} ref={ref}>
       {NORMAL_PAGES.map((item) => (
         <NavLink item={item} key={item.name} />
       ))}
@@ -79,4 +80,6 @@ export default function Navigation() {
       </div>
     </nav>
   );
-}
+});
+
+export default Navigation;
