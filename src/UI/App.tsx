@@ -1,6 +1,6 @@
-import LanguageSwitcher from '@components/languageSwitcher/LanguageSwitcher';
-import Navigation from '@elements/navigation/Navigation';
 import MainPage from '@pages/Main';
+
+import '@assets/css/app.scss';
 
 function App() {
   return (

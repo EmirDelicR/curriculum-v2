@@ -68,13 +68,13 @@
       line-height: 28px;
 
       a {
-        @extend %all-links-extension;
+        @extend %all-links-extension !optional;
       }
     }
   }
 }
 
-@media screen and(max-width: 1050px) {
+@media screen and (max-width: 1050px) {
   .home-wrapper {
     font-size: $fs-16;
     .my-img {
@@ -84,7 +84,7 @@
   }
 }
 
-@media screen and(max-width: 750px) {
+@media screen and (max-width: 750px) {
   .home-wrapper {
     font-size: $fs-14;
     flex-direction: column;
@@ -106,7 +106,7 @@
   }
 }
 
-@media screen and(max-width: 550px) {
+@media screen and (max-width: 550px) {
   .home-wrapper {
     .my-img {
       min-height: 26vh;
