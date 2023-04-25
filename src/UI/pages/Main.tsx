@@ -67,7 +67,6 @@ export default function MainPage() {
     addRemoveClass(true);
     stackRef.current!.classList.add('pages-stack--open');
     const stackPages = getStackPages(current, numberOfPages);
-
     stackPages.forEach((pageIndex, index) => {
       const page = pages[pageIndex];
       const translationValue = parseInt(String(-1 * 200 - 50 * index));
@@ -109,14 +108,16 @@ export default function MainPage() {
       : [];
     setPages(listOfPages);
     setNumberOfPages(listOfPages.length);
-
-    buildPageStack(current, numberOfPages, pages as HTMLElement[]);
-    initEvents();
   }
 
   useEffect(() => {
     init();
   }, []);
+
+  useEffect(() => {
+    buildPageStack(current, numberOfPages, pages as HTMLElement[]);
+    initEvents();
+  }, [pages]);
 
   return (
     <>

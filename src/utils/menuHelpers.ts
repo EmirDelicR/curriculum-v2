@@ -64,7 +64,7 @@ const buildPageStack = (
   pages: HTMLElement[]
 ) => {
   const stackPages = getStackPages(current, numberOfPages);
-
+  console.log('XXX: ', pages);
   /**
    * set z-index, opacity, initial transforms to pages
    * and add class page--inactive to all except the current one
