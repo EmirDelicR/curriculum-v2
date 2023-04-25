@@ -6,7 +6,7 @@ import {
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navigation from '@elements/navigation/Navigation';
-import Menu from '@elements/menu/Menu';
+import Menu from '@/UI/components/menuButton/MenuButton';
 
 export default function MainPage() {
   const { t } = useTranslation();
@@ -27,10 +27,10 @@ export default function MainPage() {
   function addRemoveClass(add: boolean) {
     if (add) {
       menuRef.current!.classList.add('menu-button--open');
-      navRef.current!.classList.add('pages-nav--open');
+      navRef.current!.classList.add('nav--open');
     } else {
       menuRef.current!.classList.remove('menu-button--open');
-      navRef.current!.classList.remove('pages-nav--open');
+      navRef.current!.classList.remove('nav--open');
     }
   }
 
@@ -77,12 +77,8 @@ export default function MainPage() {
     });
   }
 
-  function closeMenu() {
-    openPage();
-  }
-
   function toggleMenu() {
-    isMenuOpen ? closeMenu() : openMenu();
+    isMenuOpen ? openPage() : openMenu();
   }
 
   function initEvents() {
@@ -125,7 +121,7 @@ export default function MainPage() {
   return (
     <>
       <Navigation ref={navRef} />
-      <Menu ref={menuRef} cb={toggleMenu} />
+      <Menu ref={menuRef} onClickHandler={toggleMenu} />
       <div className="pages-stack" ref={stackRef}>
         <div className="page" id="home">
           <span className="page-name">{t('navBar.home')}</span>
@@ -163,6 +159,7 @@ export default function MainPage() {
           {isCurrentPage('contact') && 'contact'}
         </div>
       </div>
+      ;
     </>
   );
 }

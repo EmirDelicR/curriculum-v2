@@ -15,7 +15,8 @@
   &::before,
   &::after {
     content: '';
-    background: $menu-button;
+    background: red;
+    // background: $menu-button;
     position: absolute;
     left: 0;
     width: 100%;
@@ -35,7 +36,8 @@
   }
 
   span {
-    background: $menu-button;
+    background: red;
+    // background: $menu-button;
     position: absolute;
     left: 0;
     width: 100%;

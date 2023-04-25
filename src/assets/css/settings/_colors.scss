@@ -1,19 +1,32 @@
-$none: transparent;
-$page-background: #2a2b30;
-$body-background: #1d1e21;
-$text-color: #cecece;
-$box-shadow: rgba(66, 152, 195, 0.3);
-$menu-button: #5f656f;
-$nav-link: #366194;
-$nav-link-small: #4f4f64;
-$nav-link-small-hover: $nav-link;
-$font-color-fallback: #2187e7;
-$portfolio-background: #283042;
-$nav-link-hover: rgb(212, 201, 201);
-$light-border-color: rgba(62, 112, 255, 0.2);
-$light-border-color-alpha-1: rgba(62, 112, 255, 0.1);
-$light-border-color-alpha-3: rgba(62, 112, 255, 0.3);
-$light-border-color-alpha-6: rgba(62, 112, 255, 0.6);
-$light-border-color-alpha-7: rgba(62, 112, 255, 0.7);
-$light-border-color-alpha-9: rgba(62, 112, 255, 0.9);
-$bulb-light: yellow;
+:root {
+  // neutral
+  --none: transparent;
+  --box-shadow: rgba(66, 152, 195, 0.3);
+  // dark
+  --main-background-dark: #1d1e21;
+  --page-background: #2a2b30;
+  // light
+  --main-background-light: #f1f1f1;
+
+  // default
+  --main-background: var(--main-background-light);
+}
+
+// $page-background: #2a2b30;
+// $body-background: #1d1e21;
+// $text-color: #cecece;
+// $box-shadow: rgba(66, 152, 195, 0.3);
+// $menu-button: #5f656f;
+// $nav-link: #366194;
+// $nav-link-small: #4f4f64;
+// $nav-link-small-hover: $nav-link;
+// $font-color-fallback: #2187e7;
+// $portfolio-background: #283042;
+// $nav-link-hover: rgb(212, 201, 201);
+// $light-border-color: rgba(62, 112, 255, 0.2);
+// $light-border-color-alpha-1: rgba(62, 112, 255, 0.1);
+// $light-border-color-alpha-3: rgba(62, 112, 255, 0.3);
+// $light-border-color-alpha-6: rgba(62, 112, 255, 0.6);
+// $light-border-color-alpha-7: rgba(62, 112, 255, 0.7);
+// $light-border-color-alpha-9: rgba(62, 112, 255, 0.9);
+// $bulb-light: yellow;

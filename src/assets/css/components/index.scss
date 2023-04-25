@@ -5,14 +5,21 @@ body {
 }
 
 body {
-  background-color: $body-background;
-  color: $text-color;
   *,
   ::after,
   ::before {
     box-sizing: border-box;
   }
 }
-// @import 'nav-bar';
-// @import 'menu-button';
-// @import 'main';
+
+.app {
+  height: 100vh;
+  background-color: var(--main-background);
+  // color: $text-color;
+}
+
+.app.dark {
+  --main-background: var(--main-background-dark);
+}
+
+@import 'main';

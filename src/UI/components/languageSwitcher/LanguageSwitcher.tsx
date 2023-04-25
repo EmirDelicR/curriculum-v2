@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import classes from './LanguageSwitcher.module.scss';
+import './LanguageSwitcher.module.scss';
 import { useRef, useState } from 'react';
 
 interface IUpdateData {
@@ -16,7 +16,7 @@ export default function LanguageSwitcher() {
   } = useTranslation();
   const updateLanguage = (data: IUpdateData) => {
     changeLanguage(data.lang);
-    const showClass = `${classes[`show-${data.side}`]}`;
+    const showClass = `show-${data.side}`;
     if (currentClass !== '') {
       cubeRef.current?.classList?.remove(currentClass);
     }
@@ -25,39 +25,29 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className={classes['language-wrapper']}>
-      <div ref={cubeRef} className={classes.cube}>
+    <div className="language-wrapper">
+      <div ref={cubeRef} className="cube">
         <div
           onClick={() => updateLanguage({ lang: 'de', side: 'right' })}
-          className={`${classes['cube-face']} ${classes['cube-face--front']}`}
+          className="cube-face cube-face--front"
         >
           EN
         </div>
         <div
           onClick={() => updateLanguage({ lang: 'en', side: 'front' })}
-          className={`${classes['cube-face']} ${classes['cube-face--back']}`}
+          className="cube-face cube-face--back"
         >
           BS
         </div>
         <div
           onClick={() => updateLanguage({ lang: 'bs', side: 'back' })}
-          className={`${classes['cube-face']} ${classes['cube-face--right']}`}
+          className="cube-face cube-face--right"
         >
           DE
         </div>
-        <div
-          className={`${classes['cube-face']} ${classes['cube-face--left']}`}
-        >
-          -
-        </div>
-        <div className={`${classes['cube-face']} ${classes['cube-face--top']}`}>
-          -
-        </div>
-        <div
-          className={`${classes['cube-face']} ${classes['cube-face--bottom']}`}
-        >
-          -
-        </div>
+        <div className="cube-face cube-face--left">-</div>
+        <div className="cube-face cube-face--top">-</div>
+        <div className="cube-face cube-face--bottom">-</div>
       </div>
     </div>
   );
