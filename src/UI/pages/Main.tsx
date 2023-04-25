@@ -36,7 +36,7 @@ export default function MainPage() {
 
   function openPage(id: string | null = null) {
     const pageToOpen = id ? document.getElementById(id) : pages[current];
-
+    console.log('pageToOpen: ', pageToOpen);
     const newPage = pages.indexOf(pageToOpen!);
     const stackPages = getStackPages(current, numberOfPages, newPage);
 
@@ -83,14 +83,15 @@ export default function MainPage() {
   function initEvents() {
     const navItems = [...navRef.current!.querySelectorAll('.link--page')];
 
+    // TODO @ed move this to navigation
     navItems.forEach((item) => {
-      const pageid = item.getAttribute('href')!.slice(1);
+      const pageid = item.getAttribute('href');
       item.addEventListener('click', (ev) => {
         ev.preventDefault();
         openPage(pageid);
       });
     });
-
+    // TODo @ed move this to pages
     pages.forEach((page) => {
       const pageid = page.getAttribute('id');
       page.addEventListener('click', (ev) => {
@@ -102,16 +103,12 @@ export default function MainPage() {
     });
   }
 
-  function init() {
+  useEffect(() => {
     const listOfPages = stackRef.current?.children
       ? [...stackRef.current.children]
       : [];
     setPages(listOfPages);
     setNumberOfPages(listOfPages.length);
-  }
-
-  useEffect(() => {
-    init();
   }, []);
 
   useEffect(() => {
