@@ -5,7 +5,7 @@ import '@assets/css/app.scss';
 function App() {
   return (
     <div className="App">
-      <MainPage />
+      {/* <MainPage /> */}
 
       {/* <LanguageSwitcher />
       <PwaInstallButton /> */}
