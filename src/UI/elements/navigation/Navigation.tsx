@@ -35,11 +35,11 @@ interface SocialLinkProps extends NavLinkProps {
   };
 }
 
-function SocialLink({ item: { name, icon } }: SocialLinkProps) {
+function SocialLink({ item: { name, icon, link } }: SocialLinkProps) {
   return (
     <a
       className="link link--social link--faded"
-      href="item.link"
+      href={link}
       target="_blank"
       rel="noreferrer"
       download="item.download"
