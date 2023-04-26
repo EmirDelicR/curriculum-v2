@@ -6,7 +6,7 @@ import { NORMAL_PAGES, SMALL_PAGES, SOCIAL_PAGES } from '@utils/constants';
 import './Navigation.scss';
 
 interface NavigationProps {
-  onClickHandler: (id: string | null, pages?: Element[]) => void;
+  onClickHandler: (id: string | null) => void;
 }
 
 interface NavLinkProps extends NavigationProps {

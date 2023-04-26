@@ -3,7 +3,7 @@ import {
   endTransitionHandler,
   getStackPages
 } from '@/utils/menuHelpers';
-import { useEffect, useRef, useState } from 'react';
+import { MouseEvent, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navigation from '@elements/navigation/Navigation';
 import Menu from '@/UI/components/menuButton/MenuButton';
@@ -19,6 +19,7 @@ export default function MainPage() {
   const [current, setCurrent] = useState(0);
   const [numberOfPages, setNumberOfPages] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
+
   function isCurrentPage(page: any) {
     return currentPage === page;
   }
@@ -33,7 +34,7 @@ export default function MainPage() {
     }
   }
 
-  const openPage = (id: string | null = null, pages?: Element[]) => {
+  const openPage = (id: string | null = null) => {
     const pageToOpen = id ? document.getElementById(id) : listOfpages[current];
     const newPage = listOfpages.indexOf(pageToOpen!);
     const stackPages = getStackPages(current, numberOfPages, newPage);
@@ -74,19 +75,6 @@ export default function MainPage() {
     });
   }
 
-  function initEvents() {
-    // TODo @ed move this to pages
-    listOfpages.forEach((page) => {
-      const pageid = page.getAttribute('id');
-      page.addEventListener('click', (ev) => {
-        if (isMenuOpen) {
-          ev.preventDefault();
-          openPage(pageid, listOfpages);
-        }
-      });
-    });
-  }
-
   useEffect(() => {
     const listOfPages = stackRef.current?.children
       ? [...stackRef.current.children]
@@ -98,13 +86,20 @@ export default function MainPage() {
   useEffect(() => {
     if (listOfpages.length) {
       buildPageStack(current, numberOfPages, listOfpages as HTMLElement[]);
-      initEvents();
     }
   }, [listOfpages]);
 
+  const onPageClickHandler = (
+    event: MouseEvent<HTMLElement>,
+    pageId: string
+  ) => {
+    event.preventDefault();
+    openPage(pageId);
+  };
+
   // TODO @ed move this to button menu
   function toggleMenu() {
-    isMenuOpen ? openPage(null, listOfpages) : openMenu();
+    isMenuOpen ? openPage() : openMenu();
   }
 
   return (
@@ -112,43 +107,63 @@ export default function MainPage() {
       <Navigation ref={navRef} onClickHandler={openPage} />
       <Menu ref={menuRef} onClickHandler={toggleMenu} />
       <div className="pages-stack" ref={stackRef}>
-        <div className="page" id="home">
+        <div
+          className="page"
+          onClick={(event) => onPageClickHandler(event, 'home')}
+          id="home"
+        >
           <span className="page-name">{t('navBar.home')}</span>
-          {/* <Home v-if="isCurrentPage('home')" /> */}
           {isCurrentPage('home') && 'Home'}
         </div>
-        <div className="page" id="timeline">
+        <div
+          className="page"
+          onClick={(event) => onPageClickHandler(event, 'timeline')}
+          id="timeline"
+        >
           <span className="page-name">{t('navBar.timeline')}</span>
-          {/* <Timeline v-if="isCurrentPage('timeline')" /> */}
           {isCurrentPage('timeline') && 'timeline'}
         </div>
-        <div className="page" id="skill">
+        <div
+          className="page"
+          onClick={(event) => onPageClickHandler(event, 'skill')}
+          id="skill"
+        >
           <span className="page-name">{t('navBar.skill')}</span>
-          {/* <Skills v-if="isCurrentPage('skill')" /> */}
-          {isCurrentPage('skill') && 'timeskillline'}
+          {isCurrentPage('skill') && 'skill'}
         </div>
-        <div className="page" id="certificate">
+        <div
+          className="page"
+          onClick={(event) => onPageClickHandler(event, 'certificate')}
+          id="certificate"
+        >
           <span className="page-name">{t('navBar.certificate')}</span>
-          {/* <Certificates v-if="isCurrentPage('certificate')" /> */}
           {isCurrentPage('certificate') && 'certificate'}
         </div>
-        <div className="page" id="portfolio">
+        <div
+          className="page"
+          onClick={(event) => onPageClickHandler(event, 'portfolio')}
+          id="portfolio"
+        >
           <span className="page-name">{t('navBar.portfolio')}</span>
-          {/* <Portfolio v-if="isCurrentPage('portfolio')" /> */}
           {isCurrentPage('portfolio') && 'portfolio'}
         </div>
-        <div className="page" id="tips">
+        <div
+          className="page"
+          onClick={(event) => onPageClickHandler(event, 'tips')}
+          id="tips"
+        >
           <span className="page-name">{t('navBar.tips')}</span>
-          {/* <Tips v-if="isCurrentPage('tips')" /> */}
           {isCurrentPage('tips') && 'tips'}
         </div>
-        <div className="page" id="contact">
+        <div
+          className="page"
+          onClick={(event) => onPageClickHandler(event, 'contact')}
+          id="contact"
+        >
           <span className="page-name">{t('navBar.contact')}</span>
-          {/* <Contact v-if="isCurrentPage('contact')" /> */}
           {isCurrentPage('contact') && 'contact'}
         </div>
       </div>
-      ;
     </>
   );
 }
