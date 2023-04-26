@@ -52,8 +52,7 @@
 
   &.link--page {
     display: block;
-    color: red;
-    // color: $nav-link;
+    color: $nav-link;
 
     &.link--faded {
       font-size: $fs-13;
@@ -67,8 +66,7 @@
       width: 40px;
       height: 2px;
       margin: 5px 0 0 -20px;
-      background-color: blue;
-      // background: $nav-link-hover;
+      background: $nav-link-hover;
       transition: transform 0.3s;
       transform: scale3d(0, 1, 1);
     }
@@ -100,13 +98,11 @@
   }
 
   &.link--faded {
-    color: green;
-    //color: $nav-link-small;
+    color: $nav-link-small;
     opacity: 0.3;
     &:hover,
     :focus {
-      color: green;
-      //color: $nav-link-small;
+      color: $nav-link-small;
       opacity: 1;
     }
   }
@@ -114,8 +110,7 @@
   &:hover,
   &:focus,
   &:active {
-    color: pink;
-    // color: $nav-link-hover;
+    color: $nav-link-hover;
   }
 }
 

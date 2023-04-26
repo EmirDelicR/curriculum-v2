@@ -17,7 +17,9 @@ function App() {
       {/* <LanguageSwitcher />
       <PwaInstallButton /> */}
 
-      <button onClick={onModeClick}>Mode</button>
+      <button className="mode" onClick={onModeClick}>
+        Mode
+      </button>
     </div>
   );
 }

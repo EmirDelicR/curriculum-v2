@@ -13,9 +13,16 @@ body {
 }
 
 .app {
+  position: relative;
   height: 100vh;
-  background-color: var(--main-background-dark);
-  // color: $text-color;
+  background-color: var(--main-background);
+  color: var(--text-color);
+
+  .mode {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .app.dark {
