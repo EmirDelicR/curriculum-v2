@@ -12,7 +12,7 @@ const MenuButton = forwardRef(function MenuButton(
 ) {
   return (
     <button className="menu-button" ref={ref} onClick={onClickHandler}>
-      <span>Menu</span>
+      <span></span>
     </button>
   );
 });
