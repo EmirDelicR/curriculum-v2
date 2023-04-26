@@ -1,32 +1,27 @@
-const DIV_CLASS = 'nav__item';
 const LINK_PAGE_CLASS = 'link link--page';
 const LINK_SOCIAL_CLASS = 'link link--social link--faded';
 
 const NORMAL_PAGES = [
-  { name: 'home', divClass: DIV_CLASS, linkClass: LINK_PAGE_CLASS },
+  { name: 'home', linkClass: LINK_PAGE_CLASS },
   {
     name: 'timeline',
-    divClass: DIV_CLASS,
     linkClass: LINK_PAGE_CLASS
   },
-  { name: 'skill', divClass: DIV_CLASS, linkClass: LINK_PAGE_CLASS },
+  { name: 'skill', linkClass: LINK_PAGE_CLASS },
   {
     name: 'certificate',
-    divClass: DIV_CLASS,
     linkClass: LINK_PAGE_CLASS
   },
   {
     name: 'portfolio',
-    divClass: DIV_CLASS,
     linkClass: LINK_PAGE_CLASS
   },
-  { name: 'tips', divClass: DIV_CLASS, linkClass: LINK_PAGE_CLASS }
+  { name: 'tips', linkClass: LINK_PAGE_CLASS }
 ];
 
 const SMALL_PAGES = [
   {
     name: 'contact',
-    divClass: `${DIV_CLASS} ${DIV_CLASS}--small`,
     linkClass: `${LINK_PAGE_CLASS} link--faded`
   }
 ];
@@ -37,7 +32,6 @@ const SOCIAL_PAGES = [
     icon: 'fab fa-github',
     link: 'https://github.com/EmirDelicR',
     social: true,
-    divClass: `${DIV_CLASS} ${DIV_CLASS}--social`,
     linkClass: LINK_SOCIAL_CLASS
   },
   {
@@ -45,7 +39,6 @@ const SOCIAL_PAGES = [
     icon: 'fab fa-linkedin-in',
     link: 'https://linkedin.com/in/emir-delic-redzepagic-114190131',
     social: true,
-    divClass: `${DIV_CLASS} ${DIV_CLASS}--social`,
     linkClass: LINK_SOCIAL_CLASS
   },
   {
@@ -53,7 +46,6 @@ const SOCIAL_PAGES = [
     icon: 'fab fa-xing',
     link: 'https://www.xing.com/profile/Emir_DelicRedzepagic?sc_o=mxb_p',
     social: true,
-    divClass: `${DIV_CLASS} ${DIV_CLASS}--social`,
     linkClass: LINK_SOCIAL_CLASS
   },
   {
@@ -62,7 +54,6 @@ const SOCIAL_PAGES = [
     // link: require('@/assets/doc/CV.pdf'),
     link: 'pdf.link',
     social: true,
-    divClass: `${DIV_CLASS} ${DIV_CLASS}--social`,
     linkClass: LINK_SOCIAL_CLASS,
     download: 'CV.pdf'
   }

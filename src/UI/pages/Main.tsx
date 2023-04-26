@@ -119,7 +119,7 @@ export default function MainPage() {
 
   return (
     <>
-      <Navigation ref={navRef} />
+      <Navigation ref={navRef} onClickHandler={openPage} />
       <Menu ref={menuRef} onClickHandler={toggleMenu} />
       <div className="pages-stack" ref={stackRef}>
         <div className="page" id="home">

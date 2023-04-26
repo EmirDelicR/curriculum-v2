@@ -1,12 +1,16 @@
+import { useTranslation } from 'react-i18next';
+import { ForwardedRef, forwardRef } from 'react';
+
 import { NORMAL_PAGES, SMALL_PAGES, SOCIAL_PAGES } from '@utils/constants';
 
 import './Navigation.scss';
-import { useTranslation } from 'react-i18next';
-import { forwardRef } from 'react';
 
-interface NavLinkProps {
+interface NavigationProps {
+  onClickHandler: (id: string | null, pages: Element[]) => void;
+}
+
+interface NavLinkProps extends NavigationProps {
   item: {
-    divClass: string;
     linkClass: string;
     name: string;
   };
@@ -23,9 +27,8 @@ function NavLink({ item: { name, linkClass } }: NavLinkProps) {
   );
 }
 
-interface SocialLinkProps extends NavLinkProps {
+interface SocialLinkProps {
   item: {
-    divClass: string;
     linkClass: string;
     name: string;
     icon: string;
@@ -49,14 +52,17 @@ function SocialLink({ item: { name, icon, link } }: SocialLinkProps) {
   );
 }
 
-const Navigation = forwardRef(function Navigation(_props, ref: any) {
+const Navigation = forwardRef(function Navigation(
+  { onClickHandler }: NavigationProps,
+  ref: ForwardedRef<HTMLDivElement>
+) {
   return (
     <nav className="nav" ref={ref}>
       {NORMAL_PAGES.map((item) => (
-        <NavLink item={item} key={item.name} />
+        <NavLink item={item} key={item.name} onClickHandler={onClickHandler} />
       ))}
       {SMALL_PAGES.map((item) => (
-        <NavLink item={item} key={item.name} />
+        <NavLink item={item} key={item.name} onClickHandler={onClickHandler} />
       ))}
       <div className="nav__item nav__item--social">
         {SOCIAL_PAGES.map((item) => (
