@@ -1,10 +1,11 @@
+import { MouseEvent, useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 import {
   buildPageStack,
   endTransitionHandler,
   getStackPages
 } from '@/utils/menuHelpers';
-import { MouseEvent, useEffect, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import Navigation from '@elements/navigation/Navigation';
 import Menu from '@/UI/components/menuButton/MenuButton';
 
@@ -16,7 +17,7 @@ export default function MainPage() {
   // TODO @ed refactor this
   const [allPages, setAllPages] = useState<HTMLElement[]>([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [current, setCurrent] = useState(0);
+  const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const [numberOfPages, setNumberOfPages] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
 
@@ -35,9 +36,11 @@ export default function MainPage() {
   }
 
   const openPage = (id: string | null = null) => {
-    const pageToOpen = id ? document.getElementById(id) : allPages[current];
+    const pageToOpen = id
+      ? document.getElementById(id)
+      : allPages[currentPageIndex];
     const newPage = allPages.indexOf(pageToOpen!);
-    const stackPages = getStackPages(current, numberOfPages, newPage);
+    const stackPages = getStackPages(currentPageIndex, numberOfPages, newPage);
 
     (pageToOpen! as HTMLElement).style.transform = 'translate3d(0, 0, 0)';
     (pageToOpen! as HTMLElement).style.opacity = '1';
@@ -48,7 +51,7 @@ export default function MainPage() {
     });
 
     if (id) {
-      setCurrent(newPage);
+      setCurrentPageIndex(newPage);
       setCurrentPage(id);
     }
 
@@ -65,7 +68,7 @@ export default function MainPage() {
     setIsMenuOpen(true);
     addRemoveClass(true);
     stackRef.current!.classList.add('pages-stack--open');
-    const stackPages = getStackPages(current, numberOfPages);
+    const stackPages = getStackPages(currentPageIndex, numberOfPages);
     stackPages.forEach((pageIndex, index) => {
       const page = allPages[pageIndex];
       const translationValue = parseInt(String(-1 * 200 - 50 * index));
@@ -85,7 +88,7 @@ export default function MainPage() {
 
   useEffect(() => {
     if (allPages.length) {
-      buildPageStack(current, numberOfPages, allPages);
+      buildPageStack(currentPageIndex, numberOfPages, allPages);
     }
   }, [allPages]);
 
