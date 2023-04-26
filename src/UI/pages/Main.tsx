@@ -14,7 +14,7 @@ export default function MainPage() {
   const menuRef = useRef<HTMLButtonElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
   // TODO @ed refactor this
-  const [listOfpages, setListOfpages] = useState<Element[]>([]);
+  const [allPages, setAllPages] = useState<HTMLElement[]>([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [current, setCurrent] = useState(0);
   const [numberOfPages, setNumberOfPages] = useState(0);
@@ -35,15 +35,15 @@ export default function MainPage() {
   }
 
   const openPage = (id: string | null = null) => {
-    const pageToOpen = id ? document.getElementById(id) : listOfpages[current];
-    const newPage = listOfpages.indexOf(pageToOpen!);
+    const pageToOpen = id ? document.getElementById(id) : allPages[current];
+    const newPage = allPages.indexOf(pageToOpen!);
     const stackPages = getStackPages(current, numberOfPages, newPage);
 
     (pageToOpen! as HTMLElement).style.transform = 'translate3d(0, 0, 0)';
     (pageToOpen! as HTMLElement).style.opacity = '1';
 
     stackPages.forEach((pageIndex) => {
-      const page = listOfpages[pageIndex];
+      const page = allPages[pageIndex];
       (page as HTMLElement).style.transform = 'translate3d(0,100%,0)';
     });
 
@@ -56,7 +56,7 @@ export default function MainPage() {
 
     endTransitionHandler(pageToOpen as HTMLElement, () => {
       stackRef.current!.classList.remove('pages-stack--open');
-      buildPageStack(newPage, numberOfPages, listOfpages as HTMLElement[]);
+      buildPageStack(newPage, numberOfPages, allPages);
       setIsMenuOpen(false);
     });
   };
@@ -67,7 +67,7 @@ export default function MainPage() {
     stackRef.current!.classList.add('pages-stack--open');
     const stackPages = getStackPages(current, numberOfPages);
     stackPages.forEach((pageIndex, index) => {
-      const page = listOfpages[pageIndex];
+      const page = allPages[pageIndex];
       const translationValue = parseInt(String(-1 * 200 - 50 * index));
       (
         page as HTMLElement
@@ -79,15 +79,15 @@ export default function MainPage() {
     const listOfPages = stackRef.current?.children
       ? [...stackRef.current.children]
       : [];
-    setListOfpages(listOfPages);
+    setAllPages(listOfPages as HTMLElement[]);
     setNumberOfPages(listOfPages.length);
   }, []);
 
   useEffect(() => {
-    if (listOfpages.length) {
-      buildPageStack(current, numberOfPages, listOfpages as HTMLElement[]);
+    if (allPages.length) {
+      buildPageStack(current, numberOfPages, allPages);
     }
-  }, [listOfpages]);
+  }, [allPages]);
 
   const onPageClickHandler = (
     event: MouseEvent<HTMLElement>,
