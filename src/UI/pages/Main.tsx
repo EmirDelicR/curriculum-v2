@@ -25,15 +25,10 @@ export default function MainPage() {
     return currentPage === pageName;
   }
 
-  function addRemoveClass(add: boolean) {
-    if (add) {
-      menuRef.current!.classList.add('menu-button--open');
-      navRef.current!.classList.add('nav--open');
-    } else {
-      menuRef.current!.classList.remove('menu-button--open');
-      navRef.current!.classList.remove('nav--open');
-    }
-  }
+  const toggleClasses = () => {
+    menuRef.current!.classList.toggle('menu-button--open');
+    navRef.current!.classList.toggle('nav--open');
+  };
 
   const openPage = (id: string | null = null) => {
     const pageToOpen = id
@@ -55,7 +50,7 @@ export default function MainPage() {
       setCurrentPage(id);
     }
 
-    addRemoveClass(false);
+    toggleClasses();
 
     endTransitionHandler(pageToOpen!, () => {
       stackRef.current!.classList.remove('pages-stack--open');
@@ -66,7 +61,7 @@ export default function MainPage() {
 
   function openMenu() {
     setIsMenuOpen(true);
-    addRemoveClass(true);
+    toggleClasses();
     stackRef.current!.classList.add('pages-stack--open');
     const stackPages = getStackPages(currentPageIndex, numberOfPages);
     stackPages.forEach((pageIndex, index) => {
