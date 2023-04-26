@@ -14,12 +14,11 @@ export default function MainPage() {
   const menuRef = useRef<HTMLButtonElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
   // TODO @ed refactor this
-  const [pages, setPages] = useState<Element[]>([]);
+  const [listOfpages, setListOfpages] = useState<Element[]>([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [current, setCurrent] = useState(0);
   const [numberOfPages, setNumberOfPages] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
-
   function isCurrentPage(page: any) {
     return currentPage === page;
   }
@@ -34,9 +33,8 @@ export default function MainPage() {
     }
   }
 
-  function openPage(id: string | null = null) {
+  const openPage = (id: string | null = null, pages: Element[]) => {
     const pageToOpen = id ? document.getElementById(id) : pages[current];
-    console.log('pageToOpen: ', pageToOpen);
     const newPage = pages.indexOf(pageToOpen!);
     const stackPages = getStackPages(current, numberOfPages, newPage);
 
@@ -57,10 +55,10 @@ export default function MainPage() {
 
     endTransitionHandler(pageToOpen as HTMLElement, () => {
       stackRef.current!.classList.remove('pages-stack--open');
-      buildPageStack(current, numberOfPages, pages as HTMLElement[]);
+      buildPageStack(newPage, numberOfPages, pages as HTMLElement[]);
       setIsMenuOpen(false);
     });
-  }
+  };
 
   function openMenu() {
     setIsMenuOpen(true);
@@ -68,16 +66,12 @@ export default function MainPage() {
     stackRef.current!.classList.add('pages-stack--open');
     const stackPages = getStackPages(current, numberOfPages);
     stackPages.forEach((pageIndex, index) => {
-      const page = pages[pageIndex];
+      const page = listOfpages[pageIndex];
       const translationValue = parseInt(String(-1 * 200 - 50 * index));
       (
         page as HTMLElement
       ).style.transform = `translate3d(0, 75%, ${translationValue}px)`;
     });
-  }
-
-  function toggleMenu() {
-    isMenuOpen ? openPage() : openMenu();
   }
 
   function initEvents() {
@@ -88,16 +82,16 @@ export default function MainPage() {
       const pageid = item.getAttribute('href');
       item.addEventListener('click', (ev) => {
         ev.preventDefault();
-        openPage(pageid);
+        openPage(pageid, listOfpages);
       });
     });
     // TODo @ed move this to pages
-    pages.forEach((page) => {
+    listOfpages.forEach((page) => {
       const pageid = page.getAttribute('id');
       page.addEventListener('click', (ev) => {
         if (isMenuOpen) {
           ev.preventDefault();
-          openPage(pageid);
+          openPage(pageid, listOfpages);
         }
       });
     });
@@ -107,14 +101,21 @@ export default function MainPage() {
     const listOfPages = stackRef.current?.children
       ? [...stackRef.current.children]
       : [];
-    setPages(listOfPages);
+    setListOfpages(listOfPages);
     setNumberOfPages(listOfPages.length);
   }, []);
 
   useEffect(() => {
-    buildPageStack(current, numberOfPages, pages as HTMLElement[]);
-    initEvents();
-  }, [pages]);
+    if (listOfpages.length) {
+      buildPageStack(current, numberOfPages, listOfpages as HTMLElement[]);
+      initEvents();
+    }
+  }, [listOfpages]);
+
+  // TODO @ed move this to button menu
+  function toggleMenu() {
+    isMenuOpen ? openPage(null, listOfpages) : openMenu();
+  }
 
   return (
     <>
