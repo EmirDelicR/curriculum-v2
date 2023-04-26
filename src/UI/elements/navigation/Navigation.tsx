@@ -12,24 +12,11 @@ interface NavLinkProps {
   };
 }
 
-// TODO pass here
-/**
- * 
- * @param param0 const SMALL_PAGES = [
-  {
-    name: 'contact',
-    divClass: `${DIV_CLASS} ${DIV_CLASS}--small`,
-    linkClass: `${LINK_PAGE_CLASS} link--faded`
-  }
-];
- * @returns 
- */
-
-function NavLink({ item: { name } }: NavLinkProps) {
+function NavLink({ item: { name, linkClass } }: NavLinkProps) {
   const { t } = useTranslation();
   return (
     <div className="nav__item">
-      <a className="link link--page" href={name}>
+      <a className={linkClass} href={name}>
         {t(`navBar.${name}`)}
       </a>
     </div>
