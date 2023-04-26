@@ -29,11 +29,9 @@ function NavLink({ item: { name, linkClass } }: NavLinkProps) {
 
 interface SocialLinkProps {
   item: {
-    linkClass: string;
     name: string;
     icon: string;
     link: string;
-    social: boolean;
     download?: string;
   };
 }
