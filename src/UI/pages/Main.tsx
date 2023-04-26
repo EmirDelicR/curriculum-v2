@@ -33,16 +33,16 @@ export default function MainPage() {
     }
   }
 
-  const openPage = (id: string | null = null, pages: Element[]) => {
-    const pageToOpen = id ? document.getElementById(id) : pages[current];
-    const newPage = pages.indexOf(pageToOpen!);
+  const openPage = (id: string | null = null, pages?: Element[]) => {
+    const pageToOpen = id ? document.getElementById(id) : listOfpages[current];
+    const newPage = listOfpages.indexOf(pageToOpen!);
     const stackPages = getStackPages(current, numberOfPages, newPage);
 
     (pageToOpen! as HTMLElement).style.transform = 'translate3d(0, 0, 0)';
     (pageToOpen! as HTMLElement).style.opacity = '1';
 
     stackPages.forEach((pageIndex) => {
-      const page = pages[pageIndex];
+      const page = listOfpages[pageIndex];
       (page as HTMLElement).style.transform = 'translate3d(0,100%,0)';
     });
 
@@ -55,7 +55,7 @@ export default function MainPage() {
 
     endTransitionHandler(pageToOpen as HTMLElement, () => {
       stackRef.current!.classList.remove('pages-stack--open');
-      buildPageStack(newPage, numberOfPages, pages as HTMLElement[]);
+      buildPageStack(newPage, numberOfPages, listOfpages as HTMLElement[]);
       setIsMenuOpen(false);
     });
   };
@@ -75,16 +75,6 @@ export default function MainPage() {
   }
 
   function initEvents() {
-    const navItems = [...navRef.current!.querySelectorAll('.link--page')];
-
-    // TODO @ed move this to navigation
-    navItems.forEach((item) => {
-      const pageid = item.getAttribute('href');
-      item.addEventListener('click', (ev) => {
-        ev.preventDefault();
-        openPage(pageid, listOfpages);
-      });
-    });
     // TODo @ed move this to pages
     listOfpages.forEach((page) => {
       const pageid = page.getAttribute('id');

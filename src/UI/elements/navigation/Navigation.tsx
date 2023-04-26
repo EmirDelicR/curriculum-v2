@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
-import { ForwardedRef, forwardRef } from 'react';
+import { ForwardedRef, MouseEvent, forwardRef } from 'react';
 
 import { NORMAL_PAGES, SMALL_PAGES, SOCIAL_PAGES } from '@utils/constants';
 
 import './Navigation.scss';
 
 interface NavigationProps {
-  onClickHandler: (id: string | null, pages: Element[]) => void;
+  onClickHandler: (id: string | null, pages?: Element[]) => void;
 }
 
 interface NavLinkProps extends NavigationProps {
@@ -16,10 +16,16 @@ interface NavLinkProps extends NavigationProps {
   };
 }
 
-function NavLink({ item: { name, linkClass } }: NavLinkProps) {
+function NavLink({ item: { name, linkClass }, onClickHandler }: NavLinkProps) {
   const { t } = useTranslation();
+
+  const onClick = (event: MouseEvent<HTMLElement>) => {
+    event.preventDefault();
+    onClickHandler(name);
+  };
+
   return (
-    <div className="nav__item">
+    <div className="nav__item" onClick={onClick}>
       <a className={linkClass} href={name}>
         {t(`navBar.${name}`)}
       </a>
