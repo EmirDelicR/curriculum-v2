@@ -21,8 +21,8 @@ export default function MainPage() {
   const [numberOfPages, setNumberOfPages] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
 
-  function isCurrentPage(page: any) {
-    return currentPage === page;
+  function isCurrentPage(pageName: string) {
+    return currentPage === pageName;
   }
 
   function addRemoveClass(add: boolean) {
@@ -42,12 +42,12 @@ export default function MainPage() {
     const newPage = allPages.indexOf(pageToOpen!);
     const stackPages = getStackPages(currentPageIndex, numberOfPages, newPage);
 
-    (pageToOpen! as HTMLElement).style.transform = 'translate3d(0, 0, 0)';
-    (pageToOpen! as HTMLElement).style.opacity = '1';
+    pageToOpen!.style.transform = 'translate3d(0, 0, 0)';
+    pageToOpen!.style.opacity = '1';
 
     stackPages.forEach((pageIndex) => {
       const page = allPages[pageIndex];
-      (page as HTMLElement).style.transform = 'translate3d(0,100%,0)';
+      page.style.transform = 'translate3d(0,100%,0)';
     });
 
     if (id) {
@@ -57,7 +57,7 @@ export default function MainPage() {
 
     addRemoveClass(false);
 
-    endTransitionHandler(pageToOpen as HTMLElement, () => {
+    endTransitionHandler(pageToOpen!, () => {
       stackRef.current!.classList.remove('pages-stack--open');
       buildPageStack(newPage, numberOfPages, allPages);
       setIsMenuOpen(false);
@@ -72,9 +72,7 @@ export default function MainPage() {
     stackPages.forEach((pageIndex, index) => {
       const page = allPages[pageIndex];
       const translationValue = parseInt(String(-1 * 200 - 50 * index));
-      (
-        page as HTMLElement
-      ).style.transform = `translate3d(0, 75%, ${translationValue}px)`;
+      page.style.transform = `translate3d(0, 75%, ${translationValue}px)`;
     });
   }
 
