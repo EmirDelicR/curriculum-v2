@@ -14,28 +14,31 @@ export default function MainPage() {
   const stackRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLButtonElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
-  // TODO @ed refactor this
   const [allPages, setAllPages] = useState<HTMLElement[]>([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const [numberOfPages, setNumberOfPages] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
 
-  function isCurrentPage(pageName: string) {
+  const isCurrentPage = (pageName: string) => {
     return currentPage === pageName;
-  }
+  };
 
   const toggleClasses = () => {
     menuRef.current!.classList.toggle('menu-button--open');
     navRef.current!.classList.toggle('nav--open');
   };
 
-  const openPage = (id: string | null = null) => {
-    const pageToOpen = id
-      ? document.getElementById(id)
+  const openPage = (name: string | null = null) => {
+    const pageToOpen = name
+      ? allPages.find((page) => page.id === name)
       : allPages[currentPageIndex];
-    const newPage = allPages.indexOf(pageToOpen!);
-    const stackPages = getStackPages(currentPageIndex, numberOfPages, newPage);
+    const newPageIndex = allPages.indexOf(pageToOpen!);
+    const stackPages = getStackPages(
+      currentPageIndex,
+      numberOfPages,
+      newPageIndex
+    );
 
     pageToOpen!.style.transform = 'translate3d(0, 0, 0)';
     pageToOpen!.style.opacity = '1';
@@ -45,21 +48,20 @@ export default function MainPage() {
       page.style.transform = 'translate3d(0,100%,0)';
     });
 
-    if (id) {
-      setCurrentPageIndex(newPage);
-      setCurrentPage(id);
+    if (name) {
+      setCurrentPageIndex(newPageIndex);
+      setCurrentPage(name);
     }
 
     toggleClasses();
-
     endTransitionHandler(pageToOpen!, () => {
       stackRef.current!.classList.remove('pages-stack--open');
-      buildPageStack(newPage, numberOfPages, allPages);
+      buildPageStack(newPageIndex, numberOfPages, allPages);
       setIsMenuOpen(false);
     });
   };
 
-  function openMenu() {
+  const openMenu = () => {
     setIsMenuOpen(true);
     toggleClasses();
     stackRef.current!.classList.add('pages-stack--open');
@@ -69,7 +71,7 @@ export default function MainPage() {
       const translationValue = parseInt(String(-1 * 200 - 50 * index));
       page.style.transform = `translate3d(0, 75%, ${translationValue}px)`;
     });
-  }
+  };
 
   useEffect(() => {
     const listOfPages = stackRef.current?.children
@@ -93,10 +95,9 @@ export default function MainPage() {
     openPage(pageId);
   };
 
-  // TODO @ed move this to button menu
-  function toggleMenu() {
+  const toggleMenu = () => {
     isMenuOpen ? openPage() : openMenu();
-  }
+  };
 
   return (
     <>
