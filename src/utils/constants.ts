@@ -15,10 +15,7 @@ const NORMAL_PAGES = [
     name: 'portfolio',
     linkClass: LINK_PAGE_CLASS
   },
-  { name: 'tips', linkClass: LINK_PAGE_CLASS }
-];
-
-const SMALL_PAGES = [
+  { name: 'tips', linkClass: LINK_PAGE_CLASS },
   {
     name: 'contact',
     linkClass: `${LINK_PAGE_CLASS} link--faded`
@@ -50,4 +47,4 @@ const SOCIAL_PAGES = [
   }
 ];
 
-export { NORMAL_PAGES, SOCIAL_PAGES, SMALL_PAGES };
+export { NORMAL_PAGES, SOCIAL_PAGES };

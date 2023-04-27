@@ -65,9 +65,6 @@ const Navigation = forwardRef(function Navigation(
       {NORMAL_PAGES.map((item) => (
         <NavLink item={item} key={item.name} onClickHandler={onClickHandler} />
       ))}
-      {SMALL_PAGES.map((item) => (
-        <NavLink item={item} key={item.name} onClickHandler={onClickHandler} />
-      ))}
       <div className="nav__item nav__item--social">
         {SOCIAL_PAGES.map((item) => (
           <SocialLink item={item} key={item.name} />
