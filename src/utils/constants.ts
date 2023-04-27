@@ -1,25 +1,11 @@
-const LINK_PAGE_CLASS = 'link link--page';
-
-const NORMAL_PAGES = [
-  { name: 'home', linkClass: LINK_PAGE_CLASS },
-  {
-    name: 'timeline',
-    linkClass: LINK_PAGE_CLASS
-  },
-  { name: 'skill', linkClass: LINK_PAGE_CLASS },
-  {
-    name: 'certificate',
-    linkClass: LINK_PAGE_CLASS
-  },
-  {
-    name: 'portfolio',
-    linkClass: LINK_PAGE_CLASS
-  },
-  { name: 'tips', linkClass: LINK_PAGE_CLASS },
-  {
-    name: 'contact',
-    linkClass: `${LINK_PAGE_CLASS} link--faded`
-  }
+const PAGES = [
+  'home',
+  'timeline',
+  'skill',
+  'certificate',
+  'portfolio',
+  'tips',
+  'contact'
 ];
 
 const SOCIAL_PAGES = [
@@ -47,4 +33,4 @@ const SOCIAL_PAGES = [
   }
 ];
 
-export { NORMAL_PAGES, SOCIAL_PAGES };
+export { PAGES, SOCIAL_PAGES };

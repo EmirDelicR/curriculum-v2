@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { ForwardedRef, MouseEvent, forwardRef } from 'react';
 
-import { NORMAL_PAGES, SMALL_PAGES, SOCIAL_PAGES } from '@utils/constants';
+import { PAGES, SOCIAL_PAGES } from '@utils/constants';
 
 import './Navigation.scss';
 
@@ -10,24 +10,21 @@ interface NavigationProps {
 }
 
 interface NavLinkProps extends NavigationProps {
-  item: {
-    linkClass: string;
-    name: string;
-  };
+  page: string;
 }
 
-function NavLink({ item: { name, linkClass }, onClickHandler }: NavLinkProps) {
+function NavLink({ page, onClickHandler }: NavLinkProps) {
   const { t } = useTranslation();
 
   const onClick = (event: MouseEvent<HTMLElement>) => {
     event.preventDefault();
-    onClickHandler(name);
+    onClickHandler(page);
   };
 
   return (
     <div className="nav__item" onClick={onClick}>
-      <a className={linkClass} href={name}>
-        {t(`navBar.${name}`)}
+      <a className="link link--page" href={page}>
+        {t(`navBar.${page}`)}
       </a>
     </div>
   );
@@ -62,8 +59,8 @@ const Navigation = forwardRef(function Navigation(
 ) {
   return (
     <nav className="nav" ref={ref}>
-      {NORMAL_PAGES.map((item) => (
-        <NavLink item={item} key={item.name} onClickHandler={onClickHandler} />
+      {PAGES.map((name) => (
+        <NavLink page={name} key={name} onClickHandler={onClickHandler} />
       ))}
       <div className="nav__item nav__item--social">
         {SOCIAL_PAGES.map((item) => (
