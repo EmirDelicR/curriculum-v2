@@ -48,7 +48,7 @@
     display: block;
     color: $nav-link;
 
-    &:not(.link--faded)::before {
+    &::before {
       content: '';
       position: absolute;
       top: 100%;
