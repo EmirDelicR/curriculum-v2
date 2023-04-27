@@ -46,7 +46,7 @@
 
   &.link--page {
     display: block;
-    color: $nav-link;
+    color: var(--nav-link);
 
     &::before {
       content: '';
@@ -56,7 +56,7 @@
       width: 40px;
       height: 2px;
       margin: 5px 0 0 -20px;
-      background: $nav-link-hover;
+      background: var(--nav-link-hover);
       transition: transform 0.3s;
       transform: scale3d(0, 1, 1);
     }
@@ -91,7 +91,7 @@
   &:hover,
   &:focus,
   &:active {
-    color: $nav-link-hover;
+    color: var(--nav-link-hover);
   }
 }
 

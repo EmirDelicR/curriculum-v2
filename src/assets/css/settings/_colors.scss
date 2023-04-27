@@ -1,17 +1,27 @@
 :root {
   // neutral
+  --white: rgba(255, 255, 255, 0.85);
   --none: transparent;
   --box-shadow: rgba(66, 152, 195, 0.3);
   --text-color: #cecece;
   --menu-button: #5f656f;
+  --dark-blue: #366194;
+  --light-blue: #2187e7;
   // dark
-  --main-background-dark: #1d1e21;
+  --main-background-dark: rgba(0, 0, 0, 0.85);
+  --nav-link-dark: var(--white);
+  --nav-link-hover-dark: var(--dark-blue);
   --page-background: #2a2b30;
+
   // light
-  --main-background-light: #f1f1f1;
+  --main-background-light: var(--white);
+  --nav-link-light: var(--dark-blue);
+  --nav-link-hover-light: var(--light-blue);
 
   // default
   --main-background: var(--main-background-light);
+  --nav-link: var(--nav-link-light);
+  --nav-link-hover: var(--nav-link-hover-light);
 }
 
 // $page-background: #2a2b30;

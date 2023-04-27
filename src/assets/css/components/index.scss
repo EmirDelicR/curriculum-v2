@@ -27,6 +27,8 @@ body {
 
 .app.dark {
   --main-background: var(--main-background-dark);
+  --nav-link: var(--nav-link-dark);
+  --nav-link-hover: var(--nav-link-hover-dark);
 }
 
 @import 'main';
