@@ -13,7 +13,7 @@
     background: var(--page-background);
     box-shadow: 0 -1px 10px var(--box-shadow);
     padding: 5em 2em;
-    color: $nav-link-hover;
+    color: var(--main-color);
 
     &.page--inactive {
       position: absolute;
@@ -36,20 +36,12 @@
   }
 }
 
-// @media screen and (max-width: 640px) {
-//   .pages-stack {
-//     .page {
-//       .page-name {
-//         left: 4%;
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (max-height: 740px) {
-//   .pages-stack {
-//     .page {
-//       font-size: $fs-14;
-//     }
-//   }
-// }
+@media screen and (max-width: 640px) {
+  .pages-stack {
+    .page {
+      .page-name {
+        left: 4%;
+      }
+    }
+  }
+}

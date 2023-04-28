@@ -46,7 +46,7 @@
 
   &.link--page {
     display: block;
-    color: var(--nav-link);
+    color: var(--main-color);
 
     &::before {
       content: '';
@@ -83,7 +83,7 @@
       transition: scale 0.3s ease-in-out;
 
       path {
-        fill: var(--nav-link);
+        fill: var(--main-color);
       }
     }
 

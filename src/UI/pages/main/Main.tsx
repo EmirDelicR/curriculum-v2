@@ -9,6 +9,8 @@ import {
 import Navigation from '@elements/navigation/Navigation';
 import Menu from '@/UI/components/menuButton/MenuButton';
 
+import './Main.scss';
+
 export default function MainPage() {
   const { t } = useTranslation();
   const stackRef = useRef<HTMLDivElement>(null);

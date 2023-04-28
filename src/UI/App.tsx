@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import MainPage from '@pages/Main';
+import MainPage from '@pages/main/Main';
 
 import '@assets/css/app.scss';
 

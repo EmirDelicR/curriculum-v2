@@ -9,25 +9,26 @@
   --light-blue: #2187e7;
   // dark
   --main-background-dark: rgba(0, 0, 0, 0.85);
-  --nav-link-dark: var(--white);
+  --main-color-dark: var(--white);
   --nav-link-hover-dark: var(--dark-blue);
   --social-link-box-shadow-dark: 0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.1),
     -0.1rem -0.1rem 0.25rem rgba(255, 255, 255, 0.5);
-
-  --page-background: #2a2b30;
+  --page-background-dark: #2a2b30;
 
   // light
   --main-background-light: var(--white);
-  --nav-link-light: var(--dark-blue);
+  --main-color-light: var(--dark-blue);
   --nav-link-hover-light: var(--light-blue);
   --social-link-box-shadow-light: 0.1rem 0.1rem 0.25rem rgba(255, 255, 255, 0.1),
     -0.1rem -0.1rem 0.25rem rgba(0, 0, 0, 0.5);
+  --page-background-light: #ecf9ff;
 
   // default
   --main-background: var(--main-background-light);
-  --nav-link: var(--nav-link-light);
+  --main-color: var(--main-color-light);
   --nav-link-hover: var(--nav-link-hover-light);
   --social-link-box-shadow: var(--social-link-box-shadow-light);
+  --page-background: var(--page-background-light);
 }
 
 // $page-background: #2a2b30;
