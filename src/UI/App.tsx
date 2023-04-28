@@ -1,9 +1,8 @@
+import { useRef } from 'react';
 import MainPage from '@pages/Main';
 
 import '@assets/css/app.scss';
-import { useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
+
 function App() {
   const mainRef = useRef<HTMLDivElement>(null);
 
@@ -13,7 +12,6 @@ function App() {
 
   return (
     <div className="app" ref={mainRef}>
-      <FontAwesomeIcon icon={faUserSecret} />
       <MainPage />
 
       {/* <LanguageSwitcher />

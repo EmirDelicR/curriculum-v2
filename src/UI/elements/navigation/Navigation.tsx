@@ -50,7 +50,7 @@ function SocialLink({ item: { name, icon, link } }: SocialLinkProps) {
       rel="noreferrer"
       download="item.download"
     >
-      <FontAwesomeIcon icon={icon} />
+      <FontAwesomeIcon icon={icon} size="2x" />
       <i title={name.toUpperCase()} className={`${icon}`}></i>
     </a>
   );
