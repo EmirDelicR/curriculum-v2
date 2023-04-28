@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import MainPage from '@pages/main/Main';
 
-import '@assets/css/app.scss';
+import './App.scss';
 
 function App() {
   const mainRef = useRef<HTMLDivElement>(null);
