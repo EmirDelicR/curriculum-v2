@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { ForwardedRef, MouseEvent, forwardRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import { PAGES, SOCIAL_PAGES } from '@utils/constants';
 
@@ -33,7 +35,7 @@ function NavLink({ page, onClickHandler }: NavLinkProps) {
 interface SocialLinkProps {
   item: {
     name: string;
-    icon: string;
+    icon: IconProp;
     link: string;
     download?: string;
   };
@@ -48,6 +50,7 @@ function SocialLink({ item: { name, icon, link } }: SocialLinkProps) {
       rel="noreferrer"
       download="item.download"
     >
+      <FontAwesomeIcon icon={icon} />
       <i title={name.toUpperCase()} className={`${icon}`}></i>
     </a>
   );
