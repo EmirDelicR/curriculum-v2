@@ -1,5 +1,30 @@
+@import 'typography-variables';
+
+$font-color-fallback: #2187e7;
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+    src: local('Custom Font');
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype');
+    src: url('#{$file-path}.woff2') format('woff2');
+    src: url('#{$file-path}.woff') format('woff');
+    src: url('#{$file-path}.ttf') format('truetype');
+  }
+}
+@mixin set-fonts($font-size: $fs-10, $ls: $ls-8, $lh: $lh-10) {
+  font-size: $font-size;
+  letter-spacing: $ls;
+  line-height: $lh;
+}
+
 /* Source Courgette */
-@include font-face('#{$source-courgette}', '#{$path-cour}-Regular');
+@include font-face('#{$source-courgette}', '#{$path-courgette}-Regular');
 
 body {
   font-family: $main-font;
@@ -8,8 +33,8 @@ body {
     font-family: $source-courgette, cursive;
   }
 
-  .nav__item--small {
-    font-family: $source-courgette, cursive;
+  .nav__item {
+    font-family: $source-courgette;
   }
 
   .language-cour {
