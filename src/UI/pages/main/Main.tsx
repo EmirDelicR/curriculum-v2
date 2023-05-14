@@ -1,4 +1,12 @@
-import { MouseEvent, useEffect, useRef, useState } from 'react';
+import {
+  MouseEvent,
+  ReactNode,
+  Suspense,
+  lazy,
+  useEffect,
+  useRef,
+  useState
+} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -13,6 +21,45 @@ import Navigation from '@elements/navigation/Navigation';
 import Menu from '@/UI/components/menuButton/MenuButton';
 
 import './Main.scss';
+
+const Home = lazy(() => import('@pages/home/Home'));
+const Portfolio = lazy(() => import('@pages/portfolio/Portfolio'));
+const Timeline = lazy(() => import('@pages/timeline/Timeline'));
+const Skills = lazy(() => import('@pages/skills/Skills'));
+const Certificates = lazy(() => import('@pages/certificates/Certificates'));
+const Contact = lazy(() => import('@pages/contact/Contact'));
+const Tips = lazy(() => import('@pages/tips/Tips'));
+
+const PAGES_TO_RENDER: { name: string; element: ReactNode }[] = [
+  {
+    name: 'home',
+    element: <Home />
+  },
+  {
+    name: 'timeline',
+    element: <Timeline />
+  },
+  {
+    name: 'skill',
+    element: <Skills />
+  },
+  {
+    name: 'certificate',
+    element: <Certificates />
+  },
+  {
+    name: 'portfolio',
+    element: <Portfolio />
+  },
+  {
+    name: 'tips',
+    element: <Tips />
+  },
+  {
+    name: 'contact',
+    element: <Contact />
+  }
+];
 
 export default function MainPage() {
   const { t } = useTranslation();
@@ -96,62 +143,19 @@ export default function MainPage() {
       <Navigation ref={navRef} onClickHandler={openPage} />
       <Menu ref={menuRef} onClickHandler={toggleMenu} />
       <div className="pages-stack" ref={stackRef}>
-        <div
-          className="page"
-          onClick={(event) => onPageClickHandler(event, 'home')}
-          id="home"
-        >
-          <span className="page-name">{t('navBar.home')}</span>
-          {isCurrentPage('home') && 'Home'}
-        </div>
-        <div
-          className="page"
-          onClick={(event) => onPageClickHandler(event, 'timeline')}
-          id="timeline"
-        >
-          <span className="page-name">{t('navBar.timeline')}</span>
-          {isCurrentPage('timeline') && 'timeline'}
-        </div>
-        <div
-          className="page"
-          onClick={(event) => onPageClickHandler(event, 'skill')}
-          id="skill"
-        >
-          <span className="page-name">{t('navBar.skill')}</span>
-          {isCurrentPage('skill') && 'skill'}
-        </div>
-        <div
-          className="page"
-          onClick={(event) => onPageClickHandler(event, 'certificate')}
-          id="certificate"
-        >
-          <span className="page-name">{t('navBar.certificate')}</span>
-          {isCurrentPage('certificate') && 'certificate'}
-        </div>
-        <div
-          className="page"
-          onClick={(event) => onPageClickHandler(event, 'portfolio')}
-          id="portfolio"
-        >
-          <span className="page-name">{t('navBar.portfolio')}</span>
-          {isCurrentPage('portfolio') && 'portfolio'}
-        </div>
-        <div
-          className="page"
-          onClick={(event) => onPageClickHandler(event, 'tips')}
-          id="tips"
-        >
-          <span className="page-name">{t('navBar.tips')}</span>
-          {isCurrentPage('tips') && 'tips'}
-        </div>
-        <div
-          className="page"
-          onClick={(event) => onPageClickHandler(event, 'contact')}
-          id="contact"
-        >
-          <span className="page-name">{t('navBar.contact')}</span>
-          {isCurrentPage('contact') && 'contact'}
-        </div>
+        {PAGES_TO_RENDER.map(({ name, element }) => (
+          <div
+            key={name}
+            className="page"
+            onClick={(event) => onPageClickHandler(event, name)}
+            id={name}
+          >
+            <span className="page-name">{t(`navBar.${name}`)}</span>
+            {isCurrentPage(name) && (
+              <Suspense fallback={<span>Loading...</span>}>{element}</Suspense>
+            )}
+          </div>
+        ))}
       </div>
     </>
   );

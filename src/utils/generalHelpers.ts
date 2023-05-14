@@ -1,5 +1,3 @@
-// const lazyLoadPage = (view: string) => () => import(`@/views/${view}.vue`);
-
 export const updateOpeningPage = (
   pageToOpen: HTMLElement,
   stackOfPages: number[],
