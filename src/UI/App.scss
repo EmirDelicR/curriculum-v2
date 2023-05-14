@@ -19,12 +19,6 @@ body {
   height: 100vh;
   background-color: var(--main-background);
   color: var(--text-color);
-
-  .mode {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-  }
 }
 
 .app.dark {

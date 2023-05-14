@@ -4,7 +4,8 @@ import {
   faXing
 } from '@fortawesome/free-brands-svg-icons';
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
-const PAGES = [
+
+export const PAGES = [
   'home',
   'timeline',
   'skill',
@@ -14,7 +15,7 @@ const PAGES = [
   'contact'
 ];
 
-const SOCIAL_PAGES = [
+export const SOCIAL_PAGES = [
   {
     name: 'git',
     icon: faGithub,
@@ -38,5 +39,3 @@ const SOCIAL_PAGES = [
     download: 'CV.pdf'
   }
 ];
-
-export { PAGES, SOCIAL_PAGES };

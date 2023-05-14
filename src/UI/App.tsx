@@ -1,12 +1,14 @@
 import { useRef } from 'react';
+
 import MainPage from '@pages/main/Main';
+import ToggleMode from '@components/toggleMode/ToggleMode';
 
 import './App.scss';
 
 function App() {
   const mainRef = useRef<HTMLDivElement>(null);
 
-  const onModeClick = () => {
+  const onToggleModeClick = () => {
     mainRef.current?.classList.toggle('dark');
   };
 
@@ -17,9 +19,7 @@ function App() {
       {/* <LanguageSwitcher />
       <PwaInstallButton /> */}
 
-      <button className="mode" onClick={onModeClick}>
-        Mode
-      </button>
+      <ToggleMode onClick={onToggleModeClick} />
     </div>
   );
 }

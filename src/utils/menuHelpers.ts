@@ -1,6 +1,9 @@
 import { RefObject } from 'react';
 
-const endTransitionHandler = (element: HTMLElement, callback: () => void) => {
+export const endTransitionHandler = (
+  element: HTMLElement,
+  callback: () => void
+) => {
   const onEndCallbackFn = (event: TransitionEvent) => {
     if (event.target != element) return;
     element.removeEventListener('transitionend', onEndCallbackFn);
@@ -13,7 +16,7 @@ const endTransitionHandler = (element: HTMLElement, callback: () => void) => {
   element.addEventListener('transitionend', onEndCallbackFn);
 };
 
-const getStackOfPages = (
+export const getStackOfPages = (
   currentPageIndex: number,
   numberOfPages: number,
   indexToExclude: number | null = null
@@ -40,7 +43,7 @@ const getStackOfPages = (
   return pageIndexes;
 };
 
-const updatePageStack = (
+export const updatePageStack = (
   pageIndex: number,
   numberOfPages: number,
   pages: HTMLElement[]
@@ -53,7 +56,7 @@ const updatePageStack = (
   });
 };
 
-const buildPageStack = (
+export const buildPageStack = (
   pageIndex: number,
   numberOfPages: number,
   pages: HTMLElement[]
@@ -81,20 +84,12 @@ const buildPageStack = (
   }
 };
 
-const toggleClasses = (
+export const toggleClasses = (
   menuRef: RefObject<HTMLButtonElement>,
   navRef: RefObject<HTMLDivElement>
 ) => {
   menuRef.current!.classList.toggle('menu-button--open');
   navRef.current!.classList.toggle('nav--open');
-};
-
-export {
-  endTransitionHandler,
-  getStackOfPages,
-  updatePageStack,
-  buildPageStack,
-  toggleClasses
 };
 
 const getTransformValue = (position: number) => {

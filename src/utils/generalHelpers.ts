@@ -1,6 +1,6 @@
 // const lazyLoadPage = (view: string) => () => import(`@/views/${view}.vue`);
 
-const updateOpeningPage = (
+export const updateOpeningPage = (
   pageToOpen: HTMLElement,
   stackOfPages: number[],
   allPages: HTMLElement[]
@@ -14,7 +14,7 @@ const updateOpeningPage = (
   });
 };
 
-export {
-  //lazyLoadPage,
-  updateOpeningPage
+export const classNameHelper = (...args: string[]): string => {
+  const classes = args.filter((entry) => entry && entry.trim() !== '');
+  return classes.toString().replaceAll(',', ' ').trim();
 };
