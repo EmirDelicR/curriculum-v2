@@ -4,7 +4,9 @@ import { useTranslation } from 'react-i18next';
 import {
   buildPageStack,
   endTransitionHandler,
-  getStackPages
+  getStackOfPages,
+  toggleClasses,
+  updatePageStack
 } from '@/utils/menuHelpers';
 import Navigation from '@elements/navigation/Navigation';
 import Menu from '@/UI/components/menuButton/MenuButton';
@@ -22,13 +24,22 @@ export default function MainPage() {
   const [numberOfPages, setNumberOfPages] = useState(0);
   const [currentPage, setCurrentPage] = useState('home');
 
+  useEffect(() => {
+    const listOfPages = stackRef.current?.children
+      ? [...stackRef.current.children]
+      : [];
+    setAllPages(listOfPages as HTMLElement[]);
+    setNumberOfPages(listOfPages.length);
+  }, []);
+
+  useEffect(() => {
+    if (allPages.length) {
+      buildPageStack(currentPageIndex, numberOfPages, allPages);
+    }
+  }, [allPages]);
+
   const isCurrentPage = (pageName: string) => {
     return currentPage === pageName;
-  };
-
-  const toggleClasses = () => {
-    menuRef.current!.classList.toggle('menu-button--open');
-    navRef.current!.classList.toggle('nav--open');
   };
 
   const openPage = (name: string | null = null) => {
@@ -36,7 +47,7 @@ export default function MainPage() {
       ? allPages.find((page) => page.id === name)
       : allPages[currentPageIndex];
     const newPageIndex = allPages.indexOf(pageToOpen!);
-    const stackPages = getStackPages(
+    const stackPages = getStackOfPages(
       currentPageIndex,
       numberOfPages,
       newPageIndex
@@ -55,7 +66,7 @@ export default function MainPage() {
       setCurrentPage(name);
     }
 
-    toggleClasses();
+    toggleClasses(menuRef, navRef);
     endTransitionHandler(pageToOpen!, () => {
       stackRef.current!.classList.remove('pages-stack--open');
       buildPageStack(newPageIndex, numberOfPages, allPages);
@@ -65,29 +76,10 @@ export default function MainPage() {
 
   const openMenu = () => {
     setIsMenuOpen(true);
-    toggleClasses();
+    toggleClasses(menuRef, navRef);
     stackRef.current!.classList.add('pages-stack--open');
-    const stackPages = getStackPages(currentPageIndex, numberOfPages);
-    stackPages.forEach((pageIndex, index) => {
-      const page = allPages[pageIndex];
-      const translationValue = parseInt(String(-1 * 200 - 50 * index));
-      page.style.transform = `translate3d(0, 75%, ${translationValue}px)`;
-    });
+    updatePageStack(currentPageIndex, numberOfPages, allPages);
   };
-
-  useEffect(() => {
-    const listOfPages = stackRef.current?.children
-      ? [...stackRef.current.children]
-      : [];
-    setAllPages(listOfPages as HTMLElement[]);
-    setNumberOfPages(listOfPages.length);
-  }, []);
-
-  useEffect(() => {
-    if (allPages.length) {
-      buildPageStack(currentPageIndex, numberOfPages, allPages);
-    }
-  }, [allPages]);
 
   const onPageClickHandler = (
     event: MouseEvent<HTMLElement>,

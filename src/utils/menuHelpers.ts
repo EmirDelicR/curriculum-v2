@@ -1,3 +1,5 @@
+import { RefObject } from 'react';
+
 const endTransitionHandler = (element: HTMLElement, callback: () => void) => {
   const onEndCallbackFn = (event: TransitionEvent) => {
     if (event.target != element) return;
@@ -11,7 +13,7 @@ const endTransitionHandler = (element: HTMLElement, callback: () => void) => {
   element.addEventListener('transitionend', onEndCallbackFn);
 };
 
-const getStackPages = (
+const getStackOfPages = (
   currentPageIndex: number,
   numberOfPages: number,
   indexToExclude: number | null = null
@@ -38,19 +40,32 @@ const getStackPages = (
   return pageIndexes;
 };
 
+const updatePageStack = (
+  pageIndex: number,
+  numberOfPages: number,
+  pages: HTMLElement[]
+) => {
+  const stackPages = getStackOfPages(pageIndex, numberOfPages);
+  stackPages.forEach((pageIndex, index) => {
+    const page = pages[pageIndex];
+    const translationValue = parseInt(String(-1 * 200 - 50 * index));
+    page.style.transform = `translate3d(0, 75%, ${translationValue}px)`;
+  });
+};
+
 const buildPageStack = (
   pageIndex: number,
   numberOfPages: number,
   pages: HTMLElement[]
 ) => {
-  const stackPages = getStackPages(pageIndex, numberOfPages);
+  const stackOfPages = getStackOfPages(pageIndex, numberOfPages);
   /**
    * set z-index, opacity, initial transforms to pages
    * and add class page--inactive to all except the current one
    * */
   for (let i = 0; i < numberOfPages; ++i) {
     const page = pages[i];
-    const position = stackPages.indexOf(i);
+    const position = stackOfPages.indexOf(i);
 
     if (pageIndex !== i) {
       page.classList.add('page--inactive');
@@ -66,7 +81,21 @@ const buildPageStack = (
   }
 };
 
-export { endTransitionHandler, getStackPages, buildPageStack };
+const toggleClasses = (
+  menuRef: RefObject<HTMLButtonElement>,
+  navRef: RefObject<HTMLDivElement>
+) => {
+  menuRef.current!.classList.toggle('menu-button--open');
+  navRef.current!.classList.toggle('nav--open');
+};
+
+export {
+  endTransitionHandler,
+  getStackOfPages,
+  updatePageStack,
+  buildPageStack,
+  toggleClasses
+};
 
 const getTransformValue = (position: number) => {
   return position !== -1
