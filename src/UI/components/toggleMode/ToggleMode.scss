@@ -3,10 +3,16 @@
   right: 2vh;
   bottom: 2vh;
   cursor: pointer;
+  scale: 0.9;
+  transition: scale 0.3s ease-in-out;
 
   &.light {
     path {
       fill: rgb(206, 206, 122);
     }
+  }
+
+  &:hover {
+    scale: 1;
   }
 }
