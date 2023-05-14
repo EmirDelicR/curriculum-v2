@@ -1,12 +1,34 @@
 import { useTranslation } from 'react-i18next';
-
-import './LanguageSwitcher.scss';
 import { useRef, useState } from 'react';
 
-interface IUpdateData {
+import './LanguageSwitcher.scss';
+
+interface UpdateData {
   lang: 'de' | 'en' | 'bs';
   side: 'right' | 'front' | 'back';
 }
+
+interface LanguageData extends UpdateData {
+  data: UpdateData;
+}
+
+const LANGUAGE_DATA: LanguageData[] = [
+  {
+    data: { lang: 'de', side: 'right' },
+    side: 'front',
+    lang: 'en'
+  },
+  {
+    data: { lang: 'en', side: 'front' },
+    side: 'back',
+    lang: 'bs'
+  },
+  {
+    data: { lang: 'bs', side: 'back' },
+    side: 'right',
+    lang: 'de'
+  }
+];
 
 export default function LanguageSwitcher() {
   const cubeRef = useRef<HTMLDivElement>(null);
@@ -14,7 +36,8 @@ export default function LanguageSwitcher() {
   const {
     i18n: { changeLanguage }
   } = useTranslation();
-  const updateLanguage = (data: IUpdateData) => {
+
+  const updateLanguage = (data: UpdateData) => () => {
     changeLanguage(data.lang);
     const showClass = `show-${data.side}`;
     if (currentClass !== '') {
@@ -27,24 +50,15 @@ export default function LanguageSwitcher() {
   return (
     <div className="language-wrapper">
       <div ref={cubeRef} className="cube">
-        <div
-          onClick={() => updateLanguage({ lang: 'de', side: 'right' })}
-          className="cube-face cube-face--front"
-        >
-          EN
-        </div>
-        <div
-          onClick={() => updateLanguage({ lang: 'en', side: 'front' })}
-          className="cube-face cube-face--back"
-        >
-          BS
-        </div>
-        <div
-          onClick={() => updateLanguage({ lang: 'bs', side: 'back' })}
-          className="cube-face cube-face--right"
-        >
-          DE
-        </div>
+        {LANGUAGE_DATA.map((item) => (
+          <div
+            key={item.lang}
+            onClick={updateLanguage({ ...item.data })}
+            className={`cube-face cube-face--${item.side}`}
+          >
+            {item.lang.toUpperCase()}
+          </div>
+        ))}
         <div className="cube-face cube-face--left">-</div>
         <div className="cube-face cube-face--top">-</div>
         <div className="cube-face cube-face--bottom">-</div>

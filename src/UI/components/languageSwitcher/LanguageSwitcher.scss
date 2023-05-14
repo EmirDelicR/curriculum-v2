@@ -43,10 +43,12 @@ $ls-translate-z-value: 1rem;
     text-align: center;
     border-radius: 15%;
     background: var(--page-background);
+    scale: 0.9;
+    transition: scale 0.3s ease-in-out;
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0 5px 5px var(--light-blue);
+      scale: 1;
     }
   }
 
