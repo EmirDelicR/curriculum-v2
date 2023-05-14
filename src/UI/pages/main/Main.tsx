@@ -93,6 +93,9 @@ export default function MainPage() {
     event: MouseEvent<HTMLElement>,
     pageId: string
   ) => {
+    if (isCurrentPage(pageId)) {
+      return;
+    }
     event.preventDefault();
     openPage(pageId);
   };
