@@ -1,14 +1,10 @@
 .mode {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 0.5rem;
-  border-radius: 1rem;
+  right: 2vh;
+  bottom: 2vh;
   cursor: pointer;
 
   &.light {
-    // background: red;
-
     path {
       fill: rgb(206, 206, 122);
     }

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import './LanguageSwitcher.module.scss';
+import './LanguageSwitcher.scss';
 import { useRef, useState } from 'react';
 
 interface IUpdateData {

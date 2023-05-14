@@ -1,9 +1,12 @@
 @use 'src/assets/css' as *;
 
+$ls-box-size: 2rem;
+$ls-translate-z-value: 1rem;
+
 .language-wrapper {
   position: absolute;
   z-index: 10001;
-  top: 92vh;
+  bottom: 2vh;
   left: 2vh;
 
   %dimensions {
@@ -33,17 +36,17 @@
     position: absolute;
     @extend %dimensions;
     border: 2px solid $menu-button;
-    line-height: $ls-box-size - 6;
+    line-height: calc($ls-box-size - 6px);
     font-size: $fs-14;
     font-weight: bold;
     color: $nav-link;
     text-align: center;
     border-radius: 15%;
-    background: $body-background;
+    background: var(--page-background);
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0 0 20px $box-shadow;
+      box-shadow: 0 5px 5px var(--light-blue);
     }
   }
 
