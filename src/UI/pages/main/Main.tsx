@@ -8,6 +8,7 @@ import {
   toggleClasses,
   updatePageStack
 } from '@/utils/menuHelpers';
+import { updateOpeningPage } from '@/utils/generalHelpers';
 import Navigation from '@elements/navigation/Navigation';
 import Menu from '@/UI/components/menuButton/MenuButton';
 
@@ -53,13 +54,7 @@ export default function MainPage() {
       newPageIndex
     );
 
-    pageToOpen!.style.transform = 'translate3d(0, 0, 0)';
-    pageToOpen!.style.opacity = '1';
-
-    stackPages.forEach((pageIndex) => {
-      const page = allPages[pageIndex];
-      page.style.transform = 'translate3d(0,100%,0)';
-    });
+    updateOpeningPage(pageToOpen!, stackPages, allPages);
 
     if (name) {
       setCurrentPageIndex(newPageIndex);

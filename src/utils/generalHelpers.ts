@@ -1,15 +1,20 @@
-const lazyLoadPage = (view: string) => () => import(`@/views/${view}.vue`);
+// const lazyLoadPage = (view: string) => () => import(`@/views/${view}.vue`);
 
-const lazyLoadImage = (name: string) => import(`@/assets/images/${name}`);
+const updateOpeningPage = (
+  pageToOpen: HTMLElement,
+  stackOfPages: number[],
+  allPages: HTMLElement[]
+) => {
+  pageToOpen.style.transform = 'translate3d(0, 0, 0)';
+  pageToOpen.style.opacity = '1';
 
-const capitalize = (value: string) => {
-  if (!value) return '';
-  return value.charAt(0).toUpperCase() + value.slice(1);
+  stackOfPages.forEach((pageIndex) => {
+    const page = allPages[pageIndex];
+    page.style.transform = 'translate3d(0,100%,0)';
+  });
 };
 
-const toggleView = (name: string) => {
-  const wrapper = document.getElementsByClassName(name)[0];
-  wrapper.classList.toggle('transform-active');
+export {
+  //lazyLoadPage,
+  updateOpeningPage
 };
-
-export { lazyLoadPage, capitalize, lazyLoadImage, toggleView };
