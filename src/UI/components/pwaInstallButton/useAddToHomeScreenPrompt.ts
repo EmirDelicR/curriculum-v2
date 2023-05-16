@@ -37,6 +37,10 @@ export function useAddToHomeScreenPrompt(): [
       ready as EventListenerOrEventListenerObject
     );
 
+    window.addEventListener('appinstalled', () => {
+      console.log('App successfully installed 👍');
+    });
+
     return () => {
       window.removeEventListener(
         'beforeinstallprompt',

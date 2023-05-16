@@ -20,10 +20,15 @@ export default function PwaInstallButton() {
   }
 
   return (
-    <div className="pwa-install" onClick={hide}>
-      <button onClick={hide}>Close</button>
-      Hello! Wanna add to home screen?
-      <button onClick={promptToInstall}>Add to home screen</button>
+    <div className="pwa-install-wrapper" onClick={hide}>
+      <button className="add-button" id="install" onClick={promptToInstall}>
+        Add to home
+      </button>
     </div>
+    // <div className="pwa-install" onClick={hide}>
+    //   <button onClick={hide}>Close</button>
+    //   Hello! Wanna add to home screen?
+    //   <button onClick={promptToInstall}>Add to home screen</button>
+    // </div>
   );
 }
