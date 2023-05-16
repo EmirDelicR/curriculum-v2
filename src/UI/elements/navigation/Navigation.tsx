@@ -25,7 +25,7 @@ function NavLink({ page, onClickHandler }: NavLinkProps) {
 
   return (
     <div className="nav__item" onClick={onClick}>
-      <a className="link link--page" href={page}>
+      <a className="link link--page" href={page} rel="noreferrer">
         {t(`navBar.${page}`)}
       </a>
     </div>

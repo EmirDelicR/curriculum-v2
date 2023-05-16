@@ -11,7 +11,12 @@ const MenuButton = forwardRef(function MenuButton(
   ref: ForwardedRef<HTMLButtonElement>
 ) {
   return (
-    <button className="menu-button" ref={ref} onClick={onClickHandler}>
+    <button
+      className="menu-button"
+      ref={ref}
+      onClick={onClickHandler}
+      aria-label="mobile-nav-button"
+    >
       <span></span>
     </button>
   );
