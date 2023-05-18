@@ -140,7 +140,7 @@ export default function MainPage() {
 
   return (
     <>
-      <Navigation ref={navRef} onClickHandler={openPage} />
+      <Navigation ref={navRef} onClick={openPage} />
       <Menu ref={menuRef} onClickHandler={toggleMenu} />
       <div className="pages-stack" ref={stackRef}>
         {PAGES_TO_RENDER.map(({ name, element }) => (
