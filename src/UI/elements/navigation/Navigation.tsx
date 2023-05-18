@@ -41,14 +41,14 @@ interface SocialLinkProps {
   };
 }
 
-function SocialLink({ item: { name, icon, link } }: SocialLinkProps) {
+function SocialLink({ item: { name, icon, link, download } }: SocialLinkProps) {
   return (
     <a
       className="link link--social link--faded"
       href={link}
       target="_blank"
       rel="noreferrer"
-      download="item.download"
+      download={download}
     >
       <FontAwesomeIcon icon={icon} size="2x" />
       <i title={name.toUpperCase()} className={`${icon}`}></i>

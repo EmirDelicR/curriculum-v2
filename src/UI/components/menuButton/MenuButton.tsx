@@ -1,20 +1,20 @@
-import { ForwardedRef, forwardRef } from 'react';
+import { ComponentProps, ForwardedRef, forwardRef } from 'react';
 
 import './MenuButton.scss';
 
-interface Props {
-  onClickHandler: () => void;
+interface Props extends Omit<ComponentProps<'button'>, 'onClick'> {
+  onClick: () => void;
 }
 
 const MenuButton = forwardRef(function MenuButton(
-  { onClickHandler }: Props,
+  { onClick }: Props,
   ref: ForwardedRef<HTMLButtonElement>
 ) {
   return (
     <button
       className="menu-button"
       ref={ref}
-      onClick={onClickHandler}
+      onClick={onClick}
       aria-label="mobile-nav-button"
     >
       <span></span>

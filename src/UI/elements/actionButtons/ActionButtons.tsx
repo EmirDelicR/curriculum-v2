@@ -4,11 +4,11 @@ import ToggleMode from '@/UI/components/toggleMode/ToggleMode';
 
 import './ActionButtons.scss';
 
-export default function ActionButtons({
-  toggleAction
-}: {
+interface Props {
   toggleAction: () => void;
-}) {
+}
+
+export default function ActionButtons({ toggleAction }: Props) {
   return (
     <div className="action-buttons-wrapper">
       <LanguageSwitcher />

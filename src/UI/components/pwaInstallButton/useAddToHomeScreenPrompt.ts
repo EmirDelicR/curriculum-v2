@@ -21,7 +21,7 @@ export function useAddToHomeScreenPrompt(): [
     }
     return Promise.reject(
       new Error(
-        'Tried installing before browser sent "beforeinstallprompt" event'
+        'Tried installing before browser sent "before install prompt" event'
       )
     );
   };
@@ -36,10 +36,6 @@ export function useAddToHomeScreenPrompt(): [
       'beforeinstallprompt',
       ready as EventListenerOrEventListenerObject
     );
-
-    window.addEventListener('appinstalled', () => {
-      console.log('App successfully installed 👍');
-    });
 
     return () => {
       window.removeEventListener(
