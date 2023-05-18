@@ -3,23 +3,21 @@
 $pwa-box-size: 2rem;
 
 .pwa-install-wrapper {
-  position: absolute;
-  z-index: 10001;
-  bottom: 2vh;
-  right: 20vh;
-  border: 2px solid $menu-button;
-  border-radius: 4px;
-  display: block;
+  position: relative;
 
-  button {
+  .add-button {
+    border: 2px solid $menu-button;
+    border-radius: 4px;
     height: $pwa-box-size;
     background: var(--page-background);
-    color: $nav-link;
-    border: none;
+    color: var(--main-color);
     text-transform: uppercase;
+    scale: 0.9;
+    transition: scale 0.3s ease-in-out;
 
     &:hover {
       cursor: pointer;
+      scale: 1;
     }
 
     &::before {
@@ -29,7 +27,8 @@ $pwa-box-size: 2rem;
       left: 0;
       height: 100%;
       width: 15%;
-      background: rgba(255, 255, 255, 0.1);
+      background: var(--box-shadow);
+      background-blend-mode: difference;
 
       transform: skew(-10deg, 0deg);
       animation: move-to-left 2s linear infinite 1s;
@@ -39,11 +38,17 @@ $pwa-box-size: 2rem;
       0% {
         left: 0%;
       }
-      50% {
+      25% {
         left: 50%;
       }
-      100% {
+      50% {
         left: 80%;
+      }
+      75% {
+        right: 50%;
+      }
+      100% {
+        right: 0;
       }
     }
   }

@@ -1,9 +1,7 @@
 import { useRef } from 'react';
 
 import MainPage from '@pages/main/Main';
-import ToggleMode from '@components/toggleMode/ToggleMode';
-import LanguageSwitcher from '@components/languageSwitcher/LanguageSwitcher';
-import PwaInstallButton from '@components/pwaInstallButton/PwaInstallButton';
+import ActionButtons from '@elements/actionButtons/ActionButtons';
 
 import './App.scss';
 
@@ -17,11 +15,7 @@ export default function App() {
   return (
     <div className="app" ref={mainRef}>
       <MainPage />
-
-      <LanguageSwitcher />
-      <PwaInstallButton />
-
-      <ToggleMode onClick={onToggleModeClick} />
+      <ActionButtons toggleAction={onToggleModeClick} />
     </div>
   );
 }

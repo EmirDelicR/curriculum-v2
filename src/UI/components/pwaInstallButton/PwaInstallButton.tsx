@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { faHouseLaptop } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useAddToHomeScreenPrompt } from './useAddToHomeScreenPrompt';
 
 import './PwaInstallButton.scss';
@@ -7,8 +9,6 @@ export default function PwaInstallButton() {
   const [prompt, promptToInstall] = useAddToHomeScreenPrompt();
   const [isVisible, setVisibleState] = useState(false);
 
-  const hide = () => setVisibleState(false);
-
   useEffect(() => {
     if (prompt) {
       setVisibleState(true);
@@ -16,19 +16,18 @@ export default function PwaInstallButton() {
   }, [prompt]);
 
   if (!isVisible) {
-    return <div />;
+    return null;
   }
 
   return (
-    <div className="pwa-install-wrapper" onClick={hide}>
-      <button className="add-button" id="install" onClick={promptToInstall}>
-        Add to home
+    <div className="pwa-install-wrapper">
+      <button
+        className="add-button"
+        aria-label="pwa-button"
+        onClick={promptToInstall}
+      >
+        Add to <FontAwesomeIcon icon={faHouseLaptop} size={'lg'} />
       </button>
     </div>
-    // <div className="pwa-install" onClick={hide}>
-    //   <button onClick={hide}>Close</button>
-    //   Hello! Wanna add to home screen?
-    //   <button onClick={promptToInstall}>Add to home screen</button>
-    // </div>
   );
 }
