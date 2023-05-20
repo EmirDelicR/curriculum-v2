@@ -1,5 +1,8 @@
 {
   "translation": {
+    "waterMark": {
+      "hello": "Servus"
+    },
     "navBar": {
       "home": "Home",
       "timeline": "Timeline",

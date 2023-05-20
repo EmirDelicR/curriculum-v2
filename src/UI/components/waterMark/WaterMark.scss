@@ -1,0 +1,11 @@
+.water-mark {
+  position: relative;
+  z-index: -10;
+
+  .water-mark-text {
+    position: absolute;
+    font-size: 10rem;
+    color: var(--box-shadow);
+    opacity: 0.5;
+  }
+}

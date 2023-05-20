@@ -1,5 +1,8 @@
 {
   "translation": {
+    "waterMark": {
+      "hello": "Hello"
+    },
     "headerTitle": "My {{appName}} Header Title",
     "navBar": {
       "home": "Home",
