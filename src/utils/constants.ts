@@ -39,3 +39,10 @@ export const SOCIAL_PAGES = [
     download: 'CV.pdf'
   }
 ];
+
+const LINKS = {
+  company:
+    '<a class="language-cour" href="https://www.x-net.at/de" target="_blank" rel="noreferrer">X-net Service</a>',
+  git: ' <a class="language-cour" href="https://github.com/EmirDelicR/curriculum" target="_blank" rel="noreferrer">code</a>',
+  mail: '<a class="language-cour" href="mailto:emirdelictbf@gmail.com?subject=Web-site mail">emirdelictbf@gmail.com</a>'
+};

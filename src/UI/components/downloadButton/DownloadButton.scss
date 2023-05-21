@@ -1,8 +1,9 @@
 .download-button {
   --b: 3px;
   --s: 0.45em;
-  --color: #373b44;
+  --color: var(--main-color);
 
+  cursor: pointer;
   padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
   color: var(--color);
   --_p: var(--s);
