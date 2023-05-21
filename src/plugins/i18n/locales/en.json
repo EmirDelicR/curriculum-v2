@@ -3,7 +3,6 @@
     "waterMark": {
       "hello": "Hello"
     },
-    "headerTitle": "My {{appName}} Header Title",
     "navBar": {
       "home": "Home",
       "timeline": "Timeline",
@@ -13,6 +12,12 @@
       "tips": "Tips",
       "contact": "Contact"
     },
+    "my-description": {
+      "introduce": "Hi, my name is Emir Delic-Redzepagic.",
+      "source": "Check my web site and hope you like it. Check the source <CodeLink>code</CodeLink> and if you wish to use it, it is free.",
+      "mail": "If you want to contact me or hire me you can download my CV or contact me on my email <MailLink>emirdelictbf@gmail.com</MailLink>"
+    },
+
     "tabs-name": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -52,12 +57,6 @@
       "austria": "Austria",
       "work": "Work address"
     },
-    "my-description": {
-      "introduce": "Hi, my name is Emir Delic-Redzepagic.",
-      "source": "Check my web site and hope you like it. Check the source <CodeLink>code</CodeLink> and if you wish to use it, it is free.",
-      "mail": "If you want to contact me or hire me you can download my CV or contact me on my email <MailLink>emirdelictbf@gmail.com</MailLink>"
-    },
-
     "tips": {
       "learn": "Learning Roadmap"
     },

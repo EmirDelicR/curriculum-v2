@@ -39,8 +39,3 @@ export const SOCIAL_PAGES = [
     download: 'CV.pdf'
   }
 ];
-
-export const LINKS = {
-  git: ' <a className="highlight" href="https://github.com/EmirDelicR/curriculum" target="_blank" rel="noreferrer">code</a>',
-  mail: '<a className="highlight" href="mailto:emirdelictbf@gmail.com?subject=Web-site mail">emirdelictbf@gmail.com</a>'
-};

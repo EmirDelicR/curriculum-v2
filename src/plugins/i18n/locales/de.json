@@ -12,6 +12,12 @@
       "tips": "Tipps",
       "contact": "Kontakt"
     },
+    "my-description": {
+      "introduce": "Hallo, mein Name ist Emir Delic-Redzepagic.",
+      "source": "Überprüfen Sie meine Webseite und ich hoffe, dass sie Ihnen gefällt. Überprüfen Sie den Quell <CodeLink>code</CodeLink>, und wenn Sie ihn verwenden möchten, ist er kostenlos.",
+      "mail": "Wenn Sie mit mir Kontakt aufnehmen oder mich einstellen möchten, können Sie meinen Lebenslauf herunterladen oder mich über meine E-Mail-Adresse <MailLink>emirdelictbf@gmail.com</MailLink> kontaktieren."
+    },
+
     "tabs-name": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -50,11 +56,6 @@
       "floor": "Fußboden",
       "austria": "Österreich",
       "work": "Arbeitsadresse"
-    },
-    "my-description": {
-      "introduce": "Hallo, mein Name ist Emir Delic-Redzepagic.",
-      "source": "Überprüfen Sie meine Webseite und ich hoffe, dass sie Ihnen gefällt. Überprüfen Sie den Quell <CodeLink>code</CodeLink>, und wenn Sie ihn verwenden möchten, ist er kostenlos.",
-      "mail": "Wenn Sie mit mir Kontakt aufnehmen oder mich einstellen möchten, können Sie meinen Lebenslauf herunterladen oder mich über meine E-Mail-Adresse <MailLink>emirdelictbf@gmail.com</MailLink> kontaktieren."
     },
     "tips": {
       "learn": "Fahrplan lernen"

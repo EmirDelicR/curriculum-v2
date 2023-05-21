@@ -4,8 +4,6 @@ import TextTyping from '@/UI/components/textTyping/TextTyping';
 import WaterMark from '@/UI/components/waterMark/WaterMark';
 import DownloadButton from '@/UI/components/downloadButton/DownloadButton';
 
-import { LINKS } from '@/utils/constants';
-
 import './Home.scss';
 
 export default function Home() {
@@ -49,13 +47,15 @@ export default function Home() {
         <br />
         <DownloadButton />
       </div>
-      <img
-        src={`${window.location.origin}/images/assets/me.png`}
-        loading="lazy"
-        alt="image of me"
-        width="400"
-        height="400"
-      />
+      <div>
+        <img
+          src={`${window.location.origin}/images/assets/me.png`}
+          loading="lazy"
+          alt="image of me"
+          width="400"
+          height="400"
+        />
+      </div>
     </div>
   );
 }
