@@ -52,11 +52,9 @@
       "work": "Radna adresa"
     },
     "my-description": {
-      "introduce": "Bok, ja se zovem Emir Delic-Redzepagic.",
-      "company": "Trenutno radim kao softverski inženjer u tvrtki {0} u  Austrijskom gradu Linzu.",
-      "born": "Ja sam Božićno dijete i rođen sam 24. prosinca. Volim kodirati i gledati One Punch Man",
-      "source": "Pogledajte moju web stranicu i nadam se da će vam se svidjeti. Provjerite izvorni {0} i ako ga želite koristiti, besplatan je.",
-      "mail": "Ako me želite kontaktirati ili me unajmiti, možete preuzeti moj CV ili me kontaktirati na moj e-mail {0}"
+      "introduce": "Hi, ja se zovem Emir Delic-Redzepagic.",
+      "source": "Pogledajte moju web stranicu i nadam se da će vam se svidjeti. Provjerite izvorni <CodeLink>code</CodeLink> i ako ga želite koristiti, besplatan je.",
+      "mail": "Ako me želite kontaktirati ili me unajmiti, možete preuzeti moj CV ili me kontaktirati na moj e-mail <MailLink>emirdelictbf@gmail.com</MailLink>"
     },
     "tips": {
       "learn": "Mapa za učenje"

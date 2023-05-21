@@ -53,10 +53,8 @@
     },
     "my-description": {
       "introduce": "Hallo, mein Name ist Emir Delic-Redzepagic.",
-      "company": "Derzeit arbeite ich als Software-Ingenieur in einer österreichischen Firma {0} in der Stadt Linz.",
-      "born": "Ich bin ein Weihnachtskind und wurde am 24. Dezember geboren. Ich mag es zu programmieren und One Punch Man zu sehen",
-      "source": "Überprüfen Sie meine Webseite und ich hoffe, dass sie Ihnen gefällt. Überprüfen Sie den Quell{0}, und wenn Sie ihn verwenden möchten, ist er kostenlos.",
-      "mail": "Wenn Sie mit mir Kontakt aufnehmen oder mich einstellen möchten, können Sie meinen Lebenslauf herunterladen oder mich über meine E-Mail-Adresse {0} kontaktieren."
+      "source": "Überprüfen Sie meine Webseite und ich hoffe, dass sie Ihnen gefällt. Überprüfen Sie den Quell <CodeLink>code</CodeLink>, und wenn Sie ihn verwenden möchten, ist er kostenlos.",
+      "mail": "Wenn Sie mit mir Kontakt aufnehmen oder mich einstellen möchten, können Sie meinen Lebenslauf herunterladen oder mich über meine E-Mail-Adresse <MailLink>emirdelictbf@gmail.com</MailLink> kontaktieren."
     },
     "tips": {
       "learn": "Fahrplan lernen"

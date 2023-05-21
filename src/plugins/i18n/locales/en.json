@@ -54,10 +54,8 @@
     },
     "my-description": {
       "introduce": "Hi, my name is Emir Delic-Redzepagic.",
-      "company": "Currently, I am working as a Software engineer in a company {0} in city Linz in Austria.",
-      "born": "I am a Christmas Child and I was born on 24 December. I like to code and watch One Punch Man",
-      "source": "Check my web site and hope you like it. Check the source {0} and if you wish to use it, it is free.",
-      "mail": "If you want to contact me or hire me you can download my CV or contact me on my email {0}"
+      "source": "Check my web site and hope you like it. Check the source <CodeLink>code</CodeLink> and if you wish to use it, it is free.",
+      "mail": "If you want to contact me or hire me you can download my CV or contact me on my email <MailLink>emirdelictbf@gmail.com</MailLink>"
     },
 
     "tips": {
