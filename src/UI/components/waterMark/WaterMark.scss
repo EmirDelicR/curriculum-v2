@@ -3,8 +3,12 @@
   z-index: -10;
 
   .water-mark-text {
+    text-align: center;
+    min-width: 100vw;
+    transform: rotate(-25deg);
     position: absolute;
-    font-size: 10rem;
+    left: -4rem;
+    font-size: 8rem;
     color: var(--box-shadow);
     opacity: 0.5;
   }
