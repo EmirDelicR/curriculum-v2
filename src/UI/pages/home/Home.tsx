@@ -3,6 +3,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import TextTyping from '@/UI/components/textTyping/TextTyping';
 import WaterMark from '@/UI/components/waterMark/WaterMark';
 import DownloadButton from '@/UI/components/downloadButton/DownloadButton';
+import Hologram from '@/UI/components/hologram/Hologram';
 
 import './Home.scss';
 
@@ -12,9 +13,9 @@ export default function Home() {
   return (
     <div className="home-wrapper">
       <div className="description">
+        <WaterMark text="hello" />
         <p>{t('my-description.introduce')}</p>
         <TextTyping />
-        <WaterMark text="hello" />
         <p className="text">
           <Trans
             i18nKey="my-description.source"
@@ -45,7 +46,7 @@ export default function Home() {
         </p>
         <DownloadButton />
       </div>
-      <div className="main-img-wrapper"></div>
+      <Hologram />
     </div>
   );
 }
