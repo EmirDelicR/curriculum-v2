@@ -11,7 +11,7 @@ export default function Home() {
   const { t } = useTranslation();
 
   return (
-    <div className="home-wrapper">
+    <div className="home-page">
       <div className="description">
         <WaterMark text="hello" />
         <p>{t('my-description.introduce')}</p>

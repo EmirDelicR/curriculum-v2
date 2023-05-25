@@ -1,4 +1,4 @@
-.home-wrapper {
+.home-page {
   height: 100%;
   display: flex;
   flex-direction: column-reverse;
@@ -33,7 +33,7 @@
 }
 
 @media screen and (min-width: 1050px) {
-  .home-wrapper {
+  .home-page {
     font-size: 1.2rem;
     flex-direction: row;
     justify-content: space-evenly;
