@@ -1,0 +1,16 @@
+.tips-page {
+  font-size: 1rem;
+
+  .title {
+    font-size: 1.5em;
+    font-family: 'Courgette', cursive;
+    cursor: pointer;
+    color: var(--main-color);
+    text-decoration: none;
+    outline: 0;
+
+    &:hover {
+      color: var(--nav-link-hover);
+    }
+  }
+}

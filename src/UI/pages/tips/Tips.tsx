@@ -3,18 +3,19 @@ import { Tree, TreeNode } from 'react-organizational-chart';
 
 import Tabs from '@/UI/components/tabs/Tabs';
 
+import './Tips.scss';
+
 function RoadMapLink() {
   const { t } = useTranslation();
   return (
-    <div className="title">
-      <a
-        href="https://github.com/kamranahmedse/developer-roadmap"
-        target="_blank"
-        rel="noreferrer"
-      >
-        {t('tips.learn')}
-      </a>
-    </div>
+    <a
+      className="title"
+      href="https://github.com/kamranahmedse/developer-roadmap"
+      target="_blank"
+      rel="noreferrer"
+    >
+      {t('tips.learn')}
+    </a>
   );
 }
 
@@ -149,12 +150,14 @@ function UtilityRoadMap() {
 
 export default function Tips() {
   return (
-    <Tabs
-      items={[
-        { name: 'frontend', content: <FrontEndRoadMap /> },
-        { name: 'backend', content: <BackEndRoadMap /> },
-        { name: 'utils', content: <UtilityRoadMap /> }
-      ]}
-    />
+    <div className="tips-page">
+      <Tabs
+        items={[
+          { name: 'frontend', content: <FrontEndRoadMap /> },
+          { name: 'backend', content: <BackEndRoadMap /> },
+          { name: 'utils', content: <UtilityRoadMap /> }
+        ]}
+      />
+    </div>
   );
 }
