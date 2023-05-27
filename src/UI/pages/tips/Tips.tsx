@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Tree, TreeNode } from 'react-organizational-chart';
+import { PropsWithChildren } from 'react';
 
 import Tabs from '@/UI/components/tabs/Tabs';
 
@@ -19,131 +20,120 @@ function RoadMapLink() {
   );
 }
 
-function FrontEndTree() {
+function TreeElement({ text }: { text: string }) {
+  return <span className="tree-node">{text}</span>;
+}
+
+interface TreeRootProps extends PropsWithChildren {
+  rootText: string;
+}
+
+function TreeRoot({ rootText, children }: TreeRootProps) {
   return (
     <Tree
-      lineWidth={'2px'}
-      lineColor={'green'}
-      lineBorderRadius={'10px'}
-      label={<span>HTML</span>}
+      lineWidth="1px"
+      lineColor="#366194"
+      lineHeight="2rem"
+      lineBorderRadius="10px"
+      lineStyle="double"
+      label={<TreeElement text={rootText} />}
     >
-      <TreeNode label={<span>CSS</span>}>
-        <TreeNode label={<span>SASS/SCSS</span>} />
-        <TreeNode label={<span>Flex/Grid</span>} />
+      {children}
+    </Tree>
+  );
+}
+
+function FrontEndTree() {
+  return (
+    <TreeRoot rootText="HTML">
+      <TreeNode label={<TreeElement text="CSS" />}>
+        <TreeNode label={<TreeElement text="SASS/SCSS" />} />
+        <TreeNode label={<TreeElement text="Flex/Grid" />} />
       </TreeNode>
 
-      <TreeNode label={<span>Java Script</span>}>
-        <TreeNode label={<span>Npm, Vite</span>}>
-          <TreeNode label={<span>Type Script</span>}>
-            <TreeNode label={<span>Framework</span>}>
-              <TreeNode label={<span>Vue.js</span>} />
-              <TreeNode label={<span>React.js</span>} />
-              <TreeNode label={<span>Server</span>}>
-                <TreeNode label={<span>Nuxt.js</span>} />
-                <TreeNode label={<span>Next.js</span>} />
+      <TreeNode label={<TreeElement text="Java Script" />}>
+        <TreeNode label={<TreeElement text="Npm, Vite" />}>
+          <TreeNode label={<TreeElement text="Type Script" />}>
+            <TreeNode label={<TreeElement text="Framework" />}>
+              <TreeNode label={<TreeElement text="Vue.js" />} />
+              <TreeNode label={<TreeElement text="React.js" />} />
+              <TreeNode label={<TreeElement text="Server" />}>
+                <TreeNode label={<TreeElement text="Nuxt.js" />} />
+                <TreeNode label={<TreeElement text="Next.js" />} />
               </TreeNode>
-              <TreeNode label={<span>Desktop</span>}>
-                <TreeNode label={<span>Electron</span>} />
+              <TreeNode label={<TreeElement text="Desktop" />}>
+                <TreeNode label={<TreeElement text="Electron" />} />
               </TreeNode>
-              <TreeNode label={<span>Mobile</span>}>
-                <TreeNode label={<span>React Native</span>} />
-                <TreeNode label={<span>PWA</span>} />
+              <TreeNode label={<TreeElement text="Mobile" />}>
+                <TreeNode label={<TreeElement text="React Native" />} />
+                <TreeNode label={<TreeElement text="PWA" />} />
               </TreeNode>
             </TreeNode>
           </TreeNode>
         </TreeNode>
       </TreeNode>
-    </Tree>
+    </TreeRoot>
   );
 }
 
 function BackEndTree() {
   return (
-    <Tree
-      lineWidth={'2px'}
-      lineColor={'green'}
-      lineBorderRadius={'10px'}
-      label={<span>Terminal</span>}
-    >
-      <TreeNode label={<span>Programs</span>}>
-        <TreeNode label={<span>Node.js</span>}>
-          <TreeNode label={<span>Express</span>} />
+    <TreeRoot rootText="Terminal">
+      <TreeNode label={<TreeElement text="Programs" />}>
+        <TreeNode label={<TreeElement text="Node.js" />}>
+          <TreeNode label={<TreeElement text="Express" />} />
         </TreeNode>
-        <TreeNode label={<span>Python</span>}>
-          <TreeNode label={<span>Django</span>} />
+        <TreeNode label={<TreeElement text="Python" />}>
+          <TreeNode label={<TreeElement text="Django" />} />
         </TreeNode>
-        <TreeNode label={<span>Java</span>}>
-          <TreeNode label={<span>Spring</span>} />
+        <TreeNode label={<TreeElement text="Java" />}>
+          <TreeNode label={<TreeElement text="Spring" />} />
         </TreeNode>
       </TreeNode>
-
-      <TreeNode label={<span>Database</span>}>
-        <TreeNode label={<span>Sql</span>}>
-          <TreeNode label={<span>PostgreSql</span>} />
-          <TreeNode label={<span>MySql</span>} />
+      <TreeNode label={<TreeElement text="Database" />}>
+        <TreeNode label={<TreeElement text="Sql" />}>
+          <TreeNode label={<TreeElement text="PostgreSql" />} />
+          <TreeNode label={<TreeElement text="MySql" />} />
         </TreeNode>
-        <TreeNode label={<span>NoSql</span>}>
-          <TreeNode label={<span>Firebase</span>} />
-          <TreeNode label={<span>MongoDB</span>} />
-          <TreeNode label={<span>GraphQL</span>} />
+        <TreeNode label={<TreeElement text="NoSql" />}>
+          <TreeNode label={<TreeElement text="Firebase" />} />
+          <TreeNode label={<TreeElement text="MongoDB" />} />
+          <TreeNode label={<TreeElement text="GraphQL" />} />
         </TreeNode>
       </TreeNode>
-    </Tree>
+    </TreeRoot>
   );
 }
 
 function UtilityTree() {
   return (
-    <Tree
-      lineWidth={'2px'}
-      lineColor={'green'}
-      lineBorderRadius={'10px'}
-      label={<span>Docker</span>}
-    >
-      <TreeNode label={<span>Redis</span>} />
-      <TreeNode label={<span>RabbitMq</span>}>
-        <TreeNode label={<span>Auth</span>}>
-          <TreeNode label={<span>OAuth</span>} />
-          <TreeNode label={<span>JWT</span>} />
+    <TreeRoot rootText="Docker">
+      <TreeNode label={<TreeElement text="Redis" />} />
+      <TreeNode label={<TreeElement text="RabbitMq" />}>
+        <TreeNode label={<TreeElement text="Auth" />}>
+          <TreeNode label={<TreeElement text="OAuth" />} />
+          <TreeNode label={<TreeElement text="JWT" />} />
         </TreeNode>
-        <TreeNode label={<span>Web Servers</span>}>
-          <TreeNode label={<span>Apache</span>} />
-          <TreeNode label={<span>Nginx</span>} />
+        <TreeNode label={<TreeElement text="Web Servers" />}>
+          <TreeNode label={<TreeElement text="Apache" />} />
+          <TreeNode label={<TreeElement text="Nginx" />} />
         </TreeNode>
-        <TreeNode label={<span>Testing</span>}>
-          <TreeNode label={<span>Jest</span>} />
-          <TreeNode label={<span>Cypress</span>} />
-          <TreeNode label={<span>Selenium</span>} />
+        <TreeNode label={<TreeElement text="Testing" />}>
+          <TreeNode label={<TreeElement text="Jest" />} />
+          <TreeNode label={<TreeElement text="Cypress" />} />
+          <TreeNode label={<TreeElement text="Selenium" />} />
         </TreeNode>
       </TreeNode>
-      <TreeNode label={<span>Elastic Search</span>} />
-    </Tree>
+      <TreeNode label={<TreeElement text="Elastic Search" />} />
+    </TreeRoot>
   );
 }
 
-function FrontEndRoadMap() {
+function TabContent({ children }: PropsWithChildren) {
   return (
     <>
       <RoadMapLink />
-      <FrontEndTree />
-    </>
-  );
-}
-
-function BackEndRoadMap() {
-  return (
-    <>
-      <RoadMapLink />
-      <BackEndTree />
-    </>
-  );
-}
-
-function UtilityRoadMap() {
-  return (
-    <>
-      <RoadMapLink />
-      <UtilityTree />
+      <div className="tree-wrapper">{children}</div>
     </>
   );
 }
@@ -153,9 +143,30 @@ export default function Tips() {
     <div className="tips-page">
       <Tabs
         items={[
-          { name: 'frontend', content: <FrontEndRoadMap /> },
-          { name: 'backend', content: <BackEndRoadMap /> },
-          { name: 'utils', content: <UtilityRoadMap /> }
+          {
+            name: 'frontend',
+            content: (
+              <TabContent>
+                <FrontEndTree />
+              </TabContent>
+            )
+          },
+          {
+            name: 'backend',
+            content: (
+              <TabContent>
+                <BackEndTree />
+              </TabContent>
+            )
+          },
+          {
+            name: 'utils',
+            content: (
+              <TabContent>
+                <UtilityTree />
+              </TabContent>
+            )
+          }
         ]}
       />
     </div>

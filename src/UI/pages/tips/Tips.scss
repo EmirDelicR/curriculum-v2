@@ -13,4 +13,38 @@
       color: var(--nav-link-hover);
     }
   }
+
+  .tree-wrapper {
+    font-size: 0.8rem;
+    padding-top: 4em;
+    overflow-x: auto;
+    height: 60vh;
+
+    .tree-node {
+      color: var(--white);
+      padding: 0.5em 1em;
+      white-space: nowrap;
+      background-color: var(--dark-blue);
+      border-radius: 1em;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 6px;
+      background-color: var(--none);
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: var(--main-color);
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--nav-link-hover);
+      cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--box-shadow);
+    }
+  }
 }
