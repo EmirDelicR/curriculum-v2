@@ -11,6 +11,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import './Contact.scss';
+import { SOCIAL_PAGES } from '@/utils/constants';
+import SocialLink from '@/UI/components/socialLink/SocialLink';
 
 export default function Contact() {
   return (
@@ -28,19 +30,23 @@ export default function Contact() {
         </div>
         <div className="connect-data">
           <h3>Get in touch</h3>
-          <div>
-            <FontAwesomeIcon icon={faPhoneVolume} size="xl" /> #xxx xxx xxxx
+          <div className="connect-element">
+            <FontAwesomeIcon icon={faPhoneVolume} size="xl" /> 0677 625 819 74
           </div>
-          <div>
-            <FontAwesomeIcon icon={faEnvelope} size="xl" />{' '}
+          <div className="connect-element">
+            <FontAwesomeIcon icon={faEnvelope} size="xl" />
             emirdelictbf@gmail.com
           </div>
-          <div>
-            <FontAwesomeIcon icon={faLocationDot} size="xl" /> Some address that
-            you can find me
+          <div className="connect-element">
+            <FontAwesomeIcon icon={faLocationDot} size="xl" />
+            Vienna, Austria
           </div>
         </div>
-        <div>Social icons </div>
+        <div>
+          {SOCIAL_PAGES.map((item) => (
+            <SocialLink item={item} key={item.name} />
+          ))}
+        </div>
       </div>
       <div className="contact-form">xxx</div>
     </div>

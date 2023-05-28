@@ -66,41 +66,6 @@
     }
   }
 
-  &.link--social {
-    display: inline-flex;
-    width: 1.5rem;
-    height: 1.5rem;
-    align-items: center;
-    justify-content: center;
-    margin-left: 0;
-    margin-right: 0.75em;
-    border-radius: 50%;
-    box-shadow: var(--social-link-box-shadow);
-
-    > svg {
-      font-size: 1em;
-      scale: 0.9;
-      transition: scale 0.3s ease-in-out;
-
-      path {
-        fill: var(--main-color);
-      }
-    }
-
-    &:hover {
-      box-shadow: inset 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.1),
-        inset -0.1rem -0.1rem 0.1rem rgba(255, 255, 255, 0.1);
-
-      > svg {
-        scale: 1.1;
-
-        path {
-          fill: var(--nav-link-hover);
-        }
-      }
-    }
-  }
-
   &:hover,
   &:focus,
   &:active {
@@ -132,16 +97,6 @@
     &.link--page {
       &.link--faded {
         font-size: $fs-13;
-      }
-    }
-
-    &.link--social {
-      width: 3.5rem;
-      height: 3.5rem;
-      margin-left: 0.75em;
-
-      > svg {
-        font-size: 2em;
       }
     }
   }
