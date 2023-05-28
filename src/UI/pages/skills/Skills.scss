@@ -1,0 +1,12 @@
+.skill-page {
+  display: flex;
+  justify-content: space-around;
+
+  .skill-list-wrapper {
+    width: 35%;
+  }
+
+  .skill-description-wrapper {
+    width: 60%;
+  }
+}
