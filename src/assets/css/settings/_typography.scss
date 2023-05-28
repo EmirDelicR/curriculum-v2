@@ -1,8 +1,14 @@
-@import 'typography-variables';
-
 $arial: 'Arial';
 $main-font: $arial;
 $font-color-fallback: #2187e7;
+$fs-10: 0.625em;
+$fs-20: 1.25em;
+$fs-28: 1.75em;
+$ls-2: 0.05em;
+$ls-3: 0.0125em;
+$ls-8: 0.0075em;
+$lh-26: 1.625em;
+$lh-33: 2.0625em;
 
 @mixin set-fonts($font-size: $fs-10, $ls: $ls-8, $lh: $lh-10) {
   font-size: $font-size;

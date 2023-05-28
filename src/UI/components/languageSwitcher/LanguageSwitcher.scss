@@ -1,5 +1,3 @@
-@use 'src/assets/css' as *;
-
 $ls-box-size: 2rem;
 $ls-translate-z-value: 1rem;
 
@@ -30,9 +28,9 @@ $ls-translate-z-value: 1rem;
   .cube-face {
     position: absolute;
     @extend %dimensions;
-    border: 2px solid $menu-button;
+    border: 2px solid var(--menu-button);
     line-height: calc($ls-box-size - 6px);
-    font-size: $fs-14;
+    font-size: 0.875em;
     font-weight: bold;
     color: var(--main-color);
     text-align: center;

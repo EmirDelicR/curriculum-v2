@@ -1,12 +1,10 @@
-@use 'src/assets/css' as *;
-
 $pwa-box-size: 2rem;
 
 .pwa-install-wrapper {
   position: relative;
 
   .add-button {
-    border: 2px solid $menu-button;
+    border: 2px solid var(--menu-button);
     border-radius: 4px;
     height: $pwa-box-size;
     background: var(--page-background);
