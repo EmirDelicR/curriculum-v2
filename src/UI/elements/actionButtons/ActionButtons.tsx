@@ -1,6 +1,6 @@
-import LanguageSwitcher from '@/UI/components/languageSwitcher/LanguageSwitcher';
-import PwaInstallButton from '@/UI/components/pwaInstallButton/PwaInstallButton';
-import ToggleMode from '@/UI/components/toggleMode/ToggleMode';
+import LanguageSwitcher from '@/UI/components/buttons/languageSwitcher/LanguageSwitcher';
+import PwaInstallButton from '@/UI/components/buttons/pwaInstallButton/PwaInstallButton';
+import ToggleMode from '@/UI/components/buttons/toggleMode/ToggleMode';
 
 import './ActionButtons.scss';
 

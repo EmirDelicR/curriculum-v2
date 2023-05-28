@@ -2,7 +2,7 @@ import { Trans, useTranslation } from 'react-i18next';
 
 import TextTyping from '@/UI/components/textTyping/TextTyping';
 import WaterMark from '@/UI/components/waterMark/WaterMark';
-import DownloadButton from '@/UI/components/downloadButton/DownloadButton';
+import DownloadButton from '@/UI/components/buttons/downloadButton/DownloadButton';
 import Hologram from '@/UI/components/hologram/Hologram';
 
 import './Home.scss';
