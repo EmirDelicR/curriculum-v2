@@ -12,7 +12,7 @@ import {
 
 import './Contact.scss';
 import { SOCIAL_PAGES } from '@/utils/constants';
-import SocialLink from '@/UI/components/socialLink/SocialLink';
+import SocialLink from '@/UI/components/links/socialLink/SocialLink';
 
 export default function Contact() {
   return (

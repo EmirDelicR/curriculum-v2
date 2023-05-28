@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
+import './SocialLink.scss';
+
 interface SocialLinkProps {
   item: {
     name: string;
@@ -10,14 +12,12 @@ interface SocialLinkProps {
   };
 }
 
-import './SocialLink.scss';
-
 export default function SocialLink({
   item: { name, icon, link, download }
 }: SocialLinkProps) {
   return (
     <a
-      className="link link--social link--faded"
+      className="social-link"
       href={link}
       target="_blank"
       rel="noreferrer"
