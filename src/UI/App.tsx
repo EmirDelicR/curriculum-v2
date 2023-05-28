@@ -13,7 +13,7 @@ export default function App() {
   };
 
   return (
-    <div className="app" ref={mainRef}>
+    <div className="app dark" ref={mainRef}>
       <MainPage />
       <ActionButtons toggleAction={onToggleModeClick} />
     </div>

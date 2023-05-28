@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default function ToggleMode({ onClick }: Props) {
-  const [isLightMode, setIsLightMode] = useState(true);
+  const [isLightMode, setIsLightMode] = useState(false);
 
   const onClickHandler = () => {
     setIsLightMode((prev) => !prev);
