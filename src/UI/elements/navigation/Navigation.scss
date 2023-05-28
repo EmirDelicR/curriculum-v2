@@ -31,18 +31,15 @@
     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
     transform: translate3d(0, 20px, 0);
   }
-}
 
-.link {
-  font-size: 0.75em;
-  letter-spacing: 0.05em;
-  font-weight: bold;
-  position: relative;
-  text-transform: uppercase;
-  text-decoration: none;
-  outline: 0;
-
-  &.link--page {
+  .link {
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: 0;
     display: block;
     color: var(--main-color);
 
@@ -62,12 +59,12 @@
     &:hover:before {
       transform: scale3d(1, 1, 1);
     }
-  }
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: var(--nav-link-hover);
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--nav-link-hover);
+    }
   }
 }
 
@@ -85,11 +82,11 @@
       &--social {
         width: 100%;
       }
-    }
-  }
 
-  .link {
-    font-size: 1em;
-    letter-spacing: 0.15em;
+      .link {
+        font-size: 1em;
+        letter-spacing: 0.15em;
+      }
+    }
   }
 }
