@@ -1,12 +1,12 @@
 import { ComponentProps, ForwardedRef, forwardRef } from 'react';
 
-import './MenuButton.scss';
+import './Menu.scss';
 
 interface Props extends Omit<ComponentProps<'button'>, 'onClick'> {
   onClick: () => void;
 }
 
-const MenuButton = forwardRef(function MenuButton(
+const Menu = forwardRef(function MenuButton(
   { onClick }: Props,
   ref: ForwardedRef<HTMLButtonElement>
 ) {
@@ -22,4 +22,4 @@ const MenuButton = forwardRef(function MenuButton(
   );
 });
 
-export default MenuButton;
+export default Menu;

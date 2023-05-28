@@ -18,7 +18,7 @@ import {
 } from '@/utils/menuHelpers';
 import { updateOpeningPage } from '@/utils/generalHelpers';
 import Navigation from '@elements/navigation/Navigation';
-import Menu from '@/UI/components/buttons/menuButton/MenuButton';
+import Menu from '@/UI/components/buttons/menu/Menu';
 
 import './Main.scss';
 
