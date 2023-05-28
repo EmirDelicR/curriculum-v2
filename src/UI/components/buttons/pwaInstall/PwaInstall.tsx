@@ -3,7 +3,7 @@ import { faHouseLaptop } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useAddToHomeScreenPrompt } from './useAddToHomeScreenPrompt';
 
-import './PwaInstallButton.scss';
+import './PwaInstall.scss';
 
 export default function PwaInstallButton() {
   const [prompt, promptToInstall] = useAddToHomeScreenPrompt();

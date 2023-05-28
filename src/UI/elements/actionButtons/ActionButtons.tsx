@@ -1,5 +1,5 @@
 import LanguageSwitcher from '@/UI/components/buttons/languageSwitcher/LanguageSwitcher';
-import PwaInstallButton from '@/UI/components/buttons/pwaInstallButton/PwaInstallButton';
+import PwaInstall from '@/UI/components/buttons/pwaInstall/PwaInstall';
 import ToggleMode from '@/UI/components/buttons/toggleMode/ToggleMode';
 
 import './ActionButtons.scss';
@@ -12,7 +12,7 @@ export default function ActionButtons({ toggleAction }: Props) {
   return (
     <div className="action-buttons-wrapper">
       <LanguageSwitcher />
-      <PwaInstallButton />
+      <PwaInstall />
       <ToggleMode onClick={toggleAction} />
     </div>
   );
