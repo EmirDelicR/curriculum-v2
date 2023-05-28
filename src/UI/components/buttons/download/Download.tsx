@@ -1,6 +1,6 @@
-import './DownloadButton.scss';
+import './Download.scss';
 
-export default function DownloadButton() {
+export default function Download() {
   return (
     <a
       className="download-button"

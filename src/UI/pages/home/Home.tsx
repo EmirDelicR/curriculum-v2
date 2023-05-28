@@ -2,7 +2,7 @@ import { Trans, useTranslation } from 'react-i18next';
 
 import TextTyping from '@/UI/components/textTyping/TextTyping';
 import WaterMark from '@/UI/components/waterMark/WaterMark';
-import DownloadButton from '@/UI/components/buttons/downloadButton/DownloadButton';
+import Download from '@/UI/components/buttons/download/Download';
 import Hologram from '@/UI/components/hologram/Hologram';
 
 import './Home.scss';
@@ -44,7 +44,7 @@ export default function Home() {
             }}
           />
         </p>
-        <DownloadButton />
+        <Download />
       </div>
       <Hologram />
     </div>
