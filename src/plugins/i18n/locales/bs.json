@@ -17,7 +17,6 @@
       "source": "Pogledajte moju web stranicu i nadam se da će vam se svidjeti. Provjerite izvorni <CodeLink>code</CodeLink> i ako ga želite koristiti, besplatan je.",
       "mail": "Ako me želite kontaktirati ili me unajmiti, možete preuzeti moj CV ili me kontaktirati na moj e-mail <MailLink>emirdelictbf@gmail.com</MailLink>"
     },
-
     "tabs-name": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -43,19 +42,6 @@
       "enjoy": "Uzivanje",
       "comfort": "Udobnost",
       "overview": "Moj pregled vjestina"
-    },
-    "graph-ticks-labels": {
-      "no": "Los",
-      "basic": "Osnovno",
-      "proficient": "Vjest",
-      "great": "Sjajan",
-      "outstanding": "Izvanredan"
-    },
-    "contact": {
-      "home": "Kucna adresa",
-      "floor": "Sprat",
-      "austria": "Austria",
-      "work": "Radna adresa"
     },
     "tips": {
       "learn": "Mapa za učenje"

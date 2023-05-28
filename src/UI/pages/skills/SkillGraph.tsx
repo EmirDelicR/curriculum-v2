@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   Radar,
   RadarChart,
@@ -7,32 +8,19 @@ import {
   ResponsiveContainer
 } from 'recharts';
 
-const data = [
-  {
-    points: 'Speed',
-    position: 100
-  },
-  {
-    points: 'Knowledge',
-    position: 98
-  },
-  {
-    points: 'Level',
-    position: 86
-  },
-  {
-    points: 'Enjoyment',
-    position: 59
-  },
-  {
-    points: 'Comfort',
-    position: 85
-  }
-];
+const translateData = ['speed', 'knowledge', 'level', 'enjoy', 'comfort'];
+const data = [85, 80, 70, 90, 80];
+
 export default function SkillGraph() {
+  const { t } = useTranslation();
+  const updatedData = translateData.map((item, index) => ({
+    points: t(`graph-labels.${item}`),
+    position: data[index]
+  }));
+
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={updatedData}>
         <PolarGrid stroke="var(--main-color)" />
         <PolarAngleAxis
           tick={{ fill: 'var(--main-color)' }}
@@ -46,6 +34,7 @@ export default function SkillGraph() {
           tick={{ fill: 'var(--main-color)', fillOpacity: 0.3 }}
           orientation="middle"
           dy={25}
+          domain={[0, 100]}
         />
         <Radar
           name="Mike"
