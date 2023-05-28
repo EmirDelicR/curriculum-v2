@@ -42,7 +42,7 @@ export default function Contact() {
             Vienna, Austria
           </div>
         </div>
-        <div>
+        <div className="connect-social">
           {SOCIAL_PAGES.map((item) => (
             <SocialLink item={item} key={item.name} />
           ))}

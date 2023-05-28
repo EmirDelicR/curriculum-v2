@@ -25,6 +25,5 @@ const loadLocaleMessages = () => {
 i18n.use(initReactI18next).init({
   resources: loadLocaleMessages(),
   lng: 'en',
-  debug: true,
   fallbackLng: 'en'
 });
