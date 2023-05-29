@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { SKILL_LIST_CONTENT } from './data';
-import useSharedCounter, { SkillName } from './useSkillType';
+import { SKILL_LIST_CONTENT } from '../data';
+import useSharedCounter, { SkillName } from '../../useSkillType';
+import { useEffect } from 'react';
 
 type Item = { name: string; data: string[] };
 
@@ -30,8 +31,13 @@ interface Props {
   type: 'frontend' | 'backend' | 'database' | 'utils';
 }
 
-export default function SkillList({ type }: Props) {
+export default function List({ type }: Props) {
   const content = SKILL_LIST_CONTENT[type];
+  const { setSkillType } = useSharedCounter();
+
+  useEffect(() => {
+    setSkillType('Vue');
+  }, []);
 
   return (
     <div>

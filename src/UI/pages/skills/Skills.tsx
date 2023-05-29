@@ -1,38 +1,38 @@
 import Tabs from '@/UI/components/tabs/Tabs';
 
-import SkillList from './SkillList';
-import SkillDescription from './SkillDescription';
-import SkillGraph from './SkillGraph';
+import List from '@/UI/elements/skill/list/List';
+import Description from '@/UI//elements/skill/description/Description';
+import Graph from '@/UI//elements/skill/graph/Graph';
 
 import './Skills.scss';
 
 const SKILL_LIST = [
   {
     name: 'frontend',
-    content: <SkillList type="frontend" />
+    content: <List type="frontend" />
   },
   {
     name: 'backend',
-    content: <SkillList type="backend" />
+    content: <List type="backend" />
   },
   {
     name: 'database',
-    content: <SkillList type="database" />
+    content: <List type="database" />
   },
   {
     name: 'utils',
-    content: <SkillList type="utils" />
+    content: <List type="utils" />
   }
 ];
 
 const SKILL_DESCRIPTION = [
   {
     name: 'description',
-    content: <SkillDescription />
+    content: <Description />
   },
   {
     name: 'visual',
-    content: <SkillGraph />
+    content: <Graph />
   }
 ];
 

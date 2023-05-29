@@ -8,12 +8,12 @@ import {
   ResponsiveContainer,
   Legend
 } from 'recharts';
-import { OPTION_DATA } from './data';
-import useSharedCounter from './useSkillType';
+import { OPTION_DATA } from '../data';
+import useSharedCounter from '../../useSkillType';
 
 const translateData = ['speed', 'knowledge', 'level', 'enjoy', 'comfort'];
 
-export default function SkillGraph() {
+export default function Graph() {
   const { t } = useTranslation();
   const { skillType } = useSharedCounter();
   const { data, name } = OPTION_DATA[skillType].visual;

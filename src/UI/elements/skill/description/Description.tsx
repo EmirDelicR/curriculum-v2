@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import { OPTION_DATA } from './data';
-import useSharedCounter from './useSkillType';
+import { OPTION_DATA } from '../data';
+import useSharedCounter from '../../useSkillType';
 
-export default function SkillDescription() {
+export default function Description() {
   const { t } = useTranslation();
   const { skillType } = useSharedCounter();
   const { name, data } = OPTION_DATA[skillType].description;
