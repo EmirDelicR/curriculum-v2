@@ -33,7 +33,7 @@ const SKILL_DESCRIPTION = [
   },
   {
     name: 'visual',
-    content: <SkillGraph /> //<SkillListContent content={OPTION_DATA['Vue'].visual} />
+    content: <SkillGraph visual={OPTION_DATA['Vue'].visual} />
   }
 ];
 

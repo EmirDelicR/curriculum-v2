@@ -51,7 +51,7 @@ export const OPTION_DATA = {
     },
     visual: {
       name: 'Vue',
-      data: [45, 45, 45, 50, 50]
+      data: [85, 90, 80, 100, 90]
     }
   }
 };

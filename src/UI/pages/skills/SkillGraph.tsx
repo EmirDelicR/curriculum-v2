@@ -5,13 +5,20 @@ import {
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
-  ResponsiveContainer
+  ResponsiveContainer,
+  Legend
 } from 'recharts';
 
 const translateData = ['speed', 'knowledge', 'level', 'enjoy', 'comfort'];
-const data = [85, 80, 70, 90, 80];
 
-export default function SkillGraph() {
+interface Props {
+  visual: {
+    name: string;
+    data: number[];
+  };
+}
+
+export default function SkillGraph({ visual: { name, data } }: Props) {
   const { t } = useTranslation();
   const updatedData = translateData.map((item, index) => ({
     points: t(`graph-labels.${item}`),
@@ -37,12 +44,13 @@ export default function SkillGraph() {
           domain={[0, 100]}
         />
         <Radar
-          name="Mike"
+          name={`${t('graph-labels.overview')}`}
           dataKey="position"
           stroke="var(--nav-link-hover)"
           fill="var(--nav-link-hover)"
           fillOpacity={0.3}
         />
+        <Legend align="left" iconSize={16} iconType="triangle" />
       </RadarChart>
     </ResponsiveContainer>
   );
