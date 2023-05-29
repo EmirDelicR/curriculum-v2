@@ -9,7 +9,6 @@ function ListSegment({ item }: { item: Item }) {
   const { setSkillType } = useSharedCounter();
 
   const onItemClickHandler = (element: string) => () => {
-    console.log('element: ', element);
     setSkillType(element as SkillName);
   };
 

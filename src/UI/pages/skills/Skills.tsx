@@ -4,7 +4,6 @@ import SkillList from './SkillList';
 import SkillDescription from './SkillDescription';
 import SkillGraph from './SkillGraph';
 
-import { OPTION_DATA } from './data';
 import './Skills.scss';
 
 const SKILL_LIST = [
