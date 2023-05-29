@@ -1,3 +1,28 @@
+import {
+  faVuejs,
+  faReact,
+  faJs,
+  faSass,
+  faBootstrap,
+  faCss3,
+  faProductHunt,
+  faNode,
+  faPython,
+  faDocker,
+  faLinux,
+  faGithub
+} from '@fortawesome/free-brands-svg-icons';
+import {
+  faDatabase,
+  faFingerprint,
+  faHandSpock,
+  faLaptopCode,
+  faPlug,
+  faRadiation,
+  faRegistered,
+  faSearch
+} from '@fortawesome/free-solid-svg-icons';
+
 export const SKILL_LIST_CONTENT = {
   frontend: [
     {
@@ -44,7 +69,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Vue',
       data: {
-        icon: 'fab fa-vuejs',
+        icon: faVuejs,
         link: 'https://github.com/EmirDelicR/Vue-js-all',
         description: 'vue-description'
       }
@@ -58,7 +83,7 @@ export const OPTION_DATA = {
     description: {
       name: 'React',
       data: {
-        icon: 'fab fa-react',
+        icon: faReact,
         link: 'https://github.com/EmirDelicR/React-js-all',
         description: 'react-description'
       }
@@ -72,7 +97,7 @@ export const OPTION_DATA = {
     description: {
       name: 'VanillaJS',
       data: {
-        icon: 'fab fa-js',
+        icon: faJs,
         link: 'https://github.com/EmirDelicR/Java-script-all',
         description: 'vanilla-description'
       }
@@ -86,7 +111,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Type Script',
       data: {
-        icon: 'fab fa-js',
+        icon: faJs,
         link: 'https://github.com/EmirDelicR/Type-script-all',
         description: 'ts-description'
       }
@@ -100,7 +125,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Scss/Sass',
       data: {
-        icon: 'fab fa-sass',
+        icon: faSass,
         link: 'https://github.com/EmirDelicR/Vue-js-all/tree/master/vue-with-scss',
         description: 'scss-description'
       }
@@ -114,7 +139,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Bootstrap',
       data: {
-        icon: 'fab fa-bootstrap',
+        icon: faBootstrap,
         link: '#',
         description: 'bootstrap-description'
       }
@@ -129,10 +154,9 @@ export const OPTION_DATA = {
     description: {
       name: 'Mantine',
       data: {
-        icon: 'fab fa-css3',
+        icon: faCss3,
         link: '#',
-        // TODO update this
-        description: 'bulma-description'
+        description: 'mantine-description'
       }
     },
     visual: {
@@ -144,7 +168,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Vuetify',
       data: {
-        icon: 'fab fa-css3',
+        icon: faCss3,
         link: '#',
         description: 'vuetify-description'
       }
@@ -158,7 +182,7 @@ export const OPTION_DATA = {
     description: {
       name: 'PWA',
       data: {
-        icon: 'fab fa-product-hunt',
+        icon: faProductHunt,
         link: 'https://github.com/EmirDelicR/PWA-Full-clean',
         description: 'pwa-description'
       }
@@ -172,7 +196,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Framework 7',
       data: {
-        icon: 'far fa-hand-spock',
+        icon: faHandSpock,
         link: 'https://github.com/EmirDelicR/F7React',
         description: 'framework7-description'
       }
@@ -186,7 +210,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Jest',
       data: {
-        icon: 'fas fa-radiation',
+        icon: faRadiation,
         link: 'https://github.com/EmirDelicR/Vue-js-all/tree/master/tests-in-vue',
         description: 'jest-description'
       }
@@ -200,7 +224,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Cypress',
       data: {
-        icon: 'fas fa-radiation',
+        icon: faRadiation,
         link: 'https://github.com/EmirDelicR/Vue-js-all/tree/master/test-e2e-in-vue',
         description: 'cypress-description'
       }
@@ -214,7 +238,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Node',
       data: {
-        icon: 'fab fa-node',
+        icon: faNode,
         link: 'https://github.com/EmirDelicR/Node-js-all',
         description: 'node-description'
       }
@@ -229,7 +253,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Python',
       data: {
-        icon: 'fab fa-python',
+        icon: faPython,
         link: 'https://github.com/EmirDelicR/Python-all',
         description: 'python-description'
       }
@@ -240,7 +264,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Express',
       data: {
-        icon: 'fab fa-node',
+        icon: faNode,
         link: 'https://github.com/EmirDelicR/Node-js-all',
         description: 'express-description'
       }
@@ -254,7 +278,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Django',
       data: {
-        icon: 'fab fa-python',
+        icon: faPython,
         link: 'https://github.com/EmirDelicR/Python-all',
         description: 'django-description'
       }
@@ -265,7 +289,7 @@ export const OPTION_DATA = {
     description: {
       name: 'PostgreSQL',
       data: {
-        icon: 'fas fa-database',
+        icon: faDatabase,
         link: 'https://github.com/EmirDelicR/Python-all',
         description: 'postgresql-description'
       }
@@ -279,7 +303,7 @@ export const OPTION_DATA = {
     description: {
       name: 'MySQL',
       data: {
-        icon: 'fas fa-database',
+        icon: faDatabase,
         link: 'https://github.com/EmirDelicR/Python-all',
         description: 'mysql-description'
       }
@@ -290,7 +314,7 @@ export const OPTION_DATA = {
     description: {
       name: 'GraphQL',
       data: {
-        icon: 'fas fa-database',
+        icon: faDatabase,
         link: 'https://github.com/EmirDelicR/Node-js-all/tree/master/17-GRAPHQL',
         description: 'graphql-description'
       }
@@ -304,7 +328,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Firebase',
       data: {
-        icon: 'fas fa-database',
+        icon: faDatabase,
         link: '#',
         description: 'firebase-description'
       }
@@ -318,7 +342,7 @@ export const OPTION_DATA = {
     description: {
       name: 'MongoDB',
       data: {
-        icon: 'fas fa-database',
+        icon: faDatabase,
         link: '#',
         description: 'mongodb-description'
       }
@@ -332,7 +356,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Redis',
       data: {
-        icon: 'far fa-registered',
+        icon: faRegistered,
         link: '#',
         description: 'redis-description'
       }
@@ -343,7 +367,7 @@ export const OPTION_DATA = {
     description: {
       name: 'RabbitMQ',
       data: {
-        icon: 'far fa-registered',
+        icon: faRegistered,
         link: '#',
         description: 'rabitmq-description'
       }
@@ -357,7 +381,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Elasticsearch',
       data: {
-        icon: 'fas fa-search',
+        icon: faSearch,
         link: '#',
         description: 'elk-description'
       }
@@ -371,7 +395,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Docker',
       data: {
-        icon: 'fab fa-docker',
+        icon: faDocker,
         link: '#',
         description: 'docker-description'
       }
@@ -382,7 +406,7 @@ export const OPTION_DATA = {
     description: {
       name: 'WebSocket',
       data: {
-        icon: 'fas fa-plug',
+        icon: faPlug,
         link: 'https://github.com/EmirDelicR/Node-js-all#websocket',
         description: 'websocket-description'
       }
@@ -396,7 +420,7 @@ export const OPTION_DATA = {
     description: {
       name: 'OAuth/JWT',
       data: {
-        icon: 'fas fa-fingerprint',
+        icon: faFingerprint,
         link: '#',
         description: 'oauth-description'
       }
@@ -410,7 +434,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Linux',
       data: {
-        icon: 'fab fa-linux',
+        icon: faLinux,
         link: '#',
         description: 'linux-description'
       }
@@ -424,7 +448,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Git',
       data: {
-        icon: 'fab fa-github',
+        icon: faGithub,
         link: 'https://github.com/EmirDelicR',
         description: 'git-description'
       }
@@ -438,7 +462,7 @@ export const OPTION_DATA = {
     description: {
       name: 'Bash Scripting',
       data: {
-        icon: 'fas fa-laptop-code',
+        icon: faLaptopCode,
         link: 'https://github.com/EmirDelicR/Bash-scripting-all',
         description: 'bash-description'
       }

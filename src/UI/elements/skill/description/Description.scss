@@ -1,0 +1,46 @@
+.skill-description {
+  font-size: 1rem;
+
+  .header {
+    display: flex;
+    padding: 0 1em;
+    justify-content: space-between;
+    font-size: 1.75em;
+    font-family: 'Courgette', cursive;
+
+    svg {
+      font-size: 3em;
+    }
+  }
+
+  .content {
+    text-align: left;
+    line-height: 1.75em;
+    height: 36vh;
+    font-size: 1.1em;
+    padding: 1em;
+    padding-top: 2em;
+  }
+
+  .footer {
+    padding: 1em;
+    line-height: 2em;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+
+    a {
+      margin-top: 1em;
+      font-size: 2.2em;
+      line-height: 8vh;
+      cursor: pointer;
+      color: var(--main-color);
+      text-decoration: none;
+      outline: 0;
+      font-family: 'Courgette', cursive;
+
+      &:hover {
+        color: var(--nav-link-hover);
+      }
+    }
+  }
+}
