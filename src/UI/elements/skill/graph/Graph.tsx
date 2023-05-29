@@ -9,7 +9,7 @@ import {
   Legend
 } from 'recharts';
 import { OPTION_DATA } from '../data';
-import useSharedCounter from '../../useSkillType';
+import useSharedCounter from '../useSkillType';
 
 const translateData = ['speed', 'knowledge', 'level', 'enjoy', 'comfort'];
 

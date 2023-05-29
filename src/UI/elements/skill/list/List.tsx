@@ -1,24 +1,33 @@
 import { useTranslation } from 'react-i18next';
-import { SKILL_LIST_CONTENT } from '../data';
-import useSharedCounter, { SkillName } from '../../useSkillType';
 import { useEffect } from 'react';
+
+import { SKILL_LIST_CONTENT } from '@/UI/elements/skill/data';
+import useSharedCounter, {
+  type SkillName
+} from '@/UI/elements/skill/useSkillType';
+
+import './List.scss';
 
 type Item = { name: string; data: string[] };
 
 function ListSegment({ item }: { item: Item }) {
   const { t } = useTranslation();
-  const { setSkillType } = useSharedCounter();
+  const { skillType, setSkillType } = useSharedCounter();
 
   const onItemClickHandler = (element: string) => () => {
     setSkillType(element as SkillName);
   };
 
   return (
-    <div className="description-tab-content">
+    <div className="skill-list-item">
       <p>{t(`skill-list.${item.name}`)}</p>
       <ul>
         {item.data.map((element) => (
-          <li key={element} onClick={onItemClickHandler(element)}>
+          <li
+            className={`${element === skillType ? 'active' : ''}`}
+            key={element}
+            onClick={onItemClickHandler(element)}
+          >
             {element}
           </li>
         ))}
@@ -40,7 +49,7 @@ export default function List({ type }: Props) {
   }, []);
 
   return (
-    <div>
+    <div className="skill-list">
       {content.map((item) => (
         <ListSegment item={item} key={item.name} />
       ))}
