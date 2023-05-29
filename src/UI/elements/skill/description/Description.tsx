@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { OPTION_DATA } from '../data';
-import useSharedCounter from '../useSkillType';
+import { OPTION_DATA } from '@/UI/elements/skill/data';
+import useSharedCounter from '@/UI/elements/skill/useSkillType';
 
 export default function Description() {
   const { t } = useTranslation();

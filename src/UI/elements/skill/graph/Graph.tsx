@@ -8,17 +8,17 @@ import {
   ResponsiveContainer,
   Legend
 } from 'recharts';
-import { OPTION_DATA } from '../data';
-import useSharedCounter from '../useSkillType';
+import { OPTION_DATA } from '@/UI/elements/skill/data';
+import useSharedCounter from '@/UI/elements/skill/useSkillType';
 
-const translateData = ['speed', 'knowledge', 'level', 'enjoy', 'comfort'];
+const TRANSLATE_ITEMS = ['speed', 'knowledge', 'level', 'enjoy', 'comfort'];
 
 export default function Graph() {
   const { t } = useTranslation();
   const { skillType } = useSharedCounter();
   const { data, name } = OPTION_DATA[skillType].visual;
 
-  const updatedData = translateData.map((item, index) => ({
+  const updatedData = TRANSLATE_ITEMS.map((item, index) => ({
     points: t(`graph-labels.${item}`),
     position: data[index]
   }));
