@@ -2,12 +2,14 @@ import { MouseEvent, ReactNode, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import './Tabs.scss';
+import { classNameHelper } from '@/utils/generalHelpers';
 
 interface Props {
   items: { name: string; content: ReactNode }[];
+  isVertical?: boolean;
 }
 
-export default function Tabs({ items }: Props) {
+export default function Tabs({ items, isVertical = false }: Props) {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState(items[0].name);
 
@@ -18,7 +20,7 @@ export default function Tabs({ items }: Props) {
     };
 
   return (
-    <div className="tab">
+    <div className={classNameHelper('tab', isVertical ? 'vertical' : '')}>
       <div className="tab-list">
         {items.map((item) => (
           <a

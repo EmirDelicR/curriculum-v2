@@ -40,7 +40,7 @@ export default function Skills() {
   return (
     <div className="skill-page">
       <div className="skill-list-wrapper">
-        <Tabs items={SKILL_LIST} />
+        <Tabs items={SKILL_LIST} isVertical={true} />
       </div>
       <div className="skill-description-wrapper">
         <Tabs items={SKILL_DESCRIPTION} />
