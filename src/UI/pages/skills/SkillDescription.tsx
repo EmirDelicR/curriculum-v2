@@ -1,19 +1,11 @@
-import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
+import { OPTION_DATA } from './data';
+import useSharedCounter from './useSkillType';
 
-interface Props {
-  content: {
-    name: string;
-    data: {
-      icon: ReactNode;
-      link: string;
-      description: string;
-    };
-  };
-}
-
-export default function SkillDescription({ content: { name, data } }: Props) {
+export default function SkillDescription() {
   const { t } = useTranslation();
+  const { skillType } = useSharedCounter();
+  const { name, data } = OPTION_DATA[skillType].description;
 
   return (
     <div className="skill-option-description">

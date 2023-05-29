@@ -1,39 +1,39 @@
 import Tabs from '@/UI/components/tabs/Tabs';
 
-import { OPTION_DATA, SKILL_LIST_CONTENT } from './data';
-import SkillListContent from './SkillList';
-
-import './Skills.scss';
+import SkillList from './SkillList';
 import SkillDescription from './SkillDescription';
 import SkillGraph from './SkillGraph';
+
+import { OPTION_DATA } from './data';
+import './Skills.scss';
 
 const SKILL_LIST = [
   {
     name: 'frontend',
-    content: <SkillListContent content={SKILL_LIST_CONTENT.frontend} />
+    content: <SkillList type="frontend" />
   },
   {
     name: 'backend',
-    content: <SkillListContent content={SKILL_LIST_CONTENT.backend} />
+    content: <SkillList type="backend" />
   },
   {
     name: 'database',
-    content: <SkillListContent content={SKILL_LIST_CONTENT.database} />
+    content: <SkillList type="database" />
   },
   {
     name: 'utils',
-    content: <SkillListContent content={SKILL_LIST_CONTENT.utils} />
+    content: <SkillList type="utils" />
   }
 ];
 
 const SKILL_DESCRIPTION = [
   {
     name: 'description',
-    content: <SkillDescription content={OPTION_DATA['Vue'].description} />
+    content: <SkillDescription />
   },
   {
     name: 'visual',
-    content: <SkillGraph visual={OPTION_DATA['Vue'].visual} />
+    content: <SkillGraph />
   }
 ];
 

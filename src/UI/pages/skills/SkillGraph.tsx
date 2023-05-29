@@ -8,18 +8,16 @@ import {
   ResponsiveContainer,
   Legend
 } from 'recharts';
+import { OPTION_DATA } from './data';
+import useSharedCounter from './useSkillType';
 
 const translateData = ['speed', 'knowledge', 'level', 'enjoy', 'comfort'];
 
-interface Props {
-  visual: {
-    name: string;
-    data: number[];
-  };
-}
-
-export default function SkillGraph({ visual: { name, data } }: Props) {
+export default function SkillGraph() {
   const { t } = useTranslation();
+  const { skillType } = useSharedCounter();
+  console.log('skillType: ', skillType);
+  const { data } = OPTION_DATA[skillType].visual;
   const updatedData = translateData.map((item, index) => ({
     points: t(`graph-labels.${item}`),
     position: data[index]
