@@ -3,11 +3,11 @@ import Tabs from '@/UI/components/tabs/Tabs';
 import List from '@/UI/elements/skill/list/List';
 import Description from '@/UI//elements/skill/description/Description';
 import Graph from '@/UI//elements/skill/graph/Graph';
+import useShareSkillType from '@/UI/elements/skill/useSkillType';
+
+import { classNameHelper } from '@/utils/generalHelpers';
 
 import './Skills.scss';
-import { useState } from 'react';
-import { classNameHelper } from '@/utils/generalHelpers';
-import useShareSkillType from '@/UI/elements/skill/useSkillType';
 
 const SKILL_LIST = [
   {

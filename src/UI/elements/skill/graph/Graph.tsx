@@ -25,7 +25,7 @@ export default function Graph() {
 
   return (
     <>
-      <span>{name}</span>
+      <span style={{ fontSize: '1em', fontFamily: 'Courgette' }}>{name}</span>
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={updatedData}>
           <PolarGrid stroke="var(--main-color)" />
