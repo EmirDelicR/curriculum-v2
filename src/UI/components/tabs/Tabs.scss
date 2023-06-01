@@ -46,6 +46,7 @@
     .tab-content {
       display: none;
       width: 100%;
+      animation: show 1.5s;
 
       &.active {
         display: block;
@@ -65,5 +66,14 @@
       width: 40px;
       left: 0.25em;
     }
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
