@@ -10,12 +10,15 @@ import {
 } from 'recharts';
 import { OPTION_DATA } from '@/UI/elements/skill/data';
 import useShareSkillType from '@/UI/elements/skill/useSkillType';
+import Close from '@/UI/components/buttons/close/Close';
 
 const TRANSLATE_ITEMS = ['speed', 'knowledge', 'level', 'enjoy', 'comfort'];
 
+import './Graph.scss';
+
 export default function Graph() {
   const { t } = useTranslation();
-  const { skillType } = useShareSkillType();
+  const { skillType, setShowSkill } = useShareSkillType();
   const { data, name } = OPTION_DATA[skillType].visual;
 
   const updatedData = TRANSLATE_ITEMS.map((item, index) => ({
@@ -25,7 +28,10 @@ export default function Graph() {
 
   return (
     <>
-      <span style={{ fontSize: '1em', fontFamily: 'Courgette' }}>{name}</span>
+      <div className="graph-header">
+        <Close onCloseClick={() => setShowSkill(false)} />
+        <span>{name}</span>
+      </div>
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={updatedData}>
           <PolarGrid stroke="var(--main-color)" />

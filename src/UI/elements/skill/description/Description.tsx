@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+
+import Close from '@/UI/components/buttons/close/Close';
+
 import { OPTION_DATA } from '@/UI/elements/skill/data';
 import useShareSkillType from '@/UI/elements/skill/useSkillType';
 
 import './Description.scss';
-import Close from '@/UI/components/buttons/close/Close';
 
 export default function Description() {
   const { t } = useTranslation();
