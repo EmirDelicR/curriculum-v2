@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 
 import { SKILL_LIST_CONTENT } from '@/UI/elements/skill/data';
-import useSharedCounter, {
+import useShareSkillType, {
   type SkillName
 } from '@/UI/elements/skill/useSkillType';
 
@@ -12,7 +12,7 @@ type Item = { name: string; data: string[] };
 
 function ListSegment({ item }: { item: Item }) {
   const { t } = useTranslation();
-  const { skillType, setSkillType } = useSharedCounter();
+  const { skillType, setSkillType } = useShareSkillType();
 
   const onItemClickHandler = (element: string) => () => {
     setSkillType(element as SkillName);
@@ -42,7 +42,7 @@ interface Props {
 
 export default function List({ type }: Props) {
   const content = SKILL_LIST_CONTENT[type];
-  const { setSkillType } = useSharedCounter();
+  const { setSkillType } = useShareSkillType();
 
   useEffect(() => {
     setSkillType('Vue');

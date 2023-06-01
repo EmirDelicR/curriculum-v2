@@ -9,13 +9,13 @@ import {
   Legend
 } from 'recharts';
 import { OPTION_DATA } from '@/UI/elements/skill/data';
-import useSharedCounter from '@/UI/elements/skill/useSkillType';
+import useShareSkillType from '@/UI/elements/skill/useSkillType';
 
 const TRANSLATE_ITEMS = ['speed', 'knowledge', 'level', 'enjoy', 'comfort'];
 
 export default function Graph() {
   const { t } = useTranslation();
-  const { skillType } = useSharedCounter();
+  const { skillType } = useShareSkillType();
   const { data, name } = OPTION_DATA[skillType].visual;
 
   const updatedData = TRANSLATE_ITEMS.map((item, index) => ({

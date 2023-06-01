@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import { OPTION_DATA } from '@/UI/elements/skill/data';
-import useSharedCounter from '@/UI/elements/skill/useSkillType';
+import useShareSkillType from '@/UI/elements/skill/useSkillType';
 
 import './Description.scss';
 
 export default function Description() {
   const { t } = useTranslation();
-  const { skillType } = useSharedCounter();
+  const { skillType } = useShareSkillType();
   const { name, data } = OPTION_DATA[skillType].description;
 
   return (
