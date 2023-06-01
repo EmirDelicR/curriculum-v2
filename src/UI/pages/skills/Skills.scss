@@ -19,13 +19,18 @@
       left: 0;
     }
   }
-  // .skill-list-wrapper {
-  //   width: 35%;
-  // }
-
-  // .skill-description-wrapper {
-  //   width: 60%;
-  // }
 }
 
-// 900 pxset default view
+@media screen and (min-width: 850px) {
+  .skill-page {
+    .skill-list-wrapper {
+      width: 35%;
+    }
+    .skill-description-wrapper {
+      position: relative;
+      background-color: var(--page-background);
+      left: auto;
+      width: 60%;
+    }
+  }
+}
