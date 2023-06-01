@@ -12,10 +12,11 @@ type Item = { name: string; data: string[] };
 
 function ListSegment({ item }: { item: Item }) {
   const { t } = useTranslation();
-  const { skillType, setSkillType } = useShareSkillType();
+  const { skillType, setSkillType, setShowSkill } = useShareSkillType();
 
   const onItemClickHandler = (element: string) => () => {
     setSkillType(element as SkillName);
+    setShowSkill(true);
   };
 
   return (

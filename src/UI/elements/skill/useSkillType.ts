@@ -35,9 +35,12 @@ export type SkillName =
 
 function useSkillType() {
   const [skillType, setSkillType] = useState<SkillName>('Vue');
+  const [showSkill, setShowSkill] = useState(false);
 
   return {
+    showSkill,
     skillType,
+    setShowSkill,
     setSkillType
   };
 }

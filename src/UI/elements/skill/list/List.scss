@@ -1,7 +1,29 @@
+%pseudo-element {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.8em 0 0.8em 0.8em;
+}
+
 %link-status {
   background-color: var(--nav-link-hover);
-  color: #cecece;
-  border-radius: 5em;
+  color: var(--main-color-dark);
+  border-radius: 0.35em;
+
+  &::before {
+    @extend %pseudo-element;
+    left: 0;
+    border-color: transparent transparent transparent var(--page-background);
+  }
+
+  &::after {
+    @extend %pseudo-element;
+    right: 0;
+    border-color: var(--page-background) transparent var(--page-background)
+      transparent;
+  }
 }
 
 .skill-list {
@@ -24,6 +46,8 @@
         align-items: center;
         min-height: 1.5em;
         padding-left: 1em;
+        position: relative;
+        margin: 0.1em 0;
         cursor: pointer;
 
         &:hover {

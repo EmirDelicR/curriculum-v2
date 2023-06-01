@@ -5,6 +5,9 @@ import Description from '@/UI//elements/skill/description/Description';
 import Graph from '@/UI//elements/skill/graph/Graph';
 
 import './Skills.scss';
+import { useState } from 'react';
+import { classNameHelper } from '@/utils/generalHelpers';
+import useShareSkillType from '@/UI/elements/skill/useSkillType';
 
 const SKILL_LIST = [
   {
@@ -37,12 +40,19 @@ const SKILL_DESCRIPTION = [
 ];
 
 export default function Skills() {
+  const { showSkill } = useShareSkillType();
+
   return (
     <div className="skill-page">
       <div className="skill-list-wrapper">
         <Tabs items={SKILL_LIST} isVertical={true} />
       </div>
-      <div className="skill-description-wrapper">
+      <div
+        className={classNameHelper(
+          'skill-description-wrapper',
+          showSkill ? 'show' : ''
+        )}
+      >
         <Tabs items={SKILL_DESCRIPTION} />
       </div>
     </div>

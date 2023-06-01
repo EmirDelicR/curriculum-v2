@@ -1,0 +1,10 @@
+.close-button {
+  position: absolute;
+  top: -1.5rem;
+  scale: 1;
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.1;
+  }
+}
