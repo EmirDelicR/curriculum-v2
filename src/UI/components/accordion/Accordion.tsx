@@ -72,8 +72,7 @@ export default function Accordion({ data }: Props) {
 
   const onAccordionPanelClick = (position: number) => () => {
     const buttons = accordionRef.current?.querySelectorAll('button');
-    const contents =
-      accordionRef.current?.querySelectorAll('.accordion-content');
+    const contents = accordionRef.current?.querySelectorAll('.accordion-panel');
 
     buttons!.forEach((button) => {
       button.setAttribute('aria-expanded', 'false');
@@ -92,11 +91,21 @@ export default function Accordion({ data }: Props) {
       {data.map(({ title, imageUrl }, index) => (
         <div
           key={title}
-          className="slide"
+          className="accordion-panel"
           style={{ backgroundImage: `url(${imageUrl})` }}
         >
-          <div className="overlay"></div>
-          <div className="content">
+          <button
+            className="accordion-trigger"
+            aria-controls={`panel${index}-content`}
+            aria-expanded="true"
+            onClick={onAccordionPanelClick(index)}
+          >
+            ICON
+          </button>
+          <div
+            className="accordion-content"
+            aria-labelledby={`panel${index}-heading`}
+          >
             <h2>{title}</h2>
           </div>
         </div>
