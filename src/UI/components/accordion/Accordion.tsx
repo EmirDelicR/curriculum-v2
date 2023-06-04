@@ -66,6 +66,7 @@ export default function Accordion({ data }: Props) {
               className="accordion-image"
               src={imageUrl}
               alt="Accordion image"
+              loading="lazy"
             />
           </div>
         </div>
