@@ -1,25 +1,14 @@
-img {
-  max-width: 100%;
-  display: block;
-}
-
-.wrapper {
-  padding-inline: 2rem;
-  margin-top: 1rem;
-}
+$button-size: 3rem;
+$panel-padding: 0.75rem;
+$panel-gap: 1rem;
 
 .accordion {
-  --_button-size: 3rem;
-  --_panel-padding: 0.75rem;
-  --_panel-gap: 1rem;
-
   display: flex;
   flex-direction: column;
   gap: 1rem;
   contain: content;
   padding: 0.5rem;
   min-height: 75vh;
-  background-color: rgb(226, 86, 86);
 }
 
 @media (min-width: 45em) {
@@ -32,11 +21,11 @@ img {
 .accordion-panel {
   position: relative;
   isolation: isolate;
-  flex-basis: calc((var(--_panel-padding) * 2) + var(--_button-size));
+  flex-basis: calc(($panel-padding * 2) + $button-size);
   overflow: hidden;
-  padding: var(--_panel-padding);
-  padding-right: calc(var(--_panel-padding) * 4);
-  border-radius: calc(((var(--_panel-padding) * 2) + var(--_button-size)) / 2);
+  padding: $panel-padding;
+  padding-right: calc($panel-padding * 4);
+  border-radius: calc((($panel-padding * 2) + $button-size) / 2);
   background-color: var(--_panel-color);
 }
 
@@ -80,7 +69,7 @@ img {
   transform: translateY(2rem);
   opacity: 0;
 
-  margin-left: calc(var(--_button-size) + var(--_panel-gap));
+  margin-left: calc($button-size + $panel-gap);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -109,9 +98,9 @@ img {
   .accordion-title::after {
     content: '';
     position: absolute;
-    left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
-    width: calc(100% + (var(--_button-size) * 2));
-    height: var(--_button-size);
+    left: calc(($panel-gap + $button-size) * -1);
+    width: calc(100% + ($button-size * 2));
+    height: $button-size;
     background: hsl(0 0% 0% / 0.5);
     z-index: -1;
     border-radius: 100vw;
@@ -136,7 +125,7 @@ img {
 .accordion-trigger {
   display: flex;
   align-items: center;
-  gap: var(--_panel-gap);
+  gap: $panel-gap;
   flex-direction: row-reverse;
   background: transparent;
   border: 0;
@@ -146,7 +135,7 @@ img {
 .accordion-icon {
   fill: var(--_panel-color);
   background: hsl(0 0% 0% / 0.55);
-  width: var(--_button-size);
+  width: $button-size;
   aspect-ratio: 1 / 1;
   padding: 0.75rem;
   border-radius: 50%;
