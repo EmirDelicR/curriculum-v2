@@ -21,6 +21,7 @@ import Navigation from '@elements/navigation/Navigation';
 import Menu from '@/UI/components/buttons/menu/Menu';
 
 import './Main.scss';
+import Loader from '@/UI/components/loader/Loader';
 
 const Home = lazy(() => import('@pages/home/Home'));
 const Portfolio = lazy(() => import('@pages/portfolio/Portfolio'));
@@ -152,7 +153,7 @@ export default function MainPage() {
           >
             <span className="page-name">{t(`navBar.${name}`)}</span>
             {isCurrentPage(name) && (
-              <Suspense fallback={<span>Loading...</span>}>{element}</Suspense>
+              <Suspense fallback={<Loader />}>{element}</Suspense>
             )}
           </div>
         ))}
