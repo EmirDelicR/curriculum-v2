@@ -133,7 +133,10 @@ function TabContent({ children }: PropsWithChildren) {
   return (
     <>
       <RoadMapLink />
-      <div className="tree-wrapper">{children}</div>
+      <div className="tree-wrapper">
+        <div className="backdrop"></div>
+        {children}
+      </div>
     </>
   );
 }
