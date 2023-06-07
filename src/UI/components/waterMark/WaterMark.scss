@@ -21,6 +21,12 @@
   }
 }
 
+@media (prefers-reduced-motion) {
+  .water-mark {
+    animation: none;
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

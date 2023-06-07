@@ -14,7 +14,7 @@ export default function Home() {
     <div className="home-page">
       <div className="description">
         <WaterMark text="hello" />
-        <p>{t('my-description.introduce')}</p>
+        <p className="text">{t('my-description.introduce')}</p>
         <TextTyping />
         <p className="text">
           <Trans
