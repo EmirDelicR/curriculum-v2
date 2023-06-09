@@ -60,19 +60,23 @@ $panel-gap: 1rem;
       border-radius: 25%;
       padding: 0.5em;
       margin: 0.2em;
-      scale: 1;
-      transition: scale 0.5s ease-in-out, opacity 0.7s ease-in-out;
+      scale: 0.9;
+      transition: opacity 0.7s ease-in-out;
       cursor: pointer;
 
       svg {
+        scale: 0.9;
+        transition: scale 0.5s ease-in-out;
         path {
-          fill: var(--light-blue);
+          fill: var(--page-background);
           opacity: 0.7;
         }
       }
 
       &:hover {
-        scale: 1.1;
+        svg {
+          scale: 1;
+        }
       }
     }
 
