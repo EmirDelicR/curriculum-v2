@@ -1,0 +1,121 @@
+.timeline-page {
+  font-size: 1rem;
+
+  .swiper {
+    width: 100%;
+    height: 75vh;
+    margin: 3em 0;
+    overflow: hidden;
+    padding: 0 1em 1.5em;
+
+    .swiper-slide {
+      text-align: center;
+
+      .description {
+        border: 1px solid var(--border-color);
+        height: 55vh;
+        border-radius: 0.5em;
+        padding: 1.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          gap: 0.5em;
+
+          span {
+            font-family: 'Courgette', cursive;
+            color: var(--main-color);
+          }
+
+          svg {
+            font-size: 2em;
+          }
+        }
+
+        .link {
+          padding: 2em;
+          line-height: 2.2em;
+          border-bottom: 1px solid var(--border-color);
+
+          a {
+            margin-top: 4vh;
+            font-size: 1.5em;
+            font-family: 'Courgette', cursive;
+            color: var(--main-color);
+            text-decoration: none;
+            outline: 0;
+            cursor: pointer;
+
+            &:hover {
+              color: var(--nav-link-hover);
+            }
+          }
+        }
+
+        .location {
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column-reverse;
+          align-items: center;
+
+          svg {
+            font-size: 2em;
+            margin-bottom: 2em;
+          }
+        }
+      }
+
+      .line {
+        height: 10vh;
+        width: 1px;
+        border: 1px solid var(--border-color);
+        position: relative;
+        left: 50%;
+      }
+
+      .timestamp {
+        padding: 1em;
+
+        span {
+          font-weight: 600;
+          padding-top: 1em;
+          position: relative;
+
+          &:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: var(--main-color);
+            border: 1px solid var(--border-color);
+            border-radius: 100%;
+            position: absolute;
+            top: -10px;
+            left: calc(50% - 8px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 890px) {
+  .timeline-page {
+    font-size: 1.2rem;
+
+    .swiper {
+      .swiper-slide {
+        .description {
+          width: 80%;
+          margin-left: 10%;
+        }
+
+        .timestamp {
+          border-top: 2px solid var(--border-color);
+        }
+      }
+    }
+  }
+}
