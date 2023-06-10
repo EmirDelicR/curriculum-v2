@@ -19,6 +19,8 @@ body {
   height: 100vh;
   background-color: var(--main-background);
   color: var(--text-color);
+  max-width: 2400px;
+  margin: auto;
 }
 
 .app.dark {

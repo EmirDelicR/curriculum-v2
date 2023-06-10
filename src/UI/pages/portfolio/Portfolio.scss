@@ -109,7 +109,8 @@
       grid-template-rows: 1fr;
       grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
       margin-top: 2em;
-      height: 75vh;
+      max-height: 40em;
+      justify-content: end;
 
       .side-content {
         justify-content: space-between;
@@ -133,6 +134,7 @@
 
         .curve-path {
           width: 100%;
+          min-width: 10em;
           height: 100%;
           position: relative;
         }
