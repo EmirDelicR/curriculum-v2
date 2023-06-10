@@ -71,7 +71,7 @@
         path {
           fill: none;
           stroke: #f06d06;
-          stroke-width: 0.2em;
+          stroke-width: 1px;
         }
       }
 
@@ -101,16 +101,15 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1140px) {
   .portfolio-page {
     .project-list {
       display: grid;
       grid-template-areas: 'projects-left svg-left deck svg-right projects-right';
       grid-template-rows: 1fr;
-      grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+      grid-template-columns: 3fr 1fr 1fr 1fr 3fr;
       margin-top: 2em;
       max-height: 40em;
-      justify-content: end;
 
       .side-content {
         justify-content: space-between;
@@ -133,185 +132,11 @@
         padding-left: 0;
 
         .curve-path {
-          width: 100%;
-          min-width: 10em;
-          height: 100%;
+          width: 15em;
+          height: 15em;
           position: relative;
         }
       }
     }
   }
 }
-
-/*
-.portfolio-page {
-  height: 75vh;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-
-  .project-list {
-    display: grid;
-    grid-template: 'projects-left svg-left deck svg-right projects-right';
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 30em;
-    gap: 0;
-
-    .side-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-
-      div {
-        border: 1px solid #f06d06;
-        min-width: 12em;
-        height: 5em;
-        padding: 2em 0;
-        border-radius: 2em;
-        text-align: center;
-      }
-
-      &.left {
-        grid-area: projects-left;
-      }
-
-      &.right {
-        grid-area: projects-right;
-      }
-    }
-
-    .deck {
-      min-height: 15em;
-      min-width: 15em;
-      background-color: var(--main-color);
-      animation: deck-effect 1s ease-in;
-      border-radius: 100%;
-      border: solid 10px #f06d06;
-      border-top-color: var(--page-background);
-      border-bottom-color: var(--page-background);
-      padding: 1em;
-      background-clip: content-box;
-      grid-area: deck;
-    }
-
-    .svg-paths {
-      display: flex;
-      justify-content: space-around;
-      flex-direction: column;
-      height: 100%;
-
-      .curve-path {
-        width: 5em;
-        height: 12em;
-        position: relative;
-
-        path {
-          fill: none;
-          stroke: #f06d06;
-        }
-      }
-
-      .line-path {
-        width: 5em;
-        height: 0.2em;
-        background-color: #f06d06;
-      }
-
-      &.left {
-        grid-area: svg-left;
-      }
-
-      &.right {
-        grid-area: svg-right;
-      }
-    }
-  }
-}
-
-@keyframes deck-effect {
-  from {
-    scale: 0;
-  }
-  to {
-    scale: 1;
-  }
-}
-
-
-.wrapper {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-
-    .project-list {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 30em;
-      gap: 0;
-
-      .side-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-
-        div {
-          border: 1px solid #f06d06;
-          min-width: 12em;
-          height: 5em;
-          padding: 2em 0;
-          border-radius: 2em;
-          text-align: center;
-        }
-      }
-
-      .deck {
-        min-height: 15em;
-        min-width: 15em;
-        background-color: var(--main-color);
-        animation: deck-effect 1s ease-in;
-        border-radius: 100%;
-        border: solid 10px #f06d06;
-        border-top-color: var(--page-background);
-        border-bottom-color: var(--page-background);
-
-        padding: 1em;
-        background-clip: content-box;
-      }
-
-      .svg-paths {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        height: 100%;
-
-        .curve-path {
-          width: 5em;
-          height: 12em;
-          position: relative;
-
-          path {
-            fill: none;
-            stroke: #f06d06;
-          }
-        }
-
-        .line-path {
-          width: 5em;
-          height: 0.2em;
-          background-color: #f06d06;
-        }
-      }
-    }
-  }
-
-*/

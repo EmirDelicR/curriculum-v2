@@ -33,12 +33,20 @@ function LeftSideSvg() {
 
   return (
     <div className="svg-paths left">
-      <svg className="curve-path" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,50 L0,50 Q50,50 50,120 Q20,385 400,300" />
+      <svg
+        viewBox="0 0 100 100"
+        className="curve-path"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0,10 L0,10 Q30,10 30,60 Q30,100 105,98" />
       </svg>
       <span className="line-path"></span>
-      <svg className="curve-path" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,290 L0,290 Q50,290 50,250 Q50,60 180,20" />
+      <svg
+        viewBox="0 0 100 100"
+        className="curve-path"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0,90 L0,90 Q30,90 30,40 Q30,0 100,0" />
       </svg>
     </div>
   );
@@ -65,12 +73,20 @@ function RightSideSvg() {
 
   return (
     <div className="svg-paths right">
-      <svg className="curve-path" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,310 L0,310 Q100,310 100,250 Q100,50 180,50" />
+      <svg
+        viewBox="0 0 100 100"
+        className="curve-path"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M100,10 L100,10 Q70,10 70,50 Q70,98 0,98" />
       </svg>
       <span className="line-path"></span>
-      <svg className="curve-path rotate" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,25 L0,25 Q100,50 100,120 Q100,300 180,290" />
+      <svg
+        viewBox="0 0 100 100"
+        className="curve-path"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0,0 L0,0 Q70,0 70,50 Q70,85 100,90" />
       </svg>
     </div>
   );
