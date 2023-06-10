@@ -4,7 +4,6 @@ export default function Portfolio() {
   return (
     <div className="portfolio-page">
       <div className="wrapper">
-        <div className="backdrop"></div>
         <div className="project-list">
           <div className="side-content left">
             <div>Project 1</div>
