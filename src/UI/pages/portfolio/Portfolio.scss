@@ -1,8 +1,246 @@
 .portfolio-page {
   height: 75vh;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 
-  .wrapper {
+  .project-list {
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+      'svg-left projects-left'
+      'svg-right projects-right';
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 175px 1fr;
+    padding: 1em;
+    width: 100%;
+    align-items: center;
+    height: 75vh;
+    gap: 0;
+    position: relative;
+
+    .deck {
+      position: absolute;
+      left: -14em;
+      top: calc((75vh - 30em) / 2);
+      min-height: 30em;
+      min-width: 20em;
+      background-color: var(--main-color);
+      animation: deck-effect 1s ease-in;
+      border-radius: 100%;
+      border: solid 10px #f06d06;
+      border-top-color: var(--page-background);
+      border-bottom-color: var(--page-background);
+      padding: 1em;
+      background-clip: content-box;
+    }
+
+    .side-content {
+      display: flex;
+      flex-direction: column;
+
+      div {
+        border: 1px solid #f06d06;
+        margin: 0.5em 0;
+        height: 5em;
+        padding: 2em 0;
+        border-radius: 2em;
+        text-align: center;
+      }
+
+      &.left {
+        grid-area: projects-left;
+      }
+
+      &.right {
+        grid-area: projects-right;
+      }
+    }
+
+    .svg-paths {
+      padding-left: 5em;
+      position: relative;
+      height: 100%;
+
+      .curve-path {
+        width: 6em;
+        height: 100%;
+        position: absolute;
+
+        path {
+          fill: none;
+          stroke: #f06d06;
+          stroke-width: 0.2em;
+        }
+      }
+
+      .line-path {
+        width: 100%;
+        height: 0.2em;
+        background-color: #f06d06;
+      }
+
+      &.left {
+        grid-area: svg-left;
+      }
+
+      &.right {
+        grid-area: svg-right;
+      }
+    }
+  }
+}
+
+@keyframes deck-effect {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .portfolio-page {
+    .project-list {
+      display: grid;
+      grid-template-areas: 'projects-left svg-left deck svg-right projects-right';
+      grid-template-rows: 1fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+      margin-top: 2em;
+      height: 75vh;
+
+      .side-content {
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .deck {
+        position: relative;
+        top: unset;
+        left: unset;
+        min-height: 20em;
+        min-width: 20em;
+        grid-area: deck;
+      }
+
+      .svg-paths {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding-left: 0;
+
+        .curve-path {
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+/*
+.portfolio-page {
+  height: 75vh;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  .project-list {
+    display: grid;
+    grid-template: 'projects-left svg-left deck svg-right projects-right';
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30em;
+    gap: 0;
+
+    .side-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
+      div {
+        border: 1px solid #f06d06;
+        min-width: 12em;
+        height: 5em;
+        padding: 2em 0;
+        border-radius: 2em;
+        text-align: center;
+      }
+
+      &.left {
+        grid-area: projects-left;
+      }
+
+      &.right {
+        grid-area: projects-right;
+      }
+    }
+
+    .deck {
+      min-height: 15em;
+      min-width: 15em;
+      background-color: var(--main-color);
+      animation: deck-effect 1s ease-in;
+      border-radius: 100%;
+      border: solid 10px #f06d06;
+      border-top-color: var(--page-background);
+      border-bottom-color: var(--page-background);
+      padding: 1em;
+      background-clip: content-box;
+      grid-area: deck;
+    }
+
+    .svg-paths {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 100%;
+
+      .curve-path {
+        width: 5em;
+        height: 12em;
+        position: relative;
+
+        path {
+          fill: none;
+          stroke: #f06d06;
+        }
+      }
+
+      .line-path {
+        width: 5em;
+        height: 0.2em;
+        background-color: #f06d06;
+      }
+
+      &.left {
+        grid-area: svg-left;
+      }
+
+      &.right {
+        grid-area: svg-right;
+      }
+    }
+  }
+}
+
+@keyframes deck-effect {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+
+.wrapper {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -73,13 +311,5 @@
       }
     }
   }
-}
 
-@keyframes deck-effect {
-  from {
-    scale: 0;
-  }
-  to {
-    scale: 1;
-  }
-}
+*/
