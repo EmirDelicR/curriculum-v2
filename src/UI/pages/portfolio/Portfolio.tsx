@@ -1,9 +1,11 @@
+import useMediaQuery from '@/hooks/useMediaQuery';
+
 import './Portfolio.scss';
 
 function LeftSideSvg() {
-  const isMobile = !true;
+  const isSmallSize = useMediaQuery('(max-width: 1140px)');
 
-  if (isMobile) {
+  if (isSmallSize) {
     return (
       <div className="svg-paths left">
         <svg
@@ -53,9 +55,9 @@ function LeftSideSvg() {
 }
 
 function RightSideSvg() {
-  const isMobile = !true;
+  const isSmallSize = useMediaQuery('(max-width: 1140px)');
 
-  if (isMobile) {
+  if (isSmallSize) {
     return (
       <div className="svg-paths right">
         <svg className="curve-path" xmlns="http://www.w3.org/2000/svg">
@@ -114,43 +116,3 @@ export default function Portfolio() {
     </div>
   );
 }
-
-/**
- * 
-   <div className="svg-paths left">
-          <svg
-            className="curve-path"
-            viewBox="0 0 30 55"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0,0 L0,0 Q15,0 15,35 Q15,85 85,50" />
-          </svg>
-          <span className="line-path"></span>
-          <svg
-            className="curve-path rotate"
-            viewBox="0 0 30 55"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0,55 L0,55 Q15,55 15,35 Q15,-10 35,-8" />
-          </svg>
-        </div> 
-
-         <div className="svg-paths right">
-          <svg
-            className="curve-path"
-            viewBox="0 0 30 55"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0,62 L0,62 Q15,62 15,35 Q15,0 35,0" />
-          </svg>
-          <span className="line-path"></span>
-          <svg
-            className="curve-path rotate"
-            viewBox="0 0 30 55"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M0,-10 L0,-10 Q15,0 15,25 Q15,65 65,50" />
-          </svg>
-        </div>
-  
- */
