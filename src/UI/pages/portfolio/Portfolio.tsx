@@ -119,7 +119,7 @@ export default function Portfolio() {
           ))}
         </div>
         <LeftSideSvg />
-        <div className="deck">
+        <div className={`deck ${activeProject !== null ? 'active' : ''}`}>
           <span>Deck content {activeProject}</span>
         </div>
         <RightSideSvg />

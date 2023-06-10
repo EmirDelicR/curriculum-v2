@@ -133,12 +133,39 @@
       }
 
       .deck {
-        position: relative;
+        position: unset;
         top: unset;
         left: unset;
         min-height: 20em;
         min-width: 20em;
         grid-area: deck;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          border: 1px solid red;
+          opacity: 0;
+          width: 1px;
+          height: 100%;
+          top: 0;
+          left: 50%;
+          position: absolute;
+          color: red;
+          overflow: hidden;
+          border-radius: 1em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &.active span {
+          opacity: 1;
+          left: 0;
+          width: 100%;
+          position: absolute;
+          transition: width 3s ease-in-out, left 3s ease-in-out;
+        }
       }
 
       .svg-paths {
