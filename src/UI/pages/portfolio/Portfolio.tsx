@@ -1,6 +1,7 @@
 import useMediaQuery from '@/hooks/useMediaQuery';
 
 import './Portfolio.scss';
+import { useState } from 'react';
 
 function LeftSideSvg() {
   const isSmallSize = useMediaQuery('(max-width: 1140px)');
@@ -93,24 +94,47 @@ function RightSideSvg() {
     </div>
   );
 }
+
 export default function Portfolio() {
+  const [activeProject, setActiveProject] = useState<number | null>(null);
+
+  const onProjectClick = (project: number) => () => {
+    setActiveProject(project);
+  };
+
   return (
     <div className="portfolio-page">
       <div className="project-list">
         <div className="side-content left">
-          <div>Project 1</div>
-          <div>Project 2</div>
-          <div>Project 3</div>
+          {[1, 2, 3].map((projectNumber) => (
+            <div key={`project-${projectNumber}`}>
+              <button
+                aria-label="project-button"
+                className="project-button"
+                onClick={onProjectClick(projectNumber)}
+              >
+                Project {projectNumber}
+              </button>
+            </div>
+          ))}
         </div>
         <LeftSideSvg />
         <div className="deck">
-          <span>Deck content</span>
+          <span>Deck content {activeProject}</span>
         </div>
         <RightSideSvg />
         <div className="side-content right">
-          <div>Project 4</div>
-          <div>Project 5</div>
-          <div>Project 6</div>
+          {[4, 5, 6].map((projectNumber) => (
+            <div key={`project-${projectNumber}`}>
+              <button
+                aria-label="project-button"
+                className="project-button"
+                onClick={onProjectClick(projectNumber)}
+              >
+                Project {projectNumber}
+              </button>
+            </div>
+          ))}
         </div>
       </div>
     </div>

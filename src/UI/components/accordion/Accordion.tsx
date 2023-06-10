@@ -47,6 +47,7 @@ export default function Accordion({ data }: Props) {
             className="accordion-trigger"
             aria-controls={`panel${index}-content`}
             aria-expanded="false"
+            aria-label="accordion-trigger"
             onClick={onAccordionPanelClick(index)}
           >
             <FontAwesomeIcon className="icon" icon={faStamp} size="xl" />
