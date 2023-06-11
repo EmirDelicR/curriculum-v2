@@ -3,15 +3,6 @@
 
   .title {
     font-size: 1.5em;
-    font-family: 'Courgette', cursive;
-    cursor: pointer;
-    color: var(--main-color);
-    text-decoration: none;
-    outline: 0;
-
-    &:hover {
-      color: var(--nav-link-hover);
-    }
   }
 
   .tree-wrapper {
@@ -46,7 +37,7 @@
     }
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background: var(--main-color);
+      background: var(--orange);
     }
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {

@@ -3,20 +3,19 @@ import { Tree, TreeNode } from 'react-organizational-chart';
 import { PropsWithChildren } from 'react';
 
 import Tabs from '@/UI/components/tabs/Tabs';
+import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
 
 import './Tips.scss';
 
 function RoadMapLink() {
   const { t } = useTranslation();
   return (
-    <a
-      className="title"
-      href="https://github.com/kamranahmedse/developer-roadmap"
-      target="_blank"
-      rel="noreferrer"
+    <GeneralLink
+      linkClass="title"
+      navigateTo="https://github.com/kamranahmedse/developer-roadmap"
     >
       {t('tips.learn')}
-    </a>
+    </GeneralLink>
   );
 }
 
