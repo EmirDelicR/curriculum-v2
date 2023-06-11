@@ -2,28 +2,6 @@ $button-size: 3rem;
 $panel-padding: 0.75rem;
 $panel-gap: 1rem;
 
-%active-state {
-  flex-grow: var(--flex-grow-value);
-  filter: brightness(1);
-
-  .accordion-content {
-    visibility: visible;
-    opacity: 1;
-    transition: 0.5s;
-    transition-delay: 0.5s;
-    transform: translateY(0px);
-  }
-
-  .accordion-trigger {
-    opacity: 1;
-
-    &:focus-within {
-      outline: 2px solid var(--border-color);
-      outline-offset: 2px;
-    }
-  }
-}
-
 .accordion {
   --flex-grow-value: 6;
 
@@ -98,11 +76,47 @@ $panel-gap: 1rem;
     }
 
     &:hover {
-      @extend %active-state;
+      flex-grow: var(--flex-grow-value);
+      filter: brightness(1);
+
+      .accordion-content {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        transform: translateY(0px);
+      }
+
+      .accordion-trigger {
+        opacity: 1;
+
+        &:focus-within {
+          outline: 2px solid var(--border-color);
+          outline-offset: 2px;
+        }
+      }
     }
 
     &:has([aria-expanded='true']) {
-      @extend %active-state;
+      flex-grow: var(--flex-grow-value);
+      filter: brightness(1);
+
+      .accordion-content {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+        transform: translateY(0px);
+      }
+
+      .accordion-trigger {
+        opacity: 1;
+
+        &:focus-within {
+          outline: 2px solid var(--border-color);
+          outline-offset: 2px;
+        }
+      }
     }
   }
 }
