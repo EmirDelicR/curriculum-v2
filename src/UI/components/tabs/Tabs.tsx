@@ -1,11 +1,17 @@
 import { MouseEvent, ReactNode, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import './Tabs.scss';
 import { classNameHelper } from '@/utils/generalHelpers';
 
+import './Tabs.scss';
+
+export interface TabItem {
+  name: string;
+  content: ReactNode;
+}
+
 interface Props {
-  items: { name: string; content: ReactNode }[];
+  items: TabItem[];
   isVertical?: boolean;
 }
 

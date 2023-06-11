@@ -1,4 +1,4 @@
-import Tabs from '@/UI/components/tabs/Tabs';
+import Tabs, { TabItem } from '@/UI/components/tabs/Tabs';
 
 import List from '@/UI/elements/skill/list/List';
 import Description from '@/UI//elements/skill/description/Description';
@@ -9,7 +9,7 @@ import { classNameHelper } from '@/utils/generalHelpers';
 
 import './Skills.scss';
 
-const SKILL_LIST = [
+const SKILL_LIST: TabItem[] = [
   {
     name: 'frontend',
     content: <List type="frontend" />
@@ -28,7 +28,7 @@ const SKILL_LIST = [
   }
 ];
 
-const SKILL_DESCRIPTION = [
+const SKILL_DESCRIPTION: TabItem[] = [
   {
     name: 'description',
     content: <Description />
