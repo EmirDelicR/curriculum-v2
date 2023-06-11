@@ -40,12 +40,14 @@
         }
 
         .link {
-          padding: 2em;
-          line-height: 2.2em;
+          padding: 2em 1em;
           border-bottom: 1px solid var(--border-color);
 
+          p {
+            margin-bottom: 1em;
+          }
+
           a {
-            margin-top: 4vh;
             font-size: 1.5em;
           }
         }

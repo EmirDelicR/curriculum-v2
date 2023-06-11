@@ -2,12 +2,15 @@ import { Autoplay, A11y, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
+
+import AnimatedText from '@/UI/components/animatedText/AnimatedText';
+import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
+
 import { TIMELINE_DATA, TimelineItem } from './data';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './Timeline.scss';
-import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
 
 export default function Timeline() {
   return (
@@ -62,18 +65,17 @@ function SlideItem({ item }: { item: TimelineItem }) {
           <span>{item.title}</span>
         </div>
         <div className="link">
-          <p>{item.job}</p>
+          <AnimatedText>{item.job}</AnimatedText>
           <GeneralLink navigateTo={item.link}>
             {item.linkDescription}
           </GeneralLink>
         </div>
 
         <div className="location">
-          <span>{item.location}</span>
+          <AnimatedText>{item.location}</AnimatedText>
           <FontAwesomeIcon icon={faMapLocationDot} />
         </div>
       </div>
-
       <div className="line"></div>
       <div className="timestamp">
         <span>{item.time}</span>
