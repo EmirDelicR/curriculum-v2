@@ -8,9 +8,10 @@
 }
 
 %link-status {
-  background-color: var(--nav-link-hover);
+  background-color: var(--orange);
   color: var(--main-color-dark);
   border-radius: 0.35em;
+  opacity: 0.8;
 
   &::before {
     @extend %pseudo-element;
@@ -36,6 +37,7 @@
       border-bottom: 1px solid var(--border-color);
       margin: 0.2em 0;
       font-family: 'Courgette', cursive;
+      color: var(--orange);
     }
 
     ul {

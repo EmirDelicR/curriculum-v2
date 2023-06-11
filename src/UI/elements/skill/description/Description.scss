@@ -11,6 +11,9 @@
 
     svg {
       font-size: 3em;
+      path {
+        fill: var(--orange);
+      }
     }
   }
 
@@ -33,15 +36,6 @@
       margin-top: 1em;
       font-size: 2.2em;
       line-height: 8vh;
-      cursor: pointer;
-      color: var(--main-color);
-      text-decoration: none;
-      outline: 0;
-      font-family: 'Courgette', cursive;
-
-      &:hover {
-        color: var(--nav-link-hover);
-      }
     }
   }
 }

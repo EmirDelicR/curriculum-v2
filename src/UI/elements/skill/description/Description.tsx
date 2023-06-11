@@ -8,6 +8,7 @@ import { OPTION_DATA } from '@/UI/elements/skill/data';
 import useShareSkillType from '@/UI/elements/skill/useSkillType';
 
 import './Description.scss';
+import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
 
 export default function Description() {
   const { t } = useTranslation();
@@ -26,9 +27,7 @@ export default function Description() {
       </div>
       <div className="footer">
         <p>{t('skill-description.link')}</p>
-        <a target="_blank" href={data.link} rel="noreferrer">
-          {name}
-        </a>
+        <GeneralLink navigateTo={data.link}>{name}</GeneralLink>
       </div>
     </div>
   );
