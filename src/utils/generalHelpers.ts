@@ -16,7 +16,3 @@ export const classNameHelper = (...args: string[]): string => {
   const classes = args.filter((entry) => entry && entry.trim() !== '');
   return classes.toString().replaceAll(',', ' ').trim();
 };
-
-export const createDynamicArray = (value: number) => {
-  return Array.from(Array(Math.abs(value)).keys()) as number[];
-};
