@@ -7,6 +7,7 @@ import { TIMELINE_DATA, TimelineItem } from './data';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './Timeline.scss';
+import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
 
 export default function Timeline() {
   return (
@@ -62,9 +63,9 @@ function SlideItem({ item }: { item: TimelineItem }) {
         </div>
         <div className="link">
           <p>{item.job}</p>
-          <a href={item.link} target="_blank" rel="noreferrer">
+          <GeneralLink navigateTo={item.link}>
             {item.linkDescription}
-          </a>
+          </GeneralLink>
         </div>
 
         <div className="location">

@@ -12,7 +12,7 @@
       text-align: center;
 
       .description {
-        border: 1px solid var(--border-color);
+        border: 1px solid var(--orange);
         height: 55vh;
         border-radius: 0.5em;
         padding: 1.5em;
@@ -32,6 +32,10 @@
 
           svg {
             font-size: 2em;
+
+            path {
+              fill: var(--orange);
+            }
           }
         }
 
@@ -43,15 +47,6 @@
           a {
             margin-top: 4vh;
             font-size: 1.5em;
-            font-family: 'Courgette', cursive;
-            color: var(--main-color);
-            text-decoration: none;
-            outline: 0;
-            cursor: pointer;
-
-            &:hover {
-              color: var(--nav-link-hover);
-            }
           }
         }
 
@@ -64,6 +59,10 @@
           svg {
             font-size: 2em;
             margin-bottom: 2em;
+
+            path {
+              fill: var(--orange);
+            }
           }
         }
       }
@@ -71,7 +70,7 @@
       .line {
         height: 10vh;
         width: 1px;
-        border: 1px solid var(--border-color);
+        border: 1px solid var(--orange);
         position: relative;
         left: 50%;
       }
@@ -89,7 +88,7 @@
             width: 20px;
             height: 20px;
             background-color: var(--main-color);
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--orange);
             border-radius: 100%;
             position: absolute;
             top: -10px;
@@ -113,7 +112,7 @@
         }
 
         .timestamp {
-          border-top: 2px solid var(--border-color);
+          border-top: 2px solid var(--orange);
         }
       }
     }
