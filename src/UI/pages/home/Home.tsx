@@ -6,6 +6,7 @@ import Download from '@/UI/components/buttons/download/Download';
 import Hologram from '@/UI/components/hologram/Hologram';
 
 import './Home.scss';
+import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -21,12 +22,7 @@ export default function Home() {
             i18nKey="my-description.source"
             components={{
               CodeLink: (
-                <a
-                  className="highlight"
-                  href="https://github.com/EmirDelicR/curriculum"
-                  target="_blank"
-                  rel="noreferrer"
-                />
+                <GeneralLink navigateTo="https://github.com/EmirDelicR/curriculum" />
               )
             }}
           />
@@ -36,10 +32,7 @@ export default function Home() {
             i18nKey="my-description.mail"
             components={{
               MailLink: (
-                <a
-                  className="highlight"
-                  href="mailto:emirdelictbf@gmail.com?subject=Web-site mail"
-                />
+                <GeneralLink navigateTo="mailto:emirdelictbf@gmail.com?subject=Web-site mail" />
               )
             }}
           />

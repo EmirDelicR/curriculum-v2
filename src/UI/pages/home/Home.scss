@@ -17,19 +17,6 @@
       line-height: 1.3em;
       animation: animate-text 1s ease-in-out;
     }
-
-    .highlight {
-      cursor: pointer;
-      color: var(--main-color);
-      font-style: italic;
-      font-weight: bold;
-      text-decoration: none;
-      outline: 0;
-
-      &:hover {
-        color: var(--nav-link-hover);
-      }
-    }
   }
 }
 

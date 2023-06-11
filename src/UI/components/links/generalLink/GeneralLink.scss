@@ -1,0 +1,12 @@
+.general-link {
+  cursor: pointer;
+  color: var(--orange);
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+  outline: 0;
+
+  &:hover {
+    color: var(--nav-link-hover);
+  }
+}
