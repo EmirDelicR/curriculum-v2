@@ -129,15 +129,6 @@
   }
 }
 
-@keyframes sphere-effect {
-  from {
-    scale: 0;
-  }
-  to {
-    scale: 1;
-  }
-}
-
 @media screen and (min-width: 1140px) {
   .portfolio-page {
     .content {
@@ -186,6 +177,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes sphere-effect {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
   }
 }
 

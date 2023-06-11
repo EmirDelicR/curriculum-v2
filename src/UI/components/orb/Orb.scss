@@ -8,7 +8,7 @@ $orb-border-color: hsla($base-hue, 100%, 50%, 1);
   border-radius: 50%;
   height: $orb-size;
   width: $orb-size;
-  margin: $orb-size / 2 + px auto;
+  margin: $orb-size / 2 auto;
   position: relative;
   transform-style: preserve-3d;
   animation: spin $time linear infinite;
@@ -39,5 +39,11 @@ $orb-border-color: hsla($base-hue, 100%, 50%, 1);
   }
   100% {
     transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .orb {
+    margin: unset;
   }
 }
