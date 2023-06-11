@@ -8,9 +8,11 @@ import {
   ResponsiveContainer,
   Legend
 } from 'recharts';
+
+import Close from '@/UI/components/buttons/close/Close';
+
 import { OPTION_DATA } from '@/UI/elements/skill/data';
 import useShareSkillType from '@/UI/elements/skill/useSkillType';
-import Close from '@/UI/components/buttons/close/Close';
 
 const TRANSLATE_ITEMS = ['speed', 'knowledge', 'level', 'enjoy', 'comfort'];
 

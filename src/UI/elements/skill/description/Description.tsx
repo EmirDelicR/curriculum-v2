@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import Close from '@/UI/components/buttons/close/Close';
+import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
 
 import { OPTION_DATA } from '@/UI/elements/skill/data';
 import useShareSkillType from '@/UI/elements/skill/useSkillType';
 
 import './Description.scss';
-import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
 
 export default function Description() {
   const { t } = useTranslation();

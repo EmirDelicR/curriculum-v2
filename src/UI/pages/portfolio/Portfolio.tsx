@@ -134,15 +134,16 @@ export default function Portfolio() {
           data={[1, 2, 3]}
         />
         <LeftSideSvg />
-        <div className={`deck ${activeProject !== null ? 'active' : ''}`}>
-          <span>Deck content {activeProject}</span>
-        </div>
+        <div className="sphere"></div>
         <RightSideSvg />
         <SideContent
           contentClass="right"
           onClickHandler={onProjectClick}
           data={[4, 5, 6]}
         />
+      </div>
+      <div className={`content ${activeProject !== null ? 'active' : ''}`}>
+        xxxx
       </div>
     </div>
   );

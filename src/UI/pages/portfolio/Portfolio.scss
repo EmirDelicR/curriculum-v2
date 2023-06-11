@@ -4,6 +4,27 @@
   display: flex;
   align-items: center;
   justify-items: center;
+  position: relative;
+
+  .content {
+    position: absolute;
+    height: 100%;
+    border: 1px solid var(--orange);
+    opacity: 0;
+    width: 1px;
+    color: red;
+    overflow: hidden;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 1.5s ease-in-out, left 1.5s ease-in-out;
+
+    &.active {
+      opacity: 1;
+      width: 100%;
+    }
+  }
 
   .project-list {
     overflow: hidden;
@@ -20,44 +41,20 @@
     gap: 0;
     position: relative;
 
-    .deck {
+    .sphere {
       position: absolute;
       left: -14em;
       top: calc((75vh - 30em) / 2);
       min-height: 30em;
       min-width: 20em;
       background-color: var(--main-color);
-      animation: deck-effect 1s ease-in;
+      animation: sphere-effect 1s ease-in;
       border-radius: 100%;
-      border: solid 10px #f06d06;
+      border: 10px solid var(--orange);
       border-top-color: var(--page-background);
       border-bottom-color: var(--page-background);
       padding: 1em;
       background-clip: content-box;
-
-      span {
-        border: 1px solid red;
-        opacity: 1;
-        width: 1px;
-        height: 100%;
-        top: 0;
-        left: 70%;
-        position: absolute;
-        color: red;
-        overflow: hidden;
-        border-radius: 1em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      &.active span {
-        opacity: 1;
-        left: 72%;
-        width: 185%;
-        position: absolute;
-        transition: width 3s ease-in-out, left 3s ease-in-out;
-      }
     }
 
     .side-content {
@@ -65,7 +62,7 @@
       flex-direction: column;
 
       div {
-        border: 2px solid #f06d06;
+        border: 2px solid var(--orange);
         margin: 0.5em 0;
         height: 5em;
         border-radius: 2em;
@@ -110,7 +107,7 @@
 
         path {
           fill: none;
-          stroke: #f06d06;
+          stroke: var(--orange);
           stroke-width: 1px;
         }
       }
@@ -118,7 +115,7 @@
       .line-path {
         width: 100%;
         height: 0.2em;
-        background-color: #f06d06;
+        background-color: var(--orange);
       }
 
       &.left {
@@ -132,7 +129,7 @@
   }
 }
 
-@keyframes deck-effect {
+@keyframes sphere-effect {
   from {
     scale: 0;
   }
@@ -143,9 +140,17 @@
 
 @media screen and (min-width: 1140px) {
   .portfolio-page {
+    .content {
+      left: 50%;
+
+      &.active {
+        left: 0;
+      }
+    }
+
     .project-list {
       display: grid;
-      grid-template-areas: 'projects-left svg-left deck svg-right projects-right';
+      grid-template-areas: 'projects-left svg-left sphere svg-right projects-right';
       grid-template-rows: 1fr;
       grid-template-columns: 3fr 1fr 1fr 1fr 3fr;
       margin-top: 2em;
@@ -156,40 +161,16 @@
         height: 100%;
       }
 
-      .deck {
+      .sphere {
         position: unset;
         top: unset;
         left: unset;
         min-height: 20em;
         min-width: 20em;
-        grid-area: deck;
+        grid-area: sphere;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        span {
-          border: 1px solid red;
-          opacity: 0;
-          width: 1px;
-          height: 100%;
-          top: 0;
-          left: 50%;
-          position: absolute;
-          color: red;
-          overflow: hidden;
-          border-radius: 1em;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        &.active span {
-          opacity: 1;
-          left: 0;
-          width: 100%;
-          position: absolute;
-          transition: width 3s ease-in-out, left 3s ease-in-out;
-        }
       }
 
       .svg-paths {
@@ -204,6 +185,14 @@
           position: relative;
         }
       }
+    }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .portfolio-page {
+    .content {
+      transition: none;
     }
   }
 }
