@@ -11,12 +11,6 @@
   .description {
     display: flex;
     flex-direction: column;
-
-    .text {
-      margin-bottom: 1em;
-      line-height: 1.3em;
-      animation: animate-text 1s ease-in-out;
-    }
   }
 }
 
@@ -30,29 +24,5 @@
     .description {
       flex-basis: 50%;
     }
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .home-page {
-    .description {
-      .text {
-        animation: none;
-      }
-    }
-  }
-}
-
-@keyframes animate-text {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  50% {
-    transform: translateX(0);
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
   }
 }

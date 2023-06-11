@@ -4,9 +4,10 @@ import TextTyping from '@/UI/components/textTyping/TextTyping';
 import WaterMark from '@/UI/components/waterMark/WaterMark';
 import Download from '@/UI/components/buttons/download/Download';
 import Hologram from '@/UI/components/hologram/Hologram';
+import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
+import AnimatedText from '@/UI/components/animatedText/AnimatedText';
 
 import './Home.scss';
-import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -15,9 +16,9 @@ export default function Home() {
     <div className="home-page">
       <div className="description">
         <WaterMark text="hello" />
-        <p className="text">{t('my-description.introduce')}</p>
+        <AnimatedText>{t('my-description.introduce')}</AnimatedText>
         <TextTyping />
-        <p className="text">
+        <AnimatedText>
           <Trans
             i18nKey="my-description.source"
             components={{
@@ -26,8 +27,8 @@ export default function Home() {
               )
             }}
           />
-        </p>
-        <p className="text">
+        </AnimatedText>
+        <AnimatedText>
           <Trans
             i18nKey="my-description.mail"
             components={{
@@ -36,7 +37,7 @@ export default function Home() {
               )
             }}
           />
-        </p>
+        </AnimatedText>
         <Download />
       </div>
       <Hologram />
