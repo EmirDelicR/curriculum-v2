@@ -1,7 +1,7 @@
+import { useState } from 'react';
 import useMediaQuery from '@/hooks/useMediaQuery';
 
 import './Portfolio.scss';
-import { useState } from 'react';
 
 function LeftSideSvg() {
   const isSmallSize = useMediaQuery('(max-width: 1140px)');
@@ -95,6 +95,29 @@ function RightSideSvg() {
   );
 }
 
+interface SideContentProps {
+  contentClass: 'left' | 'right';
+  onClickHandler: (projectNUmber: number) => () => void;
+  data: number[];
+}
+function SideContent({ contentClass, data, onClickHandler }: SideContentProps) {
+  return (
+    <div className={`side-content ${contentClass}`}>
+      {data.map((projectNumber) => (
+        <div key={`project-${projectNumber}`}>
+          <button
+            aria-label="project-button"
+            className="project-button"
+            onClick={onClickHandler(projectNumber)}
+          >
+            Project {projectNumber}
+          </button>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState<number | null>(null);
 
@@ -105,37 +128,21 @@ export default function Portfolio() {
   return (
     <div className="portfolio-page">
       <div className="project-list">
-        <div className="side-content left">
-          {[1, 2, 3].map((projectNumber) => (
-            <div key={`project-${projectNumber}`}>
-              <button
-                aria-label="project-button"
-                className="project-button"
-                onClick={onProjectClick(projectNumber)}
-              >
-                Project {projectNumber}
-              </button>
-            </div>
-          ))}
-        </div>
+        <SideContent
+          contentClass="left"
+          onClickHandler={onProjectClick}
+          data={[1, 2, 3]}
+        />
         <LeftSideSvg />
         <div className={`deck ${activeProject !== null ? 'active' : ''}`}>
           <span>Deck content {activeProject}</span>
         </div>
         <RightSideSvg />
-        <div className="side-content right">
-          {[4, 5, 6].map((projectNumber) => (
-            <div key={`project-${projectNumber}`}>
-              <button
-                aria-label="project-button"
-                className="project-button"
-                onClick={onProjectClick(projectNumber)}
-              >
-                Project {projectNumber}
-              </button>
-            </div>
-          ))}
-        </div>
+        <SideContent
+          contentClass="right"
+          onClickHandler={onProjectClick}
+          data={[4, 5, 6]}
+        />
       </div>
     </div>
   );
