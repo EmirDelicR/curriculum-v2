@@ -48,13 +48,13 @@ $panel-gap: 1rem;
     filter: brightness(0.5);
 
     &:focus-within {
-      outline: 2px solid var(--border-color);
+      outline: 2px solid var(--orange);
       outline-offset: 2px;
     }
 
     .accordion-trigger {
       opacity: 0;
-      border: 1px solid var(--border-color);
+      border: 1px solid var(--orange);
       font-size: 1.15em;
       background-color: var(--main-color);
       border-radius: 25%;
@@ -67,9 +67,9 @@ $panel-gap: 1rem;
       svg {
         scale: 0.9;
         transition: scale 0.5s ease-in-out;
+
         path {
-          fill: var(--page-background);
-          opacity: 0.7;
+          fill: var(--orange);
         }
       }
 
@@ -83,7 +83,7 @@ $panel-gap: 1rem;
     .accordion-content {
       position: absolute;
       bottom: 0;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: var(--orange);
       visibility: hidden;
       opacity: 0;
       transition: 0s;
@@ -91,6 +91,10 @@ $panel-gap: 1rem;
       text-align: center;
       font-size: 0.8em;
       padding: 0;
+
+      h2 {
+        color: var(--main-color);
+      }
     }
 
     &:hover {
