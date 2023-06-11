@@ -2,6 +2,7 @@ import { useState } from 'react';
 import useMediaQuery from '@/hooks/useMediaQuery';
 
 import './Portfolio.scss';
+import Orb from '@/UI/components/orb/Orb';
 
 function LeftSideSvg() {
   const isSmallSize = useMediaQuery('(max-width: 1140px)');
@@ -134,7 +135,9 @@ export default function Portfolio() {
           data={[1, 2, 3]}
         />
         <LeftSideSvg />
-        <div className="sphere"></div>
+        <div className="sphere">
+          <Orb />
+        </div>
         <RightSideSvg />
         <SideContent
           contentClass="right"
