@@ -88,13 +88,18 @@
       "info": "Kliknite na projekt kako biste vidjeli više informacija",
       "work-headline": "Na cemu sam radio",
       "learned-headline": "Sta sam naucio",
-      "project_1": "Informacijski sustav za najam apartmana. Sustav daje pregled apartmana koji su dostupni za najam te stvaranje rezervacije. Pored korisničkog sučelja ima i administracijsko sučelje na kojem možete izvršiti rezervaciju čekova, zatim apartman i izvršiti dodavanje osoblja za održavanje sustava. Možete izvršiti uređivanje paketa, rezervaciju slanja poruka korisniku u obliku pošte i kreiranje izvještaja za radno razdoblje u pdf formatu.",
-      "project_2": "Desktop aplikacija za kontrolu mobilnog automobila. Koristi Bluetooth modul HC-06. Ovaj projekt pruža spoj programiranja i mikrokontrolera. Sustav ima ugrađene senzore za otkrivanje okolice i može donositi vlastite odluke o kretanju. Ima i video prijenos.",
-      "project_3": "Ova aplikacija nudi mogućnost pretvaranja slike u bitmap format, a zatim usporedite ljude koji su snimili sliku s osnovnom slikom u bazi podataka. Softver za otkrivanje i klasifikaciju slika omogućava usporedbu karakterističnih točaka lica i na temelju toga se vrši pretraga. Ako se osoba nalazi u bazi podataka ispisuju se njeni podaci pohranjeni u bazi podataka. Također ima ugrađeni softver za otkrivanje lica, očiju, nosa i softvera za uređivanje slika, svjetlinu boje za promjenu rezolucije, kontrast, rotaciju i još mnogo toga.",
-      "project_4": "Informacijski sustav za najam automobila Sustav daje pregled automobila koji su dostupni za najam i stvaranje rezervacije. Uz korisničko sučelje ima i administracijsko sučelje na kojem možete obavljati provjere rezervacija, zatim automobila i obavljati dodavanje korisnika, novih automobila, kao i stvaranje ugovora.",
-      "project_5": "Web stranice za kontrolu video nadzora. Omogućuje vam gledanje dvije neovisne kamere. Također u programskom jeziku Matlab je napravljen desktop aplikacija koja također nudi pregled kamera i kontrolira motoričko upravljanje kamerama.",
-      "project_6": "Web usluga za prikupljanje podataka s udaljenih lokacija. Omogućuje prikupljanje temperature i vlage pomoću mikrokontrolera. Podaci se šalju poslužitelju i pohranjuju se u bazu podataka. Jednom dnevno šalju se podaci o maksimalnoj i minimalnoj temperaturi korisniku putem e-pošte putem SMTP-a.",
-      "project_7": "Mobilne aplikacije za kontrolu mikrokontrolera. Prvi pogled namijenjen je upravljačkim elementima unutar stana ili kuće, kao i poslovnom okruženju. Drugi prikaz omogućuje prepoznavanje govora i na temelju riječi ili naredbi izvodi određenu radnju. Treći prikaz prikuplja podatke s mikrokontrolera i izvršava grafički prikaz istog. Sve su aplikacije povezane s Bluetooth modulom na mikrokontroleru i na taj način izvršavaju radnje za koje su propisane."
+      "project_1_worked": "I have workend on ...",
+      "project_1_learned": "I have learned ...",
+      "project_2_worked": "I have workend on ...",
+      "project_2_learned": "I have learned ...",
+      "project_3_worked": "I have workend on ...",
+      "project_3_learned": "I have learned ...",
+      "project_4_worked": "I have workend on ...",
+      "project_4_learned": "I have learned ...",
+      "project_5_worked": "I have workend on ...",
+      "project_5_learned": "I have learned ...",
+      "project_6_worked": "I have workend on ...",
+      "project_6_learned": "I have learned ..."
     }
   }
 }

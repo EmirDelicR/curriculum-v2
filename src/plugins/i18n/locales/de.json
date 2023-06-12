@@ -88,13 +88,18 @@
       "info": "Klicken Sie auf das Projekt, um weitere Informationen anzuzeigen",
       "work-headline": "Woran ich gearbeitet habe",
       "learned-headline": "Was ich gelernt habe",
-      "project_1": "Informationssystem für Mietwohnungen. Das System bietet einen Überblick über die zu vermietenden Wohnungen und die Erstellung der Reservierung. Neben der Benutzeroberfläche gibt es eine Administrationsoberfläche, in der Sie Schecks buchen, dann die Wohnung und das Hinzufügen von Personal vornehmen können, um das System zu warten. Sie können Bearbeitungssuiten durchführen, das Senden von Nachrichten an den Benutzer in Form von E-Mails reservieren und Berichte für die Arbeitsperiode im PDF-Format erstellen.",
-      "project_2": "Desktop-Anwendung zur Steuerung von mobilen Autos. Es verwendet das Bluetooth-Modul HC-06. Dieses Projekt bietet eine Kombination aus Programmierung und Mikrocontroller. Das System verfügt über eingebaute Sensoren zur Erkennung der Umgebung und kann seine eigenen Bewegungsentscheidungen treffen. Es hat auch eine Videoübertragung.",
-      "project_3": "Diese Anwendung bietet die Möglichkeit, das Bild in ein Bitmap-Format zu konvertieren und dann Personen, die ein Bild aufgenommen haben, mit dem Basisbild in der Datenbank zu vergleichen. Die Software zur Erkennung und Klassifizierung von Bildern ermöglicht den Vergleich charakteristischer Gesichtspunkte und auf dieser Basis die Suche. Wenn sich eine Person in der Datenbank befindet, werden ihre in der Datenbank gespeicherten Daten ausgedruckt. Es hat auch eine integrierte Software zur Erkennung von Gesicht, Augen, Nase und Bildbearbeitungssoftware, eine Änderung der Farbhelligkeit, des Kontrasts, der Drehung und vieles mehr.",
-      "project_4": "Informationssystem für Autovermietung. Das System bietet eine Übersicht über die zur Anmietung verfügbaren Autos und die Erstellung der Reservierung. Neben der Benutzeroberfläche gibt es eine Administrationsoberfläche, in der Sie Reservierungen überprüfen, dann das Auto und Benutzer hinzufügen, neue Autos sowie die Erstellung eines Vertrages vornehmen können.",
-      "project_5": "Websites zur Kontrolle der Videoüberwachung. Sie können zwei unabhängige Kameras anzeigen. Auch in der Programmiersprache Matlab wird eine Desktop-Anwendung erstellt, die auch einen Blick auf die Kameras bietet und das Motormanagement von Kameras steuert.",
-      "project_6": "Webservice zur Datenerfassung von entfernten Standorten. Ermöglicht die Erfassung von Temperatur und Luftfeuchtigkeit mithilfe eines Mikrocontrollers. Die Daten werden an den Server gesendet und in der Datenbank gespeichert. Einmal am Tag werden dem Benutzer Daten mit maximaler und minimaler Temperatur per E-Mail über SMTP gesendet.",
-      "project_7": "Mobile Anwendungen zur Steuerung eines Mikrocontrollers. Die erste Ansicht ist für die Steuerelemente in der Wohnung oder im Haus sowie für das Geschäftsumfeld vorgesehen. Eine andere Ansicht ermöglicht die Spracherkennung und führt anhand von Wörtern oder Befehlen eine bestimmte Aktion aus. Die dritte Ansicht sammelt Daten vom Mikrocontroller und führt eine grafische Darstellung desselben aus. Alle Anwendungen sind am Mikrocontroller mit dem Bluetooth-Modul verbunden und führen so Aktionen aus, für die sie vorgegeben wurden."
+      "project_1_worked": "I have workend on ...",
+      "project_1_learned": "I have learned ...",
+      "project_2_worked": "I have workend on ...",
+      "project_2_learned": "I have learned ...",
+      "project_3_worked": "I have workend on ...",
+      "project_3_learned": "I have learned ...",
+      "project_4_worked": "I have workend on ...",
+      "project_4_learned": "I have learned ...",
+      "project_5_worked": "I have workend on ...",
+      "project_5_learned": "I have learned ...",
+      "project_6_worked": "I have workend on ...",
+      "project_6_learned": "I have learned ..."
     }
   }
 }

@@ -144,15 +144,11 @@ function PortfolioContent({
     <div className="inner-content">
       <Close onCloseClick={onClose} displayTypeOnBigScreen="block" />
       <div className="inner-items">
-        <AnimatedText isHeadline={true}>{data.title}</AnimatedText>
-        <AnimatedText isHeadline={true}>
-          - {t('portfolio-data.work-headline')}
-        </AnimatedText>
-        <AnimatedText>{data.work}</AnimatedText>
-        <AnimatedText isHeadline={true}>
-          - {t('portfolio-data.learned-headline')}
-        </AnimatedText>
-        <AnimatedText>{data.learned}</AnimatedText>
+        <h1>{data.title}</h1>
+        <h2>- {t('portfolio-data.work-headline')}</h2>
+        <p>{t(`portfolio-data.project_${activeProject}_worked`)}</p>
+        <h2>- {t('portfolio-data.learned-headline')}</h2>
+        <p>{t(`portfolio-data.project_${activeProject}_learned`)}</p>
         <GeneralLink navigateTo={data.link}>Visit</GeneralLink>
       </div>
     </div>

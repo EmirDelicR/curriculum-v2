@@ -87,13 +87,18 @@
       "info": "Click on project to see more info",
       "work-headline": "What I worked on",
       "learned-headline": "What I learned",
-      "project_1": "Information system for rental apartments. The system provides an overview of the apartments, which are available for hire, and the creation of the reservation. In addition to the user interface has an administration interface where you can carry out checks booking, then the apartment, and make adding staff to maintain the system. You can perform editing suites, reservation of sending messages to the user in the form of mail and create reports for work period in pdf format.",
-      "project_2": "Desktop application to control mobile car. It uses Bluetooth module HC-06. This project provides a compound of programming and microcontroller. The system has built-in sensors to detect the surrounding area and is able to make his own decisions about moving. It also has a video transmission.",
-      "project_3": "This application offers the possibility of converting the image to a bitmap format, then compare people that have taken an image to the base image in the database. The software for the detection and classification of images allows the comparison of characteristic points of the face and on the basis that, the search is done. If a person is in the database is printed its data stored in the database. It also has built-in software to detect face, eyes, nose and image editing software, a change resolution color brightness, contrast, rotation and more.",
-      "project_4": "Information system for car rental. The system provides an overview of cars that are available for hire and the creation of the reservation. In addition to the user interface has an administration interface where you can carry out checks reservations, then the car, and make adding users,  new cars, as well as the creation of a contract. ",
-      "project_5": "Websites for control of video surveillance.  It allows you to view two independent cameras. Also in the programming language Matlab is done a desktop application that also offers a view of the cameras and control motoring management of cameras. ",
-      "project_6": "Web service for data collection from remote locations. Allows the collection of temperature and humidity by using a microcontroller. The data is sent to the server and is stored in the database. Once a day is sent data of maximum and minimum temperature the user via e-mail using SMTP.",
-      "project_7": "Mobile applications for the control of a microcontroller. The first view is intended for the control elements inside the apartment or house, as well as the business environment. Another view enables speech recognition and on the basis of words or commands performs a specific action. The third view collects data from the microcontroller and executes a graphical representation of the same. All applications are connected with the Bluetooth module on the microcontroller and thus execute actions for which they have been prescribed."
+      "project_1_worked": "I have workend on ...",
+      "project_1_learned": "I have learned ...",
+      "project_2_worked": "I have workend on ...",
+      "project_2_learned": "I have learned ...",
+      "project_3_worked": "I have workend on ...",
+      "project_3_learned": "I have learned ...",
+      "project_4_worked": "I have workend on ...",
+      "project_4_learned": "I have learned ...",
+      "project_5_worked": "I have workend on ...",
+      "project_5_learned": "I have learned ...",
+      "project_6_worked": "I have workend on ...",
+      "project_6_learned": "I have learned ..."
     }
   }
 }
