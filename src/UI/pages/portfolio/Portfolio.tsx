@@ -6,6 +6,9 @@ import useMediaQuery from '@/hooks/useMediaQuery';
 import Orb from '@/UI/components/orb/Orb';
 import Close from '@/UI/components/buttons/close/Close';
 import AnimatedText from '@/UI/components/animatedText/AnimatedText';
+import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
+
+import { PortfolioItem, PORTFOLIO_DATA } from './data';
 
 import './Portfolio.scss';
 
@@ -124,11 +127,34 @@ function SideContent({ contentClass, data, onClickHandler }: SideContentProps) {
   );
 }
 
-function PortfolioContent({ onClose }: { onClose: () => void }) {
+function PortfolioContent({
+  onClose,
+  activeProject
+}: {
+  onClose: () => void;
+  activeProject: number | null;
+}) {
+  const { t } = useTranslation();
+  const data: PortfolioItem =
+    PORTFOLIO_DATA[
+      `project_${activeProject !== null ? activeProject : 'default'}`
+    ];
+
   return (
     <div className="inner-content">
-      test dsadadasdaad
-      <Close onCloseClick={onClose} />
+      <Close onCloseClick={onClose} displayTypeOnBigScreen="block" />
+      <div className="inner-items">
+        <AnimatedText isHeadline={true}>{data.title}</AnimatedText>
+        <AnimatedText isHeadline={true}>
+          - {t('portfolio-data.work-headline')}
+        </AnimatedText>
+        <AnimatedText>{data.work}</AnimatedText>
+        <AnimatedText isHeadline={true}>
+          - {t('portfolio-data.learned-headline')}
+        </AnimatedText>
+        <AnimatedText>{data.learned}</AnimatedText>
+        <GeneralLink navigateTo={data.link}>Visit</GeneralLink>
+      </div>
     </div>
   );
 }
@@ -162,7 +188,10 @@ export default function Portfolio() {
         />
       </div>
       <div className={`content ${activeProject !== null ? 'active' : ''}`}>
-        <PortfolioContent onClose={() => setActiveProject(null)} />
+        <PortfolioContent
+          activeProject={activeProject}
+          onClose={() => setActiveProject(null)}
+        />
       </div>
     </div>
   );

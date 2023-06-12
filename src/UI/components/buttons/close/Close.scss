@@ -1,6 +1,6 @@
 .close-button {
   position: absolute;
-  top: -1.5rem;
+  top: -30px;
   scale: 1;
   cursor: pointer;
 
@@ -11,6 +11,6 @@
 
 @media screen and (min-width: 850px) {
   .close-button {
-    display: none;
+    display: var(--display-type);
   }
 }

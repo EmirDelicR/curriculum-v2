@@ -86,6 +86,8 @@
 
     "portfolio-data": {
       "info": "Klicken Sie auf das Projekt, um weitere Informationen anzuzeigen",
+      "work-headline": "Woran ich gearbeitet habe",
+      "learned-headline": "Was ich gelernt habe",
       "project_1": "Informationssystem für Mietwohnungen. Das System bietet einen Überblick über die zu vermietenden Wohnungen und die Erstellung der Reservierung. Neben der Benutzeroberfläche gibt es eine Administrationsoberfläche, in der Sie Schecks buchen, dann die Wohnung und das Hinzufügen von Personal vornehmen können, um das System zu warten. Sie können Bearbeitungssuiten durchführen, das Senden von Nachrichten an den Benutzer in Form von E-Mails reservieren und Berichte für die Arbeitsperiode im PDF-Format erstellen.",
       "project_2": "Desktop-Anwendung zur Steuerung von mobilen Autos. Es verwendet das Bluetooth-Modul HC-06. Dieses Projekt bietet eine Kombination aus Programmierung und Mikrocontroller. Das System verfügt über eingebaute Sensoren zur Erkennung der Umgebung und kann seine eigenen Bewegungsentscheidungen treffen. Es hat auch eine Videoübertragung.",
       "project_3": "Diese Anwendung bietet die Möglichkeit, das Bild in ein Bitmap-Format zu konvertieren und dann Personen, die ein Bild aufgenommen haben, mit dem Basisbild in der Datenbank zu vergleichen. Die Software zur Erkennung und Klassifizierung von Bildern ermöglicht den Vergleich charakteristischer Gesichtspunkte und auf dieser Basis die Suche. Wenn sich eine Person in der Datenbank befindet, werden ihre in der Datenbank gespeicherten Daten ausgedruckt. Es hat auch eine integrierte Software zur Erkennung von Gesicht, Augen, Nase und Bildbearbeitungssoftware, eine Änderung der Farbhelligkeit, des Kontrasts, der Drehung und vieles mehr.",

@@ -85,6 +85,8 @@
     },
     "portfolio-data": {
       "info": "Click on project to see more info",
+      "work-headline": "What I worked on",
+      "learned-headline": "What I learned",
       "project_1": "Information system for rental apartments. The system provides an overview of the apartments, which are available for hire, and the creation of the reservation. In addition to the user interface has an administration interface where you can carry out checks booking, then the apartment, and make adding staff to maintain the system. You can perform editing suites, reservation of sending messages to the user in the form of mail and create reports for work period in pdf format.",
       "project_2": "Desktop application to control mobile car. It uses Bluetooth module HC-06. This project provides a compound of programming and microcontroller. The system has built-in sensors to detect the surrounding area and is able to make his own decisions about moving. It also has a video transmission.",
       "project_3": "This application offers the possibility of converting the image to a bitmap format, then compare people that have taken an image to the base image in the database. The software for the detection and classification of images allows the comparison of characteristic points of the face and on the basis that, the search is done. If a person is in the database is printed its data stored in the database. It also has built-in software to detect face, eyes, nose and image editing software, a change resolution color brightness, contrast, rotation and more.",

@@ -21,14 +21,25 @@
     &.active {
       opacity: 1;
       width: 100%;
-      padding: 4em 0;
+      padding: 3em 0;
     }
 
     .inner-content {
       position: relative;
-      display: flex;
-      align-items: center;
+      font-size: 1rem;
       height: 100%;
+      padding: 1em;
+      border-top: 1px solid var(--orange);
+
+      h1 {
+        font-size: 1.1em;
+
+        &:nth-of-type(1) {
+          font-size: 1.2em;
+          color: var(--orange);
+          text-align: center;
+        }
+      }
     }
   }
 
