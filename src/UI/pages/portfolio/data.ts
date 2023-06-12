@@ -14,33 +14,33 @@ export const PORTFOLIO_DATA: PortfolioData = {
     img: ''
   },
   project_1: {
-    title: 'Has.to.be Website',
+    title: 'Has.to.be',
     link: 'https://support.has-to-be.com/hc/en-us',
     img: 'images/assets/projects/has-to-be.webp'
   },
   project_2: {
-    title: 'X-Net Website',
-    link: 'some link',
-    img: 'link'
+    title: 'X-Net',
+    link: 'https://www.x-net.at/de',
+    img: 'images/assets/projects/x-net.webp'
   },
   project_3: {
-    title: 'Netconomy Website',
-    link: 'some link',
-    img: 'link'
+    title: 'Netconomy',
+    link: 'https://www.douglas.at/de',
+    img: 'images/assets/projects/douglas.webp'
   },
   project_4: {
-    title: 'Bitmovin Website',
-    link: 'some link',
-    img: 'link'
+    title: 'Bitmovin',
+    link: 'https://bitmovin.com/',
+    img: 'images/assets/projects/bitmovin.webp'
   },
   project_5: {
     title: 'React starter pack',
-    link: 'some link',
-    img: 'link'
+    link: 'https://github.com/EmirDelicR/bau-app',
+    img: 'images/assets/projects/vite.webp'
   },
   project_6: {
-    title: 'Curriculum Website',
+    title: 'Curriculum',
     link: 'some link',
-    img: 'link'
+    img: 'images/assets/projects/cv.webp'
   }
 };

@@ -106,20 +106,20 @@ function RightSideSvg() {
 
 interface SideContentProps {
   contentClass: 'left' | 'right';
-  onClickHandler: (projectNUmber: number) => () => void;
-  data: number[];
+  onClickHandler: (projectNumber: number) => () => void;
+  data: { name: string; code: number }[];
 }
 function SideContent({ contentClass, data, onClickHandler }: SideContentProps) {
   return (
     <div className={`side-content ${contentClass}`}>
-      {data.map((projectNumber) => (
-        <div key={`project-${projectNumber}`}>
+      {data.map(({ name, code }) => (
+        <div key={`project-${name}`}>
           <button
             aria-label="project-button"
             className="project-button"
-            onClick={onClickHandler(projectNumber)}
+            onClick={onClickHandler(code)}
           >
-            Project {projectNumber}
+            {name}
           </button>
         </div>
       ))}
@@ -157,27 +157,16 @@ function PortfolioContent({
             </div>
           </div>
           <div className="project-image">
-            <img
-              alt="project-image"
-              width="320px"
-              height="480px"
-              src={data.img}
-              loading="lazy"
-            />
-            <img
-              alt="project-image"
-              width="320px"
-              height="480px"
-              src={data.img}
-              loading="lazy"
-            />
-            <img
-              alt="project-image"
-              width="320px"
-              height="480px"
-              src={data.img}
-              loading="lazy"
-            />
+            {[1, 2, 3].map((item) => (
+              <img
+                key={`project-image-${item}`}
+                alt="project-image"
+                width="320px"
+                height="480px"
+                src={data.img}
+                loading="lazy"
+              />
+            ))}
           </div>
         </div>
         <div className="link-item">
@@ -203,7 +192,11 @@ export default function Portfolio() {
         <SideContent
           contentClass="left"
           onClickHandler={onProjectClick}
-          data={[1, 2, 3]}
+          data={[
+            { name: 'Has-to-be', code: 1 },
+            { name: 'X-net', code: 2 },
+            { name: 'Douglas', code: 3 }
+          ]}
         />
         <LeftSideSvg />
         <div className="sphere">
@@ -213,7 +206,11 @@ export default function Portfolio() {
         <SideContent
           contentClass="right"
           onClickHandler={onProjectClick}
-          data={[4, 5, 6]}
+          data={[
+            { name: 'Bitmovin', code: 4 },
+            { name: 'React starter pack', code: 5 },
+            { name: 'Curriculum', code: 6 }
+          ]}
         />
       </div>
       <div className={`content ${activeProject !== null ? 'active' : ''}`}>
