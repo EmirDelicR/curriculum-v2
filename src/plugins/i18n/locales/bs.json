@@ -90,16 +90,16 @@
       "learned-headline": "Sta sam naucio",
       "project_1_worked": "Ovo je bilo moje prvo profesionalno radno iskustvo. Na ovom projektu sam radio na web stranici za korisničku podršku. Moji glavni alati bili su jQuery, CSS i PHP.",
       "project_1_learned": "Tijekom rada na ovom projektu naučio sam kako raditi s timom kroz Kanban ploču, proširio sam svoje vještine s razvojem sučelja i napredovao u Gitu.Također sam naučio kako izraditi Mail predloške i kako koristiti WordPress.",
-      "project_2_worked": "I have workend on ...",
-      "project_2_learned": "I have learned ...",
-      "project_3_worked": "I have workend on ...",
-      "project_3_learned": "I have learned ...",
-      "project_4_worked": "I have workend on ...",
-      "project_4_learned": "I have learned ...",
-      "project_5_worked": "I have workend on ...",
-      "project_5_learned": "I have learned ...",
-      "project_6_worked": "I have workend on ...",
-      "project_6_learned": "I have learned ..."
+      "project_2_worked": "Moj prvi projekt koji je bio izgradnja web i hibridne mobilne aplikacije. Također, ovo je bio prvi put kada sam upravljao timom i projektom. Frontend je sagrađen s Vue.js i Framework 7 za razvoj mobilnog uređaja, dok je podložan ugrađen u Python koristeći Django Framework.",
+      "project_2_learned": "Naučio sam meke vještine, kako raditi s ljudima, upravljati projektima, komunicirati s kupcima i rješavati sukobe u timu. Također, ovo mi je bio prvi put da radim s Pythonom i moram reći da je to bilo ugodno iskustvo.",
+      "project_3_worked": "Moje prvo iskustvo sa e-trgovine. Ovo je bilo web site za Douglasa. Bio sam dio tima od 14 programera. Moja je odgovornost bila pisati kôd u React.js i kôd za mobilne aplikacije pomoću React Native.",
+      "project_3_learned": "Ovdje sam naučio raditi u velikim aplikacijama s puno različitih timova koristeći Scrum metodologiju. Također, moj prvi put radeći s React Native, i nakon 2 tjedna treninga, pisao sam proizvodni kod.",
+      "project_4_worked": "U svom trenutnom projektu, gdje sam u ulozi vodstva tima za frontend devs i 20% svog vremena do arhitektonske uloge. Koristimo React JS na prednjem kraju i Java u pozadini, s C ++ za naš koder.",
+      "project_4_learned": "Kad sam počeo raditi na ovom projektu, verzija React bila je 15.x, a sada je 18.x. U 6 mjeseci rada uspijevamo se migrirati iz RCA u Vite, ukloniti sve komponente klase, nadograditi sve NPM pakete na trenutne verzije i uvesti sve najbolje prakse za projekt. To ne zvuči puno, ali naš tim ima samo 3 programera i u našoj aplikaciji imamo 4 proizvoda.",
+      "project_5_worked": "React starter pack je projekt u kojem sam koristio Node.js kao backend API i react kao klijentsku aplikaciju.",
+      "project_5_learned": "Ovo je bio vrlo intenzivan trening za React i Node.js. U ovom sam projektu stvorio starter paket s autentifikacijom, tablicama s pagiranjem, sortiranjem i virtualnim učitavanjem.Za državno upravljanje koristio sam RTK upit. Sva se primjena testira s Jest (Vitest), Cypres za E2E. Također sam stvorio Docker slike za jednostavno pokretanje projekta.",
+      "project_6_worked": "Ovo je bio sporedni projekt za izgradnju portofolio stranice. Prva verzija ovog projekta izgrađena je pomoću Vue.js. Nakon 3 godine odlucio sam da migriram kod na React.js.",
+      "project_6_learned": "Tijekom rada na ovom projektu poboljšao sam svoje CSS vještine, animacije, prijelaz i izgled. Također sam naučio kako koristiti PWA i najbolju praksu s učitavanjem slika."
     }
   }
 }

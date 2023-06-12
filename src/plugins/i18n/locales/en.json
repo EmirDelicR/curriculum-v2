@@ -87,18 +87,18 @@
       "info": "Click on project to see more info",
       "work-headline": "What I worked on",
       "learned-headline": "What I learned",
-      "project_1_worked": "This was my first professional working experience. On this project I was working on website for customer support. My main tools was jQuery, CSS and PHP.",
-      "project_1_learned": "While working on this project I have learned how to work with team through the Kanban board, expend my skils with frontend development and advanced in Git.I have also leard how to create Mail templates and how to use WordPress.",
-      "project_2_worked": "I have workend on ...",
-      "project_2_learned": "I have learned ...",
-      "project_3_worked": "I have workend on ...",
-      "project_3_learned": "I have learned ...",
-      "project_4_worked": "I have workend on ...",
-      "project_4_learned": "I have learned ...",
-      "project_5_worked": "I have workend on ...",
-      "project_5_learned": "I have learned ...",
-      "project_6_worked": "I have workend on ...",
-      "project_6_learned": "I have learned ..."
+      "project_1_worked": "This was my first professional working experience. On this project, I was working on the website for customer support. My main tools were jQuery, CSS, and PHP.",
+      "project_1_learned": "While working on this project I have learned how to work with a team through the Kanban board, expend my skills with frontend development, and advanced in Git. I have also learned how to create Mail templates and how to use WordPress.",
+      "project_2_worked": "My first project that was to build a web and hybrid mobile app. Also, this was the first time when I have managed the team and the project. Frontend was built with Vue.js and Framework 7 for mobile development, while the backend was built in Python using the Django framework. ",
+      "project_2_learned": "I have learned soft skills, how to work with people, manage projects, communicate with customers, and resolve conflicts in a team. Also, this was my first time working with Python and I need to say it was a pleasant experience.",
+      "project_3_worked": "My first e-commerce experience. This was a shop site for Douglas. I was a part of a team of 14 developers. My responsibility was to write front-end code in React.js and code for mobile applications using React Native.",
+      "project_3_learned": "Here I learned to work in large-scale applications with a lot of different teams using scrum methodology. Also, my first time working with React Native, and after 2 weeks of training, I was writing production code.",
+      "project_4_worked": "In my current project, where I am in the role of team lead for frontend devs and 20% of my time to the architectural role. We use React js in the front end and Java in the backend, with C++ for our encoder.",
+      "project_4_learned": "When I started working on this project, the react version was 15.x, and now is 18.x. In 6 months of work, we manage to migrate from RCA to Vite, remove all class components, upgrade all npm packages to current versions, and introduce all best practices for the project. This doesn't sound like much but our team is only 3 developers and we have 4 products in our application.",
+      "project_5_worked": "React starter pack is a project where I used Node.js as the backend API and React as a client application.",
+      "project_5_learned": "This was very intense training for React and Node.js. In this project, I created a starter pack with authentication, tables with pagination, sorting, and virtual loading. For state management, I have used RTK Query. All application is tested with Jest (vitest), Cypres for E2E. I have also created docker images for easy start-up of the project.",
+      "project_6_worked": "This was a side project to build a portfolio site. The first version of this project was built using Vue.js. After 3 years I have decided to migrate code to Reactjs.",
+      "project_6_learned": "During working on this project I have increased my CSS skills, animations, transition, and layout. I have also learned how to use PWA and best practices with image loading."
     }
   }
 }

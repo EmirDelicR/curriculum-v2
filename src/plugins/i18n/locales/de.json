@@ -88,18 +88,18 @@
       "info": "Klicken Sie auf das Projekt, um weitere Informationen anzuzeigen",
       "work-headline": "Woran ich gearbeitet habe",
       "learned-headline": "Was ich gelernt habe",
-      "project_1_worked": "Dies war meine erste berufliche Berufserfahrung. Bei diesem Projekt habe ich an einer Website für den Kundensupport gearbeitet. Meine Hauptwerkzeuge waren jQuery, CSS und PHP.",
-      "project_1_learned": "Während der Arbeit an diesem Projekt habe ich gelernt, über das Kanban-Board mit dem Team zusammenzuarbeiten, meine Fähigkeiten in der Frontend-Entwicklung zu erweitern und mich in Git weiterzuentwickeln.Ich habe auch gelernt, wie man Mail-Vorlagen erstellt und WordPress verwendet.",
-      "project_2_worked": "I have workend on ...",
-      "project_2_learned": "I have learned ...",
-      "project_3_worked": "I have workend on ...",
-      "project_3_learned": "I have learned ...",
-      "project_4_worked": "I have workend on ...",
-      "project_4_learned": "I have learned ...",
-      "project_5_worked": "I have workend on ...",
-      "project_5_learned": "I have learned ...",
-      "project_6_worked": "I have workend on ...",
-      "project_6_learned": "I have learned ..."
+      "project_1_worked": "Dies war meine erste berufliche Berufserfahrung. Bei diesem Projekt habe ich an der Website für den Kundensupport gearbeitet. Meine Hauptwerkzeuge waren JQuery, CSS und PHP.",
+      "project_1_learned": "Während ich an diesem Projekt arbeite, habe ich gelernt, wie man mit einem Team über das Kanban -Vorstand arbeitet, meine Fähigkeiten mit Frontend -Entwicklung ausgibt und in Git fortgeschritten ist. Ich habe auch gelernt, wie man E -Mail -Vorlagen erstellt und wie man WordPress verwendet.",
+      "project_2_worked": "Mein erstes Projekt, das es war, eine Web- und Hybrid -mobile App zu erstellen. Außerdem war dies das erste Mal, als ich das Team und das Projekt verwaltet habe. Frontend wurde mit Vue.js und Framework 7 für Mobile gebaut Entwicklung, während das Backend in Python mit dem Django -Framework gebaut wurde.",
+      "project_2_learned": "Ich habe Soft Skills gelernt, wie man mit Menschen arbeitet, Projekte verwaltet, mit Kunden kommuniziert und Konflikte in einem Team löst. Außerdem war ich das erste Mal, dass ich mit Python arbeitete und ich muss sagen, dass es eine angenehme Erfahrung war.",
+      "project_3_worked": "Meine erste E-Commerce-Erfahrung. Dies war ein Ladenplatz für Douglas. Ich war Teil eines Teams von 14 Entwicklern. In meiner Verantwortung war es, Front-End-Code in React.js und Code für mobile Anwendungen mit React Native zu schreiben.",
+      "project_3_learned": "Hier habe ich gelernt, in groß angelegten Anwendungen mit vielen verschiedenen Teams mithilfe von Scrum-Methodik zu arbeiten. Außerdem habe ich zum ersten Mal mit React Native zusammengearbeitet, und nach 2 Wochen Training schrieb ich Produktionscode.",
+      "project_4_worked": "In meinem aktuellen Projekt, in dem ich in der Rolle des Teams für Frontend Devs und 20% meiner Zeit für die architektonische Rolle bin. Wir verwenden React JS im vorderen Ende und Java im Backend mit C ++ für unseren Encoder.",
+      "project_4_learned": "Als ich an diesem Projekt begann, war die React -Version 15.x und jetzt 18.x. In 6 Monaten der Arbeit gelangen wir, von RCA zu vite zu migrieren, alle Klassenkomponenten zu entfernen, alle NPM -Pakete auf aktuelle Versionen zu verbessern und alle Best Practices für das Projekt einzulegen. Das klingt nicht nach viel, aber unser Team ist nur 3 Entwickler und wir haben 4 Produkte in unserer Anwendung.",
+      "project_5_worked": "Das React Starter Pack ist ein Projekt, bei dem ich Node.js als Backend-API und React als Client-Anwendung verwendet habe.",
+      "project_5_learned": "Dies war ein sehr intensives Training für React und Node.js. In diesem Projekt habe ich ein Starterpaket mit Authentifizierung, Tabellen mit Pagination, Sortierung und virtuellem Laden erstellt. Für das staatliche Management habe ich eine RTK -Abfrage verwendet. Alle Anwendungen werden mit Scherz (Vitest), Cypres für E2E, getestet. Ich habe auch Docker Images für einfache Start des Projekts erstellt.",
+      "project_6_worked": "Dies war ein Nebenprojekt, um eine Portfolio -Site zu erstellen. Die erste Version dieses Projekts wurde mit Vue.js. Nach 3 Jahren habe ich beschlossen, den Code in Reactjs zu migrieren.",
+      "project_6_learned": "Während der Arbeit an diesem Projekt habe ich meine CSS -Fähigkeiten, -Animationen, mein Übergang und mein Layout erhöht. Ich habe auch gelernt, wie man PWA und Best Practices mit Bildbeladung verwendet."
     }
   }
 }
