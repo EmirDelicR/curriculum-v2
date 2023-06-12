@@ -1,5 +1,5 @@
 .animated-text {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 0.5rem + 1.35vw, 1.6rem);
   margin-bottom: 1em;
   line-height: 1.3em;
   animation: animate-text 1s ease-in-out;
