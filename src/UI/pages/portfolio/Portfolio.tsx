@@ -23,21 +23,21 @@ function LeftSideSvg() {
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0,200 L0,200 Q60,200 60,10 Q60,-50 110,-50" />
+          <path d="M0,150 L0,150 Q60,140 60,10 Q60,-50 110,-40" />
         </svg>
         <svg
           className="curve-path"
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0,200 L0,200 Q80,200 80,80 Q80,50 98,50" />
+          <path d="M0,150 L0,150 Q70,140 70,70 Q70,25 98,25" />
         </svg>
         <svg
           className="curve-path"
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0,200 L0,200 Q90,200 90,160 Q90,150 98,150" />
+          <path d="M0,150 L0,150 Q90,150 90,100 Q90,90 98,90" />
         </svg>
       </div>
     );
@@ -71,13 +71,13 @@ function RightSideSvg() {
     return (
       <div className="svg-paths right">
         <svg className="curve-path" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,0 L0,0 Q60,0 60,35 Q60,75 98,70" />
+          <path d="M0,0 L0,0 Q60,0 60,35 Q60,60 98,60" />
         </svg>
         <svg className="curve-path" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,0 L0,0 Q45,0 45,45 Q45,185 98,170" />
+          <path d="M0,0 L0,0 Q45,0 45,45 Q45,135 98,130" />
         </svg>
         <svg className="curve-path" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,0 L0,0 Q35,0 35,55 Q35,270 98,265" />
+          <path d="M0,0 L0,0 Q35,0 35,55 Q35,195 98,190" />
         </svg>
       </div>
     );
