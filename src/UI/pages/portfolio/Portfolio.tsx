@@ -1,8 +1,13 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 import useMediaQuery from '@/hooks/useMediaQuery';
 
-import './Portfolio.scss';
 import Orb from '@/UI/components/orb/Orb';
+import Close from '@/UI/components/buttons/close/Close';
+import AnimatedText from '@/UI/components/animatedText/AnimatedText';
+
+import './Portfolio.scss';
 
 function LeftSideSvg() {
   const isSmallSize = useMediaQuery('(max-width: 1140px)');
@@ -15,21 +20,21 @@ function LeftSideSvg() {
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0,220 L0,220 Q60,200 60,10 Q60,-50 110,-50" />
+          <path d="M0,200 L0,200 Q60,200 60,10 Q60,-50 110,-50" />
         </svg>
         <svg
           className="curve-path"
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0,220 L0,220 Q80,220 80,80 Q80,50 98,50" />
+          <path d="M0,200 L0,200 Q80,200 80,80 Q80,50 98,50" />
         </svg>
         <svg
           className="curve-path"
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M0,220 L0,220 Q90,230 90,160 Q90,150 98,150" />
+          <path d="M0,200 L0,200 Q90,200 90,160 Q90,150 98,150" />
         </svg>
       </div>
     );
@@ -119,7 +124,17 @@ function SideContent({ contentClass, data, onClickHandler }: SideContentProps) {
   );
 }
 
+function PortfolioContent({ onClose }: { onClose: () => void }) {
+  return (
+    <div className="inner-content">
+      test dsadadasdaad
+      <Close onCloseClick={onClose} />
+    </div>
+  );
+}
+
 export default function Portfolio() {
+  const { t } = useTranslation();
   const [activeProject, setActiveProject] = useState<number | null>(null);
 
   const onProjectClick = (project: number) => () => {
@@ -128,6 +143,7 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio-page">
+      <AnimatedText isHeadline={true}>{t('portfolio-data.info')}</AnimatedText>
       <div className="project-list">
         <SideContent
           contentClass="left"
@@ -146,7 +162,7 @@ export default function Portfolio() {
         />
       </div>
       <div className={`content ${activeProject !== null ? 'active' : ''}`}>
-        xxxx
+        <PortfolioContent onClose={() => setActiveProject(null)} />
       </div>
     </div>
   );

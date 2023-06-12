@@ -2,6 +2,7 @@
   height: 75vh;
   font-size: 1rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-items: center;
   position: relative;
@@ -11,18 +12,23 @@
     height: 100%;
     border: 1px solid var(--orange);
     opacity: 0;
-    width: 1px;
-    color: red;
+    width: 0%;
     overflow: hidden;
     border-radius: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: width 1.5s ease-in-out, left 1.5s ease-in-out;
+    background-color: var(--page-background);
 
     &.active {
       opacity: 1;
       width: 100%;
+      padding: 4em 0;
+    }
+
+    .inner-content {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100%;
     }
   }
 
@@ -34,7 +40,7 @@
       'svg-right projects-right';
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 175px 1fr;
-    padding: 1em;
+    padding: 0 1em;
     width: 100%;
     align-items: center;
     height: 75vh;

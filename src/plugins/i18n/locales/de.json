@@ -52,7 +52,6 @@
       "react-description": "Ich habe vor vier Jahren angefangen, mit React.js zu arbeiten. Version 16 hat die Effizienz und die Freude am Arbeiten mit diesem Framework erhöht. Auch nach der Einführung von React Hooks hat dies zu einem noch größeren Interesse an diesem Framework beigetragen. Ich kann sagen, dass mein Kenntnisstand mit React.js ziemlich hoch ist und ich genieße es, Anwendungen mit diesem Framework zu erstellen.",
       "vanilla-description": "JavaScript ist eine meiner Lieblingsprogrammiersprachen. Obwohl es manchmal komisch ist, mit ihm zu arbeiten und es schwierig ist, bestimmte Verhaltensweisen zu erklären, ist er ein wesentlicher Bestandteil der Webentwicklung. Auch die Verwendung von Formularen aus anderen Programmiersprachen hat das Erlernen dieser Programmiersprache erheblich erleichtert und zu ihrer Geschwindigkeit beigetragen",
       "es-description": "ECMAScript 6 (ES6) und die neuesten Versionen haben die Arbeit mit Javascript und das Schreiben von Code erheblich vereinfacht. Mein Lieblingsfeature ist, wie man Funktionen schreibt und den Kontext dafür nutzt. Auch die Verwendung von Klassen sowie die Vererbung und alle anderen Funktionen, die in der Back-End-Entwicklung berücksichtigt werden können.",
-
       "ts-description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.",
       "scss-description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.",
       "bootstrap-description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.",
@@ -86,12 +85,7 @@
     },
 
     "portfolio-data": {
-      "info_system": "Informationssystem",
-      "desktop_app": "Desktop-Anwendungen",
-      "web_page": "Website",
-      "web_service": "Internetservice",
-      "mobile_app": "Mobile Applikation",
-      "programing_env": "Die Programmierumgebung:",
+      "info": "Klicken Sie auf das Projekt, um weitere Informationen anzuzeigen",
       "project_1": "Informationssystem für Mietwohnungen. Das System bietet einen Überblick über die zu vermietenden Wohnungen und die Erstellung der Reservierung. Neben der Benutzeroberfläche gibt es eine Administrationsoberfläche, in der Sie Schecks buchen, dann die Wohnung und das Hinzufügen von Personal vornehmen können, um das System zu warten. Sie können Bearbeitungssuiten durchführen, das Senden von Nachrichten an den Benutzer in Form von E-Mails reservieren und Berichte für die Arbeitsperiode im PDF-Format erstellen.",
       "project_2": "Desktop-Anwendung zur Steuerung von mobilen Autos. Es verwendet das Bluetooth-Modul HC-06. Dieses Projekt bietet eine Kombination aus Programmierung und Mikrocontroller. Das System verfügt über eingebaute Sensoren zur Erkennung der Umgebung und kann seine eigenen Bewegungsentscheidungen treffen. Es hat auch eine Videoübertragung.",
       "project_3": "Diese Anwendung bietet die Möglichkeit, das Bild in ein Bitmap-Format zu konvertieren und dann Personen, die ein Bild aufgenommen haben, mit dem Basisbild in der Datenbank zu vergleichen. Die Software zur Erkennung und Klassifizierung von Bildern ermöglicht den Vergleich charakteristischer Gesichtspunkte und auf dieser Basis die Suche. Wenn sich eine Person in der Datenbank befindet, werden ihre in der Datenbank gespeicherten Daten ausgedruckt. Es hat auch eine integrierte Software zur Erkennung von Gesicht, Augen, Nase und Bildbearbeitungssoftware, eine Änderung der Farbhelligkeit, des Kontrasts, der Drehung und vieles mehr.",

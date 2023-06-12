@@ -52,7 +52,6 @@
       "react-description": "Počeo sam raditi s React.js prije četiri godine. Verzija 16 povećala je učinkovitost i zadovoljstvo rada s ovim okvirom. Također, nakon što je React Hooks ušao u upotrebu, to je pridonijelo još većem zanimanju za ovaj framework. Mogu reći da je moja razina vještine s React.js prilično visoka i uživam u stvaranju aplikacija s ovim frameworkom.",
       "vanilla-description": "JavaScript je jedan od mojih najdražih programskih jezika. Iako je ponekad čudno raditi s njim i teško je objasniti određena ponašanja, kada je u pitanju web razvoj on je njegov sastavni dio. Također je upotreba obrazaca iz drugih programskih jezika uvelike olakšala i pridonijela brzini učenja ovog programskog jezika.",
       "es-description": "ECMAScript 6 (ES6) i najnovije verzije znatno su olakšali rad s Javascriptom i načinom pisanja koda. Moja omiljena značajka je kako pisati funkcije i koristiti kontekst this. Također upotreba klase, kao i nasljedstvo i sve druge značajke koje se mogu uzeti u back-end razvoju.",
-
       "ts-description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.",
       "scss-description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.",
       "bootstrap-description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.",
@@ -86,12 +85,7 @@
     },
 
     "portfolio-data": {
-      "info_system": "Informacijski sistem",
-      "desktop_app": "Desktop aplikacije",
-      "web_page": "Web stranica",
-      "web_service": "Web servis",
-      "mobile_app": "Mobilna aplikacija",
-      "programing_env": "Programsko okruženje:",
+      "info": "Kliknite na projekt kako biste vidjeli više informacija",
       "project_1": "Informacijski sustav za najam apartmana. Sustav daje pregled apartmana koji su dostupni za najam te stvaranje rezervacije. Pored korisničkog sučelja ima i administracijsko sučelje na kojem možete izvršiti rezervaciju čekova, zatim apartman i izvršiti dodavanje osoblja za održavanje sustava. Možete izvršiti uređivanje paketa, rezervaciju slanja poruka korisniku u obliku pošte i kreiranje izvještaja za radno razdoblje u pdf formatu.",
       "project_2": "Desktop aplikacija za kontrolu mobilnog automobila. Koristi Bluetooth modul HC-06. Ovaj projekt pruža spoj programiranja i mikrokontrolera. Sustav ima ugrađene senzore za otkrivanje okolice i može donositi vlastite odluke o kretanju. Ima i video prijenos.",
       "project_3": "Ova aplikacija nudi mogućnost pretvaranja slike u bitmap format, a zatim usporedite ljude koji su snimili sliku s osnovnom slikom u bazi podataka. Softver za otkrivanje i klasifikaciju slika omogućava usporedbu karakterističnih točaka lica i na temelju toga se vrši pretraga. Ako se osoba nalazi u bazi podataka ispisuju se njeni podaci pohranjeni u bazi podataka. Također ima ugrađeni softver za otkrivanje lica, očiju, nosa i softvera za uređivanje slika, svjetlinu boje za promjenu rezolucije, kontrast, rotaciju i još mnogo toga.",
