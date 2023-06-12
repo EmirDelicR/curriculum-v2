@@ -15,8 +15,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
   },
   project_1: {
     title: 'Has.to.be Website',
-    link: 'some link',
-    img: 'link'
+    link: 'https://support.has-to-be.com/hc/en-us',
+    img: 'images/assets/projects/has-to-be.webp'
   },
   project_2: {
     title: 'X-Net Website',

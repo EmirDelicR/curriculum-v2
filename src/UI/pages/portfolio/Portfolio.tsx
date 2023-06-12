@@ -145,11 +145,44 @@ function PortfolioContent({
       <Close onCloseClick={onClose} displayTypeOnBigScreen="block" />
       <div className="inner-items">
         <h1>{data.title}</h1>
-        <h2>- {t('portfolio-data.work-headline')}</h2>
-        <p>{t(`portfolio-data.project_${activeProject}_worked`)}</p>
-        <h2>- {t('portfolio-data.learned-headline')}</h2>
-        <p>{t(`portfolio-data.project_${activeProject}_learned`)}</p>
-        <GeneralLink navigateTo={data.link}>Visit</GeneralLink>
+        <div className="inner-items-wrapper">
+          <div className="description">
+            <div className="work-item">
+              <h2>- {t('portfolio-data.work-headline')}</h2>
+              <p>{t(`portfolio-data.project_${activeProject}_worked`)}</p>
+            </div>
+            <div className="learn-item">
+              <h2>- {t('portfolio-data.learned-headline')}</h2>
+              <p>{t(`portfolio-data.project_${activeProject}_learned`)}</p>
+            </div>
+          </div>
+          <div className="project-image">
+            <img
+              alt="project-image"
+              width="320px"
+              height="480px"
+              src={data.img}
+              loading="lazy"
+            />
+            <img
+              alt="project-image"
+              width="320px"
+              height="480px"
+              src={data.img}
+              loading="lazy"
+            />
+            <img
+              alt="project-image"
+              width="320px"
+              height="480px"
+              src={data.img}
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div className="link-item">
+          <GeneralLink navigateTo={data.link}>Visit</GeneralLink>
+        </div>
       </div>
     </div>
   );
@@ -164,7 +197,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="portfolio-page">
+    <div className={`portfolio-page ${activeProject !== null ? 'active' : ''}`}>
       <AnimatedText isHeadline={true}>{t('portfolio-data.info')}</AnimatedText>
       <div className="project-list">
         <SideContent
