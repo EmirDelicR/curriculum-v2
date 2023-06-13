@@ -2,32 +2,38 @@
   --icon-size: 2em;
   --icon-padding: 1em;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 75vh;
   font-size: 1rem;
-  padding: 1em;
-  gap: 4em;
-  flex-direction: column;
+  padding: 0 1em;
+  position: relative;
 
-  .connect {
+  .contact-hero {
+    position: absolute;
+    z-index: -1;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-    flex-basis: 40%;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: 4em;
+    opacity: 0.5;
+
+    .contact-headline {
+      font-size: 1.2em;
+      font-family: 'Courgette', cursive;
+      color: var(--orange);
+
+      h1 {
+        margin: 0;
+      }
+    }
 
     .icon-wrapper {
       position: relative;
       display: flex;
       flex-direction: column;
       min-height: calc(var(--icon-size) * 6);
-      border: 1px solid red;
-
-      h1 {
-        font-family: 'Courgette', cursive;
-        margin-left: calc(var(--icon-size) * 4.5);
-      }
 
       .icon {
         width: var(--icon-size);
@@ -48,6 +54,7 @@
           top: var(--icon-size);
         }
         &:nth-of-type(2) {
+          color: var(--orange);
           left: calc(var(--icon-size) + var(--icon-padding));
         }
         &:nth-of-type(3) {
@@ -55,6 +62,7 @@
           left: calc(calc(var(--icon-size) + var(--icon-padding)) * 2);
         }
         &:nth-of-type(4) {
+          color: var(--orange);
           top: calc(calc(var(--icon-size) * 2) + var(--icon-padding) * 2);
           left: calc(calc(var(--icon-size) + var(--icon-padding)) * 2);
         }
@@ -63,6 +71,7 @@
           left: calc(var(--icon-size) * 4 + var(--icon-padding));
         }
         &:nth-of-type(6) {
+          color: var(--orange);
           top: calc(var(--icon-size) * 3);
           left: calc(var(--icon-size) * 6);
         }
@@ -72,27 +81,40 @@
         }
       }
     }
+  }
+
+  .connect {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
 
     .connect-data {
       h3 {
         margin-bottom: 1em;
+        font-size: 1.2em;
+        display: none;
       }
 
-      .connect-element {
-        padding-top: 1em;
+      .connect-personal {
         display: flex;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1em;
+
+        font-size: 0.8em;
+
+        svg {
+          font-size: 1.2em;
+          color: var(--orange);
+        }
       }
     }
 
     .connect-social {
       margin-top: 2em;
+      display: flex;
+      justify-content: center;
     }
-  }
-
-  .contact-form {
-    flex-grow: 1;
   }
 }
 

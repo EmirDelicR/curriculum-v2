@@ -18,9 +18,8 @@ import ContactForm from '@/feature/ContactForm';
 export default function Contact() {
   return (
     <div className="contact-page">
-      <div className="connect">
+      <div className="contact-hero">
         <div className="icon-wrapper">
-          <h1>Contact</h1>
           <FontAwesomeIcon className="icon" icon={faEnvelope} />
           <FontAwesomeIcon className="icon" icon={faMobileRetro} />
           <FontAwesomeIcon className="icon" icon={faComments} />
@@ -29,27 +28,35 @@ export default function Contact() {
           <FontAwesomeIcon className="icon" icon={faTowerCell} />
           <FontAwesomeIcon className="icon" icon={faPager} />
         </div>
-        <div className="connect-data">
-          <h3>Get in touch</h3>
-          <div className="connect-element">
-            <FontAwesomeIcon icon={faPhoneVolume} size="xl" /> 0677 625 819 74
-          </div>
-          <div className="connect-element">
-            <FontAwesomeIcon icon={faEnvelope} size="xl" />
-            emirdelictbf@gmail.com
-          </div>
-          <div className="connect-element">
-            <FontAwesomeIcon icon={faLocationDot} size="xl" />
-            Vienna, Austria
-          </div>
-        </div>
-        <div className="connect-social">
-          {SOCIAL_PAGES.map((item) => (
-            <SocialLink item={item} key={item.name} />
-          ))}
+        <div className="contact-headline">
+          <h1>Contact me</h1>
         </div>
       </div>
-      <ContactForm />
+
+      <div className="connect">
+        <div className="connect-data">
+          <h3>Get in touch</h3>
+          <div className="connect-personal">
+            <div>
+              <FontAwesomeIcon icon={faEnvelope} size="xl" />{' '}
+              emirdelictbf@gmail.com
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faPhoneVolume} size="xl" /> 0677 625 819 74
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faLocationDot} size="xl" /> Vienna, Austria
+            </div>
+          </div>
+          <div className="connect-social">
+            {SOCIAL_PAGES.map((item) => (
+              <SocialLink item={item} key={item.name} />
+            ))}
+          </div>
+        </div>
+
+        <ContactForm />
+      </div>
     </div>
   );
 }
