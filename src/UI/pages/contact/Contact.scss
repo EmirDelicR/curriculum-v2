@@ -1,7 +1,7 @@
-$icon-size: 1em;
-$icon-padding: 0.5em;
-
 .contact-page {
+  --icon-size: 2em;
+  --icon-padding: 1em;
+
   display: flex;
   justify-content: space-between;
   font-size: 1rem;
@@ -20,17 +20,18 @@ $icon-padding: 0.5em;
       position: relative;
       display: flex;
       flex-direction: column;
-      min-height: calc($icon-size * 10);
+      min-height: calc(var(--icon-size) * 6);
+      border: 1px solid red;
 
       h1 {
         font-family: 'Courgette', cursive;
-        margin-left: calc($icon-size * 4.5);
+        margin-left: calc(var(--icon-size) * 4.5);
       }
 
       .icon {
-        width: $icon-size;
-        height: $icon-size;
-        padding: $icon-padding;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        padding: var(--icon-padding);
         background-color: var(--box-shadow);
         position: absolute;
         clip-path: polygon(
@@ -43,30 +44,30 @@ $icon-padding: 0.5em;
         );
 
         &:nth-of-type(1) {
-          top: $icon-size;
+          top: var(--icon-size);
         }
         &:nth-of-type(2) {
-          left: calc($icon-size + $icon-padding);
+          left: calc(var(--icon-size) + var(--icon-padding));
         }
         &:nth-of-type(3) {
-          top: $icon-size;
-          left: calc($icon-size * 3);
+          top: var(--icon-size);
+          left: calc(calc(var(--icon-size) + var(--icon-padding)) * 2);
         }
         &:nth-of-type(4) {
-          top: calc($icon-size * 3);
-          left: calc($icon-size * 3);
+          top: calc(calc(var(--icon-size) * 2) + var(--icon-padding) * 2);
+          left: calc(calc(var(--icon-size) + var(--icon-padding)) * 2);
         }
         &:nth-of-type(5) {
-          top: calc($icon-size * 4);
-          left: calc($icon-size * 4 + $icon-padding);
+          top: calc(var(--icon-size) * 4);
+          left: calc(var(--icon-size) * 4 + var(--icon-padding));
         }
         &:nth-of-type(6) {
-          top: calc($icon-size * 3);
-          left: calc($icon-size * 6);
+          top: calc(var(--icon-size) * 3);
+          left: calc(var(--icon-size) * 6);
         }
         &:nth-of-type(7) {
-          top: calc($icon-size * 4);
-          left: calc($icon-size * 7 + $icon-padding);
+          top: calc(var(--icon-size) * 4);
+          left: calc(var(--icon-size) * 7 + var(--icon-padding));
         }
       }
     }

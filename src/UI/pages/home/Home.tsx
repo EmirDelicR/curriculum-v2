@@ -2,7 +2,7 @@ import { Trans, useTranslation } from 'react-i18next';
 
 import TextTyping from '@/UI/components/textTyping/TextTyping';
 import WaterMark from '@/UI/components/waterMark/WaterMark';
-import Download from '@/UI/components/buttons/download/Download';
+import { Button } from '@/UI/components/buttons/button/Button';
 import Hologram from '@/UI/components/hologram/Hologram';
 import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
 import AnimatedText from '@/UI/components/animatedText/AnimatedText';
@@ -38,7 +38,7 @@ export default function Home() {
             }}
           />
         </AnimatedText>
-        <Download />
+        <Button isDownloadButton={true} />
       </div>
       <Hologram />
     </div>

@@ -13,6 +13,7 @@ import {
 import './Contact.scss';
 import { SOCIAL_PAGES } from '@/utils/constants';
 import SocialLink from '@/UI/components/links/socialLink/SocialLink';
+import ContactForm from '@/feature/ContactForm';
 
 export default function Contact() {
   return (
@@ -20,13 +21,13 @@ export default function Contact() {
       <div className="connect">
         <div className="icon-wrapper">
           <h1>Contact</h1>
-          <FontAwesomeIcon className="icon" icon={faEnvelope} size="xl" />
-          <FontAwesomeIcon className="icon" icon={faMobileRetro} size="xl" />
-          <FontAwesomeIcon className="icon" icon={faComments} size="xl" />
-          <FontAwesomeIcon className="icon" icon={faLocationDot} size="xl" />
-          <FontAwesomeIcon className="icon" icon={faGlobe} size="xl" />
-          <FontAwesomeIcon className="icon" icon={faTowerCell} size="xl" />
-          <FontAwesomeIcon className="icon" icon={faPager} size="xl" />
+          <FontAwesomeIcon className="icon" icon={faEnvelope} />
+          <FontAwesomeIcon className="icon" icon={faMobileRetro} />
+          <FontAwesomeIcon className="icon" icon={faComments} />
+          <FontAwesomeIcon className="icon" icon={faLocationDot} />
+          <FontAwesomeIcon className="icon" icon={faGlobe} />
+          <FontAwesomeIcon className="icon" icon={faTowerCell} />
+          <FontAwesomeIcon className="icon" icon={faPager} />
         </div>
         <div className="connect-data">
           <h3>Get in touch</h3>
@@ -48,7 +49,7 @@ export default function Contact() {
           ))}
         </div>
       </div>
-      <div className="contact-form">xxx</div>
+      <ContactForm />
     </div>
   );
 }
