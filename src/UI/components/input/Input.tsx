@@ -10,7 +10,7 @@ import {
 import './Input.scss';
 
 const NOT_EMPTY_PATTERN = '.{1,}';
-const EMAIL_PATTERN = '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$';
+const EMAIL_PATTERN = '^[^ ]+@[^ ]+\\.[a-z]{2,6}$';
 
 function getPattern(withValidator: boolean) {
   if (!withValidator) {

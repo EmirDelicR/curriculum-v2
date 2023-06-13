@@ -52,7 +52,12 @@ export default function ContactForm() {
           type="email"
           onChangeHandler={onEmailChange}
         />
-        <Input label="Name" value={name.value} onChangeHandler={onNameChange} />
+        <Input
+          label="Name"
+          value={name.value}
+          onChangeHandler={onNameChange}
+          useValidator={false}
+        />
       </div>
       <Textarea onChangeHandler={setText} value={text} />
       <Button
