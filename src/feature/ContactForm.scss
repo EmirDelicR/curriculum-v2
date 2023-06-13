@@ -5,4 +5,20 @@
     display: flex;
     gap: 1em;
   }
+
+  .form-feedback {
+    min-height: 2em;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.success {
+      color: hsl(130 52% 46%);
+    }
+
+    &.error {
+      color: hsl(18 100% 50%);
+    }
+  }
 }
