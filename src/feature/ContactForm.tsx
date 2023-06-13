@@ -48,14 +48,6 @@ export default function ContactForm() {
 
   const handleFormSubmit = async () => {
     setIsSending(true);
-    setTimeout(() => {
-      console.log('sending');
-      setIsSending(false);
-      setInfoMessage({
-        type: 'error',
-        message: 'Message send successfully.'
-      });
-    }, 2000);
     emailjs
       .send(
         'service_wut2gj5',
