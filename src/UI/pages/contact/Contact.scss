@@ -1,189 +1,140 @@
 .contact-page {
-  --icon-size: 2em;
-  --icon-padding: 1em;
-
   height: 75vh;
   font-size: 1rem;
   padding: 0 1em;
-  position: relative;
+  display: grid;
+  grid-template-areas:
+    'headline'
+    'form'
+    'personal';
 
-  .contact-hero {
-    position: absolute;
-    z-index: -1;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
-    gap: 4em;
-    opacity: 0.5;
+  .contact-headline {
+    grid-area: headline;
+    font-family: 'Courgette', cursive;
+    color: var(--orange);
+    text-align: center;
 
-    .contact-headline {
-      font-size: 1.2em;
-      font-family: 'Courgette', cursive;
-      color: var(--orange);
-
-      h1 {
-        margin: 0;
-      }
-    }
-
-    .icon-wrapper {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-height: calc(var(--icon-size) * 6);
-
-      .icon {
-        width: var(--icon-size);
-        height: var(--icon-size);
-        padding: var(--icon-padding);
-        background-color: var(--box-shadow);
-        position: absolute;
-        clip-path: polygon(
-          25% 0%,
-          75% 0%,
-          100% 50%,
-          75% 100%,
-          25% 100%,
-          0% 50%
-        );
-
-        &:nth-of-type(1) {
-          top: var(--icon-size);
-        }
-        &:nth-of-type(2) {
-          color: var(--orange);
-          left: calc(var(--icon-size) + var(--icon-padding));
-        }
-        &:nth-of-type(3) {
-          top: var(--icon-size);
-          left: calc(calc(var(--icon-size) + var(--icon-padding)) * 2);
-        }
-        &:nth-of-type(4) {
-          color: var(--orange);
-          top: calc(calc(var(--icon-size) * 2) + var(--icon-padding) * 2);
-          left: calc(calc(var(--icon-size) + var(--icon-padding)) * 2);
-        }
-        &:nth-of-type(5) {
-          top: calc(var(--icon-size) * 4);
-          left: calc(var(--icon-size) * 4 + var(--icon-padding));
-        }
-        &:nth-of-type(6) {
-          color: var(--orange);
-          top: calc(var(--icon-size) * 3);
-          left: calc(var(--icon-size) * 6);
-        }
-        &:nth-of-type(7) {
-          top: calc(var(--icon-size) * 4);
-          left: calc(var(--icon-size) * 7 + var(--icon-padding));
-        }
-      }
+    h1 {
+      font-size: 2em;
+      margin: 0;
     }
   }
 
-  .connect {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
+  .contact-form-wrapper {
+    grid-area: form;
+    margin-top: 0.5em;
+  }
 
-    .connect-data {
-      h3 {
-        display: none;
-      }
+  .connect-data {
+    grid-area: personal;
+    text-align: center;
 
-      .connect-personal {
+    h3 {
+      display: none;
+    }
+
+    .connect-personal {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1em;
+      font-size: 0.8em;
+
+      > div {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1em;
-        font-size: 0.8em;
-
-        svg {
-          font-size: 1.2em;
-          color: var(--orange);
-        }
+        flex-direction: column;
+        font-size: 1.2em;
       }
 
-      .connect-social {
-        margin-top: 2em;
-        display: flex;
-        justify-content: center;
+      svg {
+        font-size: 1.2em;
+        color: var(--orange);
+        margin-bottom: 0.25em;
       }
+    }
+
+    .connect-social {
+      margin-top: 2em;
+      display: flex;
+      justify-content: center;
     }
   }
 }
 
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
 @media screen and (min-width: 1024px) {
   .contact-page {
-    --icon-size: 2.5em;
-    --icon-padding: 1.25em;
+    --d: 2500ms;
+    --angle: 180deg;
+    --c1: rgba(168, 239, 255, 1);
+    --c2: var(--orange);
 
-    .contact-hero {
-      position: unset;
-      z-index: unset;
-      opacity: 1;
-      height: auto;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      gap: 0;
+    grid-template-areas:
+      'headline headline'
+      'personal form';
+    gap: 0;
 
-      .icon-wrapper {
-        flex-basis: 25%;
-      }
-      .contact-headline {
-        flex-basis: 50%;
-        font-size: 2em;
+    .contact-headline {
+      font-size: 2em;
+
+      h1 {
+        border-bottom: 1px solid var(--orange);
       }
     }
 
-    .connect {
+    .contact-form-wrapper {
+      padding: 2em 2em 0;
+      border-right: 1px solid var(--orange);
+      border-bottom: 1px solid var(--orange);
+      border-image: conic-gradient(
+          from var(--angle),
+          var(--c2),
+          var(--c1) 0.1turn,
+          var(--c1) 0.15turn,
+          var(--c2) 0.25turn
+        )
+        30;
+      animation: borderRotate var(--d) linear infinite forwards;
+    }
+
+    .connect-data {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
-      align-items: center;
-      padding-top: 3em;
-      gap: 5em;
-      height: calc(100% - calc(var(--icon-size) * 6));
+      border-top: 1px solid var(--orange);
+      border-left: 1px solid var(--orange);
+      border-right: 1px solid var(--orange);
+      border-image: conic-gradient(
+          from var(--angle),
+          var(--c2),
+          var(--c1) 0.1turn,
+          var(--c1) 0.15turn,
+          var(--c2) 0.25turn
+        )
+        30;
+      animation: borderRotate var(--d) linear infinite forwards;
 
-      .connect-data {
-        flex-basis: 30%;
-        text-align: center;
-
-        h3 {
-          margin-bottom: 1em;
-          font-size: 1.7em;
-          display: block;
-          color: var(--orange);
-        }
-
-        .connect-personal {
-          display: flex;
-          flex-direction: column;
-          font-size: 1.25em;
-
-          > div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-          svg {
-            font-size: 1.5em;
-            margin-bottom: 0.5em;
-          }
-        }
-        .connect-social {
-          margin-top: 2em;
-          display: flex;
-          justify-content: center;
-        }
+      h3 {
+        font-size: 2em;
+        margin-bottom: 1em;
+        display: block;
       }
 
-      .contact-form {
-        flex-basis: 50%;
-        padding: 0;
+      .connect-personal {
+        svg {
+          font-size: 2em;
+        }
       }
     }
+  }
+}
+@keyframes borderRotate {
+  100% {
+    --angle: 540deg;
   }
 }
