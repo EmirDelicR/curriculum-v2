@@ -2,8 +2,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2.5em;
+  height: 2.5em;
   text-decoration: none;
   outline: 0;
   margin-left: 0;
@@ -12,7 +12,7 @@
   box-shadow: var(--social-link-box-shadow);
 
   > svg {
-    font-size: 1em;
+    font-size: clamp(1rem, 0.5rem + 1.25vw, 1.5rem);
     scale: 0.9;
     transition: scale 0.3s ease-in-out;
 
@@ -38,17 +38,5 @@
   &:focus,
   &:active {
     color: var(--nav-link-hover);
-  }
-}
-
-@media screen and (min-width: 40em) {
-  .social-link {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-left: 0.75em;
-
-    > svg {
-      font-size: 1.5em;
-    }
   }
 }

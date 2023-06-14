@@ -14,10 +14,13 @@ export default function GeneralLink({
   linkClass = '',
   children
 }: Props) {
-  const itemClass = classNameHelper('general-link', linkClass);
-
   return (
-    <a className={itemClass} href={navigateTo} target="_blank" rel="noreferrer">
+    <a
+      className={classNameHelper('general-link', linkClass)}
+      href={navigateTo}
+      target="_blank"
+      rel="noreferrer"
+    >
       {children}
     </a>
   );
