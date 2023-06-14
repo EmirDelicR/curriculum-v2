@@ -1,11 +1,11 @@
 import { Trans, useTranslation } from 'react-i18next';
 
-import TextTyping from '@/UI/components/textTyping/TextTyping';
-import WaterMark from '@/UI/components/waterMark/WaterMark';
-import { Button } from '@/UI/components/buttons/button/Button';
+import AnimatedText from '@/UI/components/animatedText/AnimatedText';
+import Button from '@/UI/components/buttons/button/Button';
 import Hologram from '@/UI/components/hologram/Hologram';
 import GeneralLink from '@/UI/components/links/generalLink/GeneralLink';
-import AnimatedText from '@/UI/components/animatedText/AnimatedText';
+import TextTyping from '@/UI/components/textTyping/TextTyping';
+import WaterMark from '@/UI/components/waterMark/WaterMark';
 
 import './Home.scss';
 

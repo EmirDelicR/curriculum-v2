@@ -9,7 +9,7 @@ interface Props extends PropsWithChildren {
   isDownloadButton?: boolean;
 }
 
-export function Button({
+export default function Button({
   children,
   onClickHandler,
   isDisabled = false,
