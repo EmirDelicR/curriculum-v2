@@ -14,8 +14,8 @@
     },
     "my-description": {
       "introduce": "Hallo, mein Name ist Emir Delic-Redzepagic.",
-      "source": "Überprüfen Sie meine Webseite und ich hoffe, dass sie Ihnen gefällt. Überprüfen Sie den Quell <CodeLink>code</CodeLink>, und wenn Sie ihn verwenden möchten, ist er kostenlos.",
-      "mail": "Wenn Sie mit mir Kontakt aufnehmen oder mich einstellen möchten, können Sie meinen Lebenslauf herunterladen oder mich über meine E-Mail-Adresse <MailLink>emirdelictbf@gmail.com</MailLink> kontaktieren."
+      "source": "Überprüfen Sie meine Webseite. Überprüfen Sie den Quell <CodeLink>code</CodeLink>, und wenn Sie ihn verwenden möchten, ist er kostenlos.",
+      "mail": "Wenn Sie mit mir Kontakt aufnehmen möchten, können Sie mich über meine E-Mail-Adresse <MailLink>emirdelictbf@gmail.com</MailLink> kontaktieren."
     },
     "tabs-name": {
       "frontend": "Frontend",
