@@ -1,6 +1,10 @@
 .close-button {
+  background-color: transparent;
+  padding: 1px;
+  color: var(--main-color);
+  font-size: 1.3em;
   position: absolute;
-  top: -30px;
+  top: -35px;
   scale: 1;
   cursor: pointer;
 

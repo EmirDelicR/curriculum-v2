@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-import { Button } from '@/UI/components/buttons/button/Button';
+import Button from '@/UI/components/buttons/button/Button';
 import { Input } from '@/UI/components/input/Input';
 import { Textarea } from '@/UI/components/textarea/Textarea';
 

@@ -14,11 +14,15 @@ export default function Close({
   displayTypeOnBigScreen = 'none'
 }: Props) {
   return (
-    <FontAwesomeIcon
-      className="close-button"
-      style={{ '--display-type': displayTypeOnBigScreen } as CSSProperties}
-      icon={faCircleXmark}
+    <button
+      aria-label="close-button"
       onClick={onCloseClick}
-    />
+      className="close-button"
+    >
+      <FontAwesomeIcon
+        style={{ '--display-type': displayTypeOnBigScreen } as CSSProperties}
+        icon={faCircleXmark}
+      />
+    </button>
   );
 }

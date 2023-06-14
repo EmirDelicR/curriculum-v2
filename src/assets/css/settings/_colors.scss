@@ -1,6 +1,7 @@
 :root {
   // neutral
   --white: rgba(255, 255, 255, 0.85);
+  --dark: rgba(0, 0, 0, 0.85);
   --none: transparent;
   --orange: #f06d06;
   --box-shadow: rgba(66, 152, 195, 0.3);
@@ -10,10 +11,11 @@
   --light-blue: #2187e7;
   --border-color: rgb(33, 135, 231, 0.7);
   --shadow-light-blue: hsl(180, 62%, 96%);
+  --shadow-dark-blue: hsl(206, 40%, 38%);
 
   // light
   --main-background-light: var(--white);
-  --main-color-light: var(--dark-blue);
+  --main-color-light: var(--dark);
   --nav-link-hover-light: var(--light-blue);
   --social-link-box-shadow-light: 0.1rem 0.1rem 0.25rem rgba(255, 255, 255, 0.1),
     -0.1rem -0.1rem 0.25rem rgba(0, 0, 0, 0.5);
