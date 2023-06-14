@@ -1,12 +1,12 @@
 .text-wrapper {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1rem + 1.25vw, 2.5rem);
   letter-spacing: 0.1em;
   font-weight: 600;
   overflow: hidden;
   display: inline-block;
   padding-right: 2px;
   color: var(--main-color);
-  margin: 0.5em 0;
+  margin: 1em 0;
   width: 100%;
 
   .typing-text {
@@ -42,11 +42,5 @@
   }
   100% {
     left: 0%;
-  }
-}
-
-@media screen and (min-width: 1050px) {
-  .text-wrapper {
-    margin: 2em 0;
   }
 }

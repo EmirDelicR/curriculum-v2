@@ -1,4 +1,5 @@
 import { CSSProperties, useEffect, useState } from 'react';
+
 import './TextTyping.scss';
 
 const WORDS = ['developer', 'engineer'];
