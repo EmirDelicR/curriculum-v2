@@ -1,20 +1,92 @@
+$size: 30px;
+$borderSize: 2px;
+$borderColor: var(--main-color);
+$speed: 0.5s;
+
 .close-button {
-  background-color: transparent;
-  padding: 1px;
-  color: var(--main-color);
-  font-size: 1.3em;
-  position: absolute;
+  width: 30px;
+  height: 30px;
+  position: relative;
   top: -35px;
-  scale: 1;
+  border-radius: 50%;
+  transition: 0.25s ease-in-out;
+  animation: fade-in $speed ease-out 0.25s both;
   cursor: pointer;
 
+  .circle {
+    width: $size;
+    height: $size;
+
+    path {
+      stroke: $borderColor;
+      fill: none;
+      stroke-width: calc($borderSize/2);
+      stroke-linecap: round;
+      animation: progress $speed ease-out 0.25s both;
+    }
+  }
+  span {
+    display: block;
+    width: calc($size/4);
+    height: $borderSize;
+    background: $borderColor;
+    border-radius: 20px;
+    position: absolute;
+    $padding: calc($size/3);
+    transition: 0.25s ease-in-out;
+    animation: slide-in $speed ease-in-out 0.25s both;
+
+    &:nth-child(1) {
+      top: calc($padding - calc($borderSize/2));
+      left: $padding;
+      transform: rotate(45deg);
+      transform-origin: top left;
+    }
+    &:nth-child(2) {
+      top: calc($padding - calc($borderSize/2));
+      right: $padding;
+      transform: rotate(-45deg);
+      transform-origin: top right;
+    }
+    &:nth-child(3) {
+      bottom: calc($padding - calc($borderSize/2));
+      left: $padding;
+      transform: rotate(-45deg);
+      transform-origin: bottom left;
+    }
+    &:nth-child(4) {
+      bottom: calc($padding - calc($borderSize/2));
+      right: $padding;
+      transform: rotate(45deg);
+      transform-origin: bottom right;
+    }
+  }
   &:hover {
-    scale: 1.1;
+    background: var(--nav-link-hover);
   }
 }
 
 @media screen and (min-width: 850px) {
   .close-button {
     display: var(--display-type);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes progress {
+  from {
+    stroke-dasharray: 0 100;
   }
 }
