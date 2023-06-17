@@ -25,6 +25,10 @@ body {
 
 .app.dark {
   --main-background: var(--main-background-dark);
+  --nav-color: var(--nav-color-dark);
+  --text-color: var(--text-color-dark);
+
+  // TODO remove this
   --main-color: var(--main-color-dark);
   --nav-link-hover: var(--nav-link-hover-dark);
   --social-link-box-shadow: var(--social-link-box-shadow-dark);
