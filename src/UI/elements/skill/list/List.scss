@@ -8,7 +8,7 @@
 }
 
 %link-status {
-  background-color: var(--orange);
+  background-color: var(--secondary);
   color: var(--main-color-dark);
   border-radius: 0.35em;
   opacity: 0.8;
@@ -37,7 +37,7 @@
       border-bottom: 1px solid var(--border-color);
       margin: 0.2em 0;
       font-family: 'Courgette', cursive;
-      color: var(--orange);
+      color: var(--secondary);
     }
 
     ul {

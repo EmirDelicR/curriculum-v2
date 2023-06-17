@@ -26,13 +26,13 @@ $panel-gap: 1rem;
     filter: brightness(0.5);
 
     &:focus-within {
-      outline: 2px solid var(--orange);
+      outline: 2px solid var(--secondary);
       outline-offset: 2px;
     }
 
     .accordion-trigger {
       opacity: 0;
-      border: 1px solid var(--orange);
+      border: 1px solid var(--secondary);
       font-size: 1.15em;
       background-color: var(--main-color);
       border-radius: 25%;
@@ -47,7 +47,7 @@ $panel-gap: 1rem;
         transition: scale 0.5s ease-in-out;
 
         path {
-          fill: var(--orange);
+          fill: var(--secondary);
         }
       }
 
@@ -61,7 +61,7 @@ $panel-gap: 1rem;
     .accordion-content {
       position: absolute;
       bottom: 0;
-      background-color: var(--orange);
+      background-color: var(--secondary);
       visibility: hidden;
       opacity: 0;
       transition: 0s;

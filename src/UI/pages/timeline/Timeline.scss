@@ -12,7 +12,7 @@
       text-align: center;
 
       .description {
-        border: 1px solid var(--orange);
+        border: 1px solid var(--secondary);
         height: 55vh;
         border-radius: 0.5em;
         padding: 1.5em;
@@ -34,7 +34,7 @@
             font-size: 2em;
 
             path {
-              fill: var(--orange);
+              fill: var(--secondary);
             }
           }
         }
@@ -63,7 +63,7 @@
             margin-bottom: 2em;
 
             path {
-              fill: var(--orange);
+              fill: var(--secondary);
             }
           }
         }
@@ -72,7 +72,7 @@
       .line {
         height: 10vh;
         width: 1px;
-        border: 1px solid var(--orange);
+        border: 1px solid var(--secondary);
         position: relative;
         left: 50%;
       }
@@ -90,7 +90,7 @@
             width: 20px;
             height: 20px;
             background-color: var(--main-color);
-            border: 1px solid var(--orange);
+            border: 1px solid var(--secondary);
             border-radius: 100%;
             position: absolute;
             top: -10px;
@@ -114,7 +114,7 @@
         }
 
         .timestamp {
-          border-top: 2px solid var(--orange);
+          border-top: 2px solid var(--secondary);
         }
       }
     }
