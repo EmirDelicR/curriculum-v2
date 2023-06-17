@@ -8,7 +8,6 @@
 
   // TODO remove this
   --box-shadow: rgba(66, 152, 195, 0.3);
-  --dark-blue: #366194;
   --light-blue: #2187e7;
   --border-color: rgb(33, 135, 231, 0.7);
   --shadow-light-blue: hsl(180, 62%, 96%);
@@ -33,7 +32,7 @@
 
   // TODO remove this
   --main-color-dark: var(--white);
-  --nav-link-hover-dark: var(--dark-blue);
+  --nav-link-hover-dark: var(--primary);
   --social-link-box-shadow-dark: 0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.1),
     -0.1rem -0.1rem 0.25rem rgba(255, 255, 255, 0.5);
 
