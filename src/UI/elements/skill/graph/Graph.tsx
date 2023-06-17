@@ -39,7 +39,7 @@ export default function Graph() {
           <PolarGrid stroke="var(--main-color)" />
           <PolarAngleAxis
             tick={{ fill: 'var(--main-color)' }}
-            tickLine={{ stroke: 'var(--none)' }}
+            tickLine={{ stroke: 'transparent' }}
             dataKey="points"
             stroke="var(--main-color)"
           />

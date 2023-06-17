@@ -2,7 +2,8 @@
   // neutral
   --white: rgba(255, 255, 255, 0.85);
   --dark: rgba(0, 0, 0, 0.85);
-  --none: transparent;
+
+  // TODO remove this
   --orange: #f06d06;
   --box-shadow: rgba(66, 152, 195, 0.3);
   --text-color: #cecece;
@@ -15,6 +16,7 @@
 
   // light
   --main-background-light: var(--white);
+  // TODO remove this
   --main-color-light: var(--dark);
   --nav-link-hover-light: var(--light-blue);
   --social-link-box-shadow-light: 0.1rem 0.1rem 0.25rem rgba(255, 255, 255, 0.1),
@@ -22,7 +24,8 @@
   --page-background-light: var(--shadow-light-blue);
 
   // dark
-  --main-background-dark: rgba(0, 0, 0, 0.85);
+  --main-background-dark: var(--dark);
+  // TODO remove this
   --main-color-dark: var(--white);
   --nav-link-hover-dark: var(--dark-blue);
   --social-link-box-shadow-dark: 0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.1),
@@ -31,9 +34,9 @@
 
   // default
   --main-background: var(--main-background-light);
+  // TODO remove this
   --main-color: var(--main-color-light);
   --nav-link-hover: var(--nav-link-hover-light);
   --social-link-box-shadow: var(--social-link-box-shadow-light);
   --page-background: var(--page-background-light);
-  --main-color-revert: var(--main-color-dark);
 }
