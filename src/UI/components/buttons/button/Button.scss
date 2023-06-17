@@ -1,7 +1,7 @@
 .button {
   --b: 3px;
   --s: 0.45em;
-  --color: var(--main-color);
+  --color: var(--primary);
 
   padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
   color: var(--color);
