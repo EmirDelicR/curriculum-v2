@@ -23,7 +23,7 @@ export default function Home() {
             i18nKey="my-description.source"
             components={{
               CodeLink: (
-                <GeneralLink navigateTo="https://github.com/EmirDelicR/curriculum" />
+                <GeneralLink navigateTo="https://github.com/EmirDelicR/curriculum-v2" />
               )
             }}
           />
