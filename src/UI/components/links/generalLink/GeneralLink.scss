@@ -1,12 +1,12 @@
 .general-link {
-  cursor: pointer;
-  font-size: clamp(0.9rem, 0.5rem + 1.25vw, 1.5rem);
   font-family: 'Courgette', cursive;
   color: var(--secondary);
   font-style: italic;
   font-weight: bold;
   text-decoration: none;
   outline: 0;
+
+  cursor: pointer;
 
   &:hover {
     color: var(--link-hover);
