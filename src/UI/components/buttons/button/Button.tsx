@@ -20,7 +20,7 @@ export default function Button({
     return (
       <a
         className="button"
-        href={`${window.location.origin}/doc/CV.pdf`}
+        href={`${window.location.origin}/curriculum-v2/doc/CV.pdf`}
         target="_blank"
         rel="noreferrer"
         download

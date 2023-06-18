@@ -23,8 +23,7 @@ export default function SocialLink({
       rel="noreferrer"
       download={download}
     >
-      <FontAwesomeIcon icon={icon} size="2x" />
-      <i title={name.toUpperCase()} className={`${icon}`}></i>
+      <FontAwesomeIcon icon={icon} size="2x" title={name.toUpperCase()} />
     </a>
   );
 }

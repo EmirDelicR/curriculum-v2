@@ -34,8 +34,7 @@ export const SOCIAL_PAGES = [
   {
     name: 'cv',
     icon: faFileDownload,
-    // link: require('@/assets/doc/CV.pdf'),
-    link: 'pdf.link',
+    link: `${window.location.origin}/curriculum-v2/doc/CV.pdf`,
     download: 'CV.pdf'
   }
 ];

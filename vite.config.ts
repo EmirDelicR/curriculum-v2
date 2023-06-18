@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 import eslint from 'vite-plugin-eslint';
 import { VitePWA } from 'vite-plugin-pwa';
 
-export const vitePWA = VitePWA({
+const vitePWA = VitePWA({
   registerType: 'prompt',
   injectRegister: 'auto',
   // cache all the imports
