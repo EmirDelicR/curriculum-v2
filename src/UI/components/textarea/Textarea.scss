@@ -1,9 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  color: var(--text-color);
-  font-size: 1rem;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 
   label {
     font-size: 0.9em;
@@ -16,9 +14,9 @@
     border: 0.01em solid var(--text-color);
     border-radius: 0.2em;
     font-size: 1em;
-    min-height: 8em;
-    max-height: 8em;
-    color: var(--link-hover);
+    min-height: 6em;
+    max-height: 6em;
+    color: var(--text-color);
     overflow-y: auto;
 
     &:focus {

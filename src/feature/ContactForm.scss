@@ -1,4 +1,7 @@
 .contact-form {
+  display: flex;
+  flex-direction: column;
+
   .inputs {
     display: flex;
     gap: 1em;
@@ -18,5 +21,11 @@
     &.error {
       color: hsl(18 100% 50%);
     }
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .contact-form {
+    gap: 1em;
   }
 }
