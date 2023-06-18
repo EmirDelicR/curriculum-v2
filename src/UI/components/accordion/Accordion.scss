@@ -3,7 +3,7 @@ $panel-padding: 0.75rem;
 $panel-gap: 1rem;
 
 .accordion {
-  --flex-grow-value: 6;
+  --flex-grow-value: 10;
 
   display: flex;
   height: 80vh;
@@ -118,12 +118,9 @@ $panel-gap: 1rem;
   }
 }
 
-@media screen and (min-width: 710px) {
+@media screen and (min-width: 850px) {
   .accordion {
     --flex-grow-value: 15;
-    .accordion-panel {
-      background-position: center top;
-    }
   }
 }
 
