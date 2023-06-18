@@ -18,6 +18,12 @@ $pwa-box-size: 2em;
     scale: 0.9;
     transition: scale 0.3s ease-in-out;
 
+    svg {
+      path {
+        fill: var(--secondary);
+      }
+    }
+
     &:hover {
       cursor: pointer;
       scale: 1;
