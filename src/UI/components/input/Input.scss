@@ -1,10 +1,10 @@
 .input {
-  --label-color: var(--main-color);
+  --label-color: var(--text-color);
   --transition: 0.2s;
   --valid: hsl(130 52% 46%);
   --invalid: hsl(18 100% 50%);
   --focus: hsl(44 83% 53%);
-  --blur: var(--main-color);
+  --blur: var(--text-color);
 
   position: relative;
   font-size: 1rem;

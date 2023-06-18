@@ -36,17 +36,17 @@ export default function Graph() {
       </div>
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={updatedData}>
-          <PolarGrid stroke="var(--main-color)" />
+          <PolarGrid stroke="var(--text-color)" />
           <PolarAngleAxis
-            tick={{ fill: 'var(--main-color)' }}
+            tick={{ fill: 'var(--text-color)' }}
             tickLine={{ stroke: 'transparent' }}
             dataKey="points"
-            stroke="var(--main-color)"
+            stroke="var(--text-color)"
           />
           <PolarRadiusAxis
-            stroke="var(--main-color)"
+            stroke="var(--text-color)"
             angle={90}
-            tick={{ fill: 'var(--main-color)', fillOpacity: 0.3 }}
+            tick={{ fill: 'var(--text-color)', fillOpacity: 0.3 }}
             orientation="middle"
             dy={25}
             domain={[0, 100]}
