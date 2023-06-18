@@ -183,7 +183,7 @@ export const OPTION_DATA = {
       name: 'PWA',
       data: {
         icon: faProductHunt,
-        link: 'https://github.com/EmirDelicR/PWA-Full-clean',
+        link: 'https://github.com/EmirDelicR/Progressive-Web-App',
         description: 'pwa-description'
       }
     },
