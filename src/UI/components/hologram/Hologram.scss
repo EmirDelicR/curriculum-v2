@@ -89,3 +89,12 @@ $holo-color: #2187e7;
     --image-height: 45vh;
   }
 }
+
+@media (prefers-reduced-motion) {
+  .hologram-wrapper {
+    .hologram,
+    .image {
+      animation: none;
+    }
+  }
+}
