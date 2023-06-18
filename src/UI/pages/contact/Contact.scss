@@ -1,4 +1,15 @@
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
 .contact-page {
+  --d: 2500ms;
+  --angle: 180deg;
+  --c1: rgba(168, 239, 255, 1);
+  --c2: var(--secondary);
+
   height: 75vh;
   padding: 0 1em;
   display: grid;
@@ -57,19 +68,8 @@
   }
 }
 
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 90deg;
-  inherits: true;
-}
-
 @media screen and (min-width: 1024px) {
   .contact-page {
-    --d: 2500ms;
-    --angle: 180deg;
-    --c1: rgba(168, 239, 255, 1);
-    --c2: var(--secondary);
-
     grid-template-areas:
       'headline headline'
       'personal form';
