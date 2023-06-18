@@ -116,7 +116,7 @@ export const vitePWA = VitePWA({
     ]
   }
 });
-console.log('DD: ', path.resolve(__dirname, ''));
+
 const viteEslint = eslint({
   include: [
     `${path.resolve(__dirname, '')}/**/*.ts`,
@@ -127,6 +127,7 @@ const viteEslint = eslint({
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), viteEslint, vitePWA],
+  base: '/curriculum-v2/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
