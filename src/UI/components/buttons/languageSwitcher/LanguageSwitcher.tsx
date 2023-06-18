@@ -56,7 +56,7 @@ export default function LanguageSwitcher() {
             onClick={updateLanguage({ ...item.data })}
             className={`cube-face cube-face--${item.side}`}
           >
-            {item.lang.toUpperCase()}
+            {item.lang}
           </div>
         ))}
         <div className="cube-face cube-face--left">-</div>

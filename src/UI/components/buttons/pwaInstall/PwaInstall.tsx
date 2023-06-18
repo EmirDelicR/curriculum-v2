@@ -26,7 +26,7 @@ export default function PwaInstallButton() {
         aria-label="pwa-button"
         onClick={promptToInstall}
       >
-        Add to <FontAwesomeIcon icon={faHouseLaptop} size={'lg'} />
+        Install <FontAwesomeIcon icon={faHouseLaptop} size={'lg'} />
       </button>
     </div>
   );

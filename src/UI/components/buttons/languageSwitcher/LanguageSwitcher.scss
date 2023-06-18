@@ -28,6 +28,7 @@ $ls-translate-z-value: 1em;
   .cube-face {
     position: absolute;
     @extend %dimensions;
+    font-family: 'Courgette', cursive;
     border: 2px solid var(--secondary);
     display: flex;
     align-items: center;

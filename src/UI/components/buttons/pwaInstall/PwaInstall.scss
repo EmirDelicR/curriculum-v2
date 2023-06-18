@@ -4,6 +4,7 @@ $pwa-box-size: 2em;
   position: relative;
 
   .add-button {
+    font-family: 'Courgette', cursive;
     display: flex;
     align-items: center;
     gap: 0.5em;
@@ -14,7 +15,7 @@ $pwa-box-size: 2em;
     height: $pwa-box-size;
     background: var(--page-background);
     color: var(--light-blue);
-    text-transform: uppercase;
+    // text-transform: uppercase;
     scale: 0.9;
     transition: scale 0.3s ease-in-out;
 
