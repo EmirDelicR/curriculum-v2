@@ -32,10 +32,10 @@ export default function Graph() {
     <>
       <div className="graph-header">
         <Close onCloseClick={() => setShowSkill(false)} />
-        <span>{name}</span>
+        <span className="title">{name}</span>
       </div>
-      <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={updatedData}>
+      <ResponsiveContainer width="100%" height="90%">
+        <RadarChart cx="50%" cy="45%" outerRadius="80%" data={updatedData}>
           <PolarGrid stroke="var(--text-color)" />
           <PolarAngleAxis
             tick={{ fill: 'var(--text-color)' }}

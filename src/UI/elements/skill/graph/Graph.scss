@@ -1,10 +1,11 @@
 .graph-header {
   position: relative;
 
-  span {
+  .title {
     display: flex;
     justify-content: end;
-    font-size: 1em;
+    margin-right: 1em;
+    font-size: var(--fs-900);
     font-family: 'Courgette', cursive;
   }
 }
