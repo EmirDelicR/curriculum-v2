@@ -128,6 +128,9 @@ const viteEslint = eslint({
 export default defineConfig({
   plugins: [react(), viteEslint, vitePWA],
   base: '/curriculum-v2/',
+  build: {
+    manifest: true
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
