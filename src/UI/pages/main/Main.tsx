@@ -9,6 +9,11 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Navigation from '@elements/navigation/Navigation';
+
+import Menu from '@/UI/components/buttons/menu/Menu';
+import Loader from '@/UI/components/loader/Loader';
+
 import {
   buildPageStack,
   endTransitionHandler,
@@ -17,11 +22,8 @@ import {
   updatePageStack
 } from '@/utils/menuHelpers';
 import { updateOpeningPage } from '@/utils/generalHelpers';
-import Navigation from '@elements/navigation/Navigation';
-import Menu from '@/UI/components/buttons/menu/Menu';
 
 import './Main.scss';
-import Loader from '@/UI/components/loader/Loader';
 
 const Home = lazy(() => import('@pages/home/Home'));
 const Portfolio = lazy(() => import('@pages/portfolio/Portfolio'));
