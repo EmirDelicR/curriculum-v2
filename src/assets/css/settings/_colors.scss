@@ -4,11 +4,9 @@
   --dark: rgba(0, 0, 0, 0.85);
   --primary: #366194;
   --secondary: #f06d06;
-
-  // TODO remove this
+  --border-color: rgb(33, 135, 231, 0.7);
   --box-shadow: rgba(66, 152, 195, 0.3);
   --light-blue: #2187e7;
-  --border-color: rgb(33, 135, 231, 0.7);
 
   // light
   --main-background-light: var(--white);
@@ -17,10 +15,10 @@
   --social-link-box-shadow-light: 0.1rem 0.1rem 0.25rem rgba(255, 255, 255, 0.1),
     -0.1rem -0.1rem 0.25rem rgba(0, 0, 0, 0.5);
   --page-background-light: #f5fffe;
+  --link-hover-light: var(--light-blue);
 
   // TODO remove this
   --main-color-light: var(--dark);
-  --nav-link-hover-light: var(--light-blue);
 
   // dark
   --main-background-dark: var(--dark);
@@ -29,10 +27,10 @@
   --page-background-dark: #2a2b30;
   --social-link-box-shadow-dark: 0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.1),
     -0.1rem -0.1rem 0.25rem rgba(255, 255, 255, 0.5);
+  --link-hover-dark: var(--primary);
 
   // TODO remove this
   --main-color-dark: var(--white);
-  --nav-link-hover-dark: var(--primary);
 
   // default
   --main-background: var(--main-background-light);
@@ -40,7 +38,8 @@
   --page-background: var(--page-background-light);
   --text-color: var(--text-color-light);
   --nav-color: var(--nav-color-light);
+  --link-hover: var(--link-hover-light);
+
   // TODO remove this
   --main-color: var(--main-color-light);
-  --nav-link-hover: var(--nav-link-hover-light);
 }

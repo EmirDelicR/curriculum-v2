@@ -54,8 +54,8 @@ export default function Graph() {
           <Radar
             name={`${t('graph-labels.overview')}`}
             dataKey="position"
-            stroke="var(--nav-link-hover)"
-            fill="var(--nav-link-hover)"
+            stroke="var(--link-hover)"
+            fill="var(--link-hover)"
             fillOpacity={0.3}
           />
           <Legend align="left" iconSize={16} iconType="triangle" />
