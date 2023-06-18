@@ -1,0 +1,1 @@
+import{e as n,M as l}from"./index-428fcb1c.js";function i({navigateTo:e,linkClass:r="",children:a}){return n("a",{className:l("general-link",r,e==="#"?"invalid":""),href:e,target:"_blank",rel:"noreferrer",children:a})}export{i as G};

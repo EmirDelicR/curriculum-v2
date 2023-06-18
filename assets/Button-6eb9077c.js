@@ -1,1 +1,0 @@
-import{e as o}from"./index-31375d72.js";function s({children:t,onClickHandler:n,isDisabled:e=!1,type:r="button",isDownloadButton:a=!1}){return a?o("a",{className:"button",href:`${window.location.origin}/doc/CV.pdf`,target:"_blank",rel:"noreferrer",download:!0,children:"Download CV"}):o("button",{type:r,className:"button",onClick:n,disabled:e,children:t})}export{s as B};
