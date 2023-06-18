@@ -25,7 +25,7 @@ export const vitePWA = VitePWA({
     orientation: 'portrait-primary',
     display: 'standalone',
     scope: '/',
-    start_url: '/',
+    start_url: '/curriculum-v2/',
     description: 'Curriculum web page application',
     prefer_related_applications: true,
     icons: [
