@@ -1,5 +1,5 @@
-$ls-box-size: 2rem;
-$ls-translate-z-value: 1rem;
+$ls-box-size: 2em;
+$ls-translate-z-value: 1em;
 
 %dimensions {
   width: $ls-box-size;
@@ -30,7 +30,6 @@ $ls-translate-z-value: 1rem;
     @extend %dimensions;
     border: 2px solid var(--secondary);
     line-height: calc($ls-box-size - 6px);
-    font-size: 0.875em;
     font-weight: bold;
     color: var(--text-color);
     text-align: center;
