@@ -11,4 +11,8 @@
   &:hover {
     color: var(--link-hover);
   }
+
+  &.invalid {
+    pointer-events: none;
+  }
 }

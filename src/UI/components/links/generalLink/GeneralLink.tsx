@@ -16,7 +16,11 @@ export default function GeneralLink({
 }: Props) {
   return (
     <a
-      className={classNameHelper('general-link', linkClass)}
+      className={classNameHelper(
+        'general-link',
+        linkClass,
+        navigateTo === '#' ? 'invalid' : ''
+      )}
       href={navigateTo}
       target="_blank"
       rel="noreferrer"
