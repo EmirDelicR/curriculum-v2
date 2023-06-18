@@ -24,7 +24,7 @@ export default function Contact() {
         <ContactForm />
       </div>
       <div className="connect-data">
-        <h3>Get in touch</h3>
+        <h2>Get in touch</h2>
         <div className="connect-personal">
           <div>
             <FontAwesomeIcon icon={faEnvelope} size="xl" />

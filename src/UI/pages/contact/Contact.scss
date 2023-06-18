@@ -1,6 +1,5 @@
 .contact-page {
   height: 75vh;
-  font-size: 1rem;
   padding: 0 1em;
   display: grid;
   grid-template-areas:
@@ -15,7 +14,6 @@
     text-align: center;
 
     h1 {
-      // font-size: 2em;
       margin: 0;
     }
   }
@@ -29,7 +27,7 @@
     grid-area: personal;
     text-align: center;
 
-    h3 {
+    h2 {
       display: none;
     }
 
@@ -38,16 +36,15 @@
       flex-direction: column;
       justify-content: center;
       gap: 1em;
-      font-size: 0.8em;
+      font-size: var(--fs-300);
 
       > div {
         display: flex;
         flex-direction: column;
-        font-size: 1.2em;
       }
 
       svg {
-        font-size: 1.2em;
+        font-size: var(--fs-600);
         color: var(--secondary);
         margin-bottom: 0.25em;
       }
@@ -80,8 +77,6 @@
     gap: 0;
 
     .contact-headline {
-      font-size: 2em;
-
       h1 {
         border-bottom: 1px solid var(--secondary);
       }
@@ -119,16 +114,9 @@
         30;
       animation: borderRotate var(--d) linear infinite forwards;
 
-      h3 {
-        font-size: 2em;
+      h2 {
         margin-bottom: 1em;
         display: block;
-      }
-
-      .connect-personal {
-        svg {
-          font-size: 2em;
-        }
       }
     }
   }
