@@ -4,11 +4,24 @@
   inherits: true;
 }
 
+@mixin border-animation {
+  border-image: conic-gradient(
+      from var(--angle),
+      var(--c2),
+      var(--c1) 0.1turn,
+      var(--c1) 0.15turn,
+      var(--c2) 0.25turn
+    )
+    30;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
+
 .contact-page {
   --d: 2500ms;
   --angle: 180deg;
   --c1: rgba(168, 239, 255, 1);
   --c2: var(--secondary);
+  --border-size: 2px;
 
   height: 75vh;
   padding: 0 1em;
@@ -32,6 +45,9 @@
   .contact-form-wrapper {
     grid-area: form;
     margin-top: 0.5em;
+    margin-bottom: 1em;
+    border-bottom: var(--border-size) solid var(--secondary);
+    @include border-animation;
   }
 
   .connect-data {
@@ -61,7 +77,6 @@
     }
 
     .connect-social {
-      margin-top: 1em;
       display: flex;
       justify-content: center;
     }
@@ -77,45 +92,36 @@
 
     .contact-headline {
       h1 {
-        border-bottom: 1px solid var(--secondary);
+        border-bottom: var(--border-size) solid var(--secondary);
       }
     }
 
     .contact-form-wrapper {
       padding: 2em 2em 0;
-      border-right: 1px solid var(--secondary);
-      border-bottom: 1px solid var(--secondary);
-      border-image: conic-gradient(
-          from var(--angle),
-          var(--c2),
-          var(--c1) 0.1turn,
-          var(--c1) 0.15turn,
-          var(--c2) 0.25turn
-        )
-        30;
-      animation: borderRotate var(--d) linear infinite forwards;
+      border-right: var(--border-size) solid var(--secondary);
+      margin-bottom: 0;
     }
 
     .connect-data {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      border-top: 1px solid var(--secondary);
-      border-left: 1px solid var(--secondary);
-      border-right: 1px solid var(--secondary);
-      border-image: conic-gradient(
-          from var(--angle),
-          var(--c2),
-          var(--c1) 0.1turn,
-          var(--c1) 0.15turn,
-          var(--c2) 0.25turn
-        )
-        30;
-      animation: borderRotate var(--d) linear infinite forwards;
+      border-top: var(--border-size) solid var(--secondary);
+      border-left: var(--border-size) solid var(--secondary);
+      border-right: var(--border-size) solid var(--secondary);
+      @include border-animation;
 
       h2 {
         margin-bottom: 1em;
         display: block;
+      }
+
+      .connect-personal {
+        font-size: var(--fs-400);
+      }
+
+      .connect-social {
+        margin-top: 2em;
       }
     }
   }
