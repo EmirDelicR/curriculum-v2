@@ -25,9 +25,6 @@ export default function ActionButtons({ toggleAction }: Props) {
   );
   return (
     <>
-      <button className="btn" onClick={toggleActiveClass}>
-        +
-      </button>
       <FontAwesomeIcon
         className="tool-icon"
         icon={faPlusCircle}

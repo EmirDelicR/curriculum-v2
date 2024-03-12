@@ -24,10 +24,7 @@ $holo-color: #2187e7;
     background-color: rgba($holo-color, 0.35);
     border-radius: 100%;
     filter: blur(2.5px);
-    // transform: perspective(100px) rotateX(-25deg);
-    // transform-style: preserve-3d;
     animation: holographic 1.5s infinite alternate;
-    //backface-visibility: hidden;
 
     &:after {
       content: '';
