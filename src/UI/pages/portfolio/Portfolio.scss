@@ -61,6 +61,27 @@
           .description {
             display: flex;
             flex-direction: column;
+            height: 42vh;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+              width: 4px;
+              height: 4px;
+              background-color: transparent;
+            }
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+              background: var(--secondary);
+            }
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+              background: var(--link-hover);
+              cursor: pointer;
+            }
+
+            &::-webkit-scrollbar-track {
+              background: var(--box-shadow);
+            }
 
             p {
               line-height: 1.5;

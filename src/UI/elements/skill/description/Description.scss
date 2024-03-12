@@ -23,11 +23,31 @@
     height: 36vh;
     padding: 1em;
     padding-top: 2em;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+      background-color: transparent;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: var(--secondary);
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--link-hover);
+      cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--box-shadow);
+    }
   }
 
   .footer {
+    margin-top: 0.5em;
     padding: 1em;
-    line-height: 2;
     text-align: center;
     border-top: 2px solid var(--border-color);
 
