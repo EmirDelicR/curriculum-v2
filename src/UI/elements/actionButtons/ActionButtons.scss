@@ -4,7 +4,40 @@
   bottom: 2vh;
   margin: 0 2rem;
   display: flex;
-  width: calc(100% - 2rem);
+  width: calc(100% - 4rem);
   justify-content: space-between;
   align-items: center;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.tool-icon {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .action-buttons-wrapper {
+    width: calc(100% - 8rem);
+    &.mobile-active {
+      bottom: 6vh;
+    }
+  }
+
+  .tool-icon {
+    display: block;
+    position: absolute;
+    bottom: 6.2vh;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    right: 1rem;
+    scale: 0.6;
+    transition: scale 0.3s ease-in-out;
+    cursor: pointer;
+
+    border: 2px solid var(--link-hover);
+
+    &:hover {
+      scale: 1.2;
+      background-color: var(--link-hover);
+    }
+  }
 }

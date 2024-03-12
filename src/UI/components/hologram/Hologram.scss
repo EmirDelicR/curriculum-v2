@@ -15,36 +15,36 @@ $holo-color: #2187e7;
     animation: float 1s infinite alternate;
   }
 
-  // .hologram {
-  //   position: relative;
-  //   z-index: 2;
-  //   width: var(--holo-width);
-  //   height: 5px;
-  //   margin: -5px auto 0;
-  //   background-color: rgba($holo-color, 0.35);
-  //   border-radius: 100%;
-  //   filter: blur(2.5px);
-  //   transform: perspective(100px) rotateX(-30deg);
-  //   transform-style: preserve-3d;
-  //   // animation: holographic 1.5s infinite alternate;
-  //   backface-visibility: hidden;
+  .hologram {
+    position: relative;
+    z-index: 2;
+    width: var(--holo-width);
+    height: 5px;
+    margin: -5px auto 0;
+    background-color: rgba($holo-color, 0.35);
+    border-radius: 100%;
+    filter: blur(2.5px);
+    transform: perspective(100px) rotateX(-25deg);
+    // transform-style: preserve-3d;
+    animation: holographic 1.5s infinite alternate;
+    //backface-visibility: hidden;
 
-  //   &:after {
-  //     position: absolute;
-  //     left: -10px;
-  //     right: -10px;
-  //     content: '';
-  //     height: 5px;
-  //     background-color: rgba($holo-color, 0.5);
-  //     border-radius: 100%;
-  //     filter: blur(2.5px);
-  //   }
+    &:after {
+      content: '';
+      filter: blur(2.5px);
+      position: absolute;
+      left: -10px;
+      right: -10px;
+      height: 5px;
+      background-color: rgba($holo-color, 0.5);
+      border-radius: 100%;
+    }
 
-  //   + .hologram {
-  //     animation-duration: 0.75s;
-  //     opacity: 0.5;
-  //   }
-  // }
+    + .hologram {
+      animation-duration: 0.75s;
+      opacity: 0.5;
+    }
+  }
 }
 
 @keyframes float {
