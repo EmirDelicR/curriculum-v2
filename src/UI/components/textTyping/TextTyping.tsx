@@ -1,4 +1,3 @@
-import { CSSProperties, useEffect, useState } from 'react';
 import { ReactTyped } from 'react-typed';
 
 import './TextTyping.scss';
