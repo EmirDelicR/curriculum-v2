@@ -1,21 +1,45 @@
-import { ReactTyped } from 'react-typed';
+import { CSSProperties, useEffect, useState } from 'react';
 
 import './TextTyping.scss';
 
 const WORDS = ['developer', 'engineer'];
 
+const TIMING = 2000; // in milliseconds
+
 export default function TextTyping() {
+  const [position, setPosition] = useState(0);
+  let timeout: ReturnType<typeof setInterval>;
+
+  useEffect(() => {
+    timeout = setInterval(() => {
+      setPosition((prev) => {
+        const position = prev + 1;
+        if (position > WORDS.length - 1) {
+          return 0;
+        }
+        return position;
+      });
+    }, TIMING);
+
+    return () => {
+      clearInterval(timeout);
+    };
+  }, []);
+
   return (
     <div className="text-wrapper">
       <span className="main-text">I&rsquo;m a </span>
-      <ReactTyped
+      <span
         className="typing-text"
-        startWhenVisible
-        strings={WORDS}
-        typeSpeed={100}
-        backSpeed={50}
-        loop
-      />
+        style={
+          {
+            '--timing': `${TIMING}ms`,
+            '--steps': `${WORDS[position].length}`
+          } as CSSProperties
+        }
+      >
+        {WORDS[position]}
+      </span>
     </div>
   );
 }

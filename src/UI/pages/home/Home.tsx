@@ -17,7 +17,7 @@ export default function Home() {
       <div className="description">
         <WaterMark text="hello" />
         <AnimatedText>{t('my-description.introduce')}</AnimatedText>
-        {/* <TextTyping /> */}
+        <TextTyping />
         <AnimatedText>
           <Trans
             i18nKey="my-description.source"

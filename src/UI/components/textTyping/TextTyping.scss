@@ -2,14 +2,42 @@
   font-size: var(--fs-600);
   letter-spacing: 0.1em;
   font-weight: 600;
-  overflow: hidden;
-  display: inline-block;
   padding-right: 2px;
   color: var(--secondary);
-  margin: 1em 0;
-  width: 100%;
+  margin: 0.5em 0;
 
   .typing-text {
+    position: relative;
     color: var(--primary);
+    letter-spacing: 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: var(--page-background);
+      border-left: 2px solid var(--primary);
+      animation: typing var(--timing) steps(var(--steps)) infinite,
+        cursor 0.5s step-end infinite alternate;
+    }
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-left-color: transparent;
+  }
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
   }
 }
