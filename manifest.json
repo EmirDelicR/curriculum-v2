@@ -19,47 +19,47 @@
     "file": "assets/Tabs-26b53319.css",
     "src": "Tabs.css"
   },
-  "_AnimatedText-30c905c8.js": {
+  "_AnimatedText-3c618d39.js": {
     "css": [
       "assets/AnimatedText-edb5c94a.css"
     ],
-    "file": "assets/AnimatedText-30c905c8.js",
+    "file": "assets/AnimatedText-3c618d39.js",
     "imports": [
       "index.html"
     ]
   },
-  "_Button-8c04ab4f.js": {
+  "_Button-f772ca9a.js": {
     "css": [
       "assets/Button-e6e70d5a.css"
     ],
-    "file": "assets/Button-8c04ab4f.js",
+    "file": "assets/Button-f772ca9a.js",
     "imports": [
       "index.html"
     ]
   },
-  "_Close-0dc181a0.js": {
+  "_Close-5f76ec9b.js": {
     "css": [
       "assets/Close-4da80220.css"
     ],
-    "file": "assets/Close-0dc181a0.js",
+    "file": "assets/Close-5f76ec9b.js",
     "imports": [
       "index.html"
     ]
   },
-  "_GeneralLink-26f3d961.js": {
+  "_GeneralLink-a6dfc4c2.js": {
     "css": [
       "assets/GeneralLink-47eefb83.css"
     ],
-    "file": "assets/GeneralLink-26f3d961.js",
+    "file": "assets/GeneralLink-a6dfc4c2.js",
     "imports": [
       "index.html"
     ]
   },
-  "_Tabs-23399b12.js": {
+  "_Tabs-59702f47.js": {
     "css": [
       "assets/Tabs-26b53319.css"
     ],
-    "file": "assets/Tabs-23399b12.js",
+    "file": "assets/Tabs-59702f47.js",
     "imports": [
       "index.html"
     ]
@@ -81,7 +81,7 @@
       "src/UI/pages/contact/Contact.tsx",
       "src/UI/pages/tips/Tips.tsx"
     ],
-    "file": "assets/index-7c5e1b53.js",
+    "file": "assets/index-11085d1a.js",
     "isEntry": true,
     "src": "index.html"
   },
@@ -93,7 +93,7 @@
     "css": [
       "assets/Certificates-9912f2ee.css"
     ],
-    "file": "assets/Certificates-bf8643d5.js",
+    "file": "assets/Certificates-a0bab02a.js",
     "imports": [
       "index.html"
     ],
@@ -108,11 +108,11 @@
     "css": [
       "assets/Contact-b1f08433.css"
     ],
-    "file": "assets/Contact-9a5c6d91.js",
+    "file": "assets/Contact-2f9ae09d.js",
     "imports": [
       "index.html",
-      "_AnimatedText-30c905c8.js",
-      "_Button-8c04ab4f.js"
+      "_AnimatedText-3c618d39.js",
+      "_Button-f772ca9a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/contact/Contact.tsx"
@@ -125,12 +125,12 @@
     "css": [
       "assets/Home-2d07d326.css"
     ],
-    "file": "assets/Home-7a8a4356.js",
+    "file": "assets/Home-c83f4339.js",
     "imports": [
       "index.html",
-      "_AnimatedText-30c905c8.js",
-      "_Button-8c04ab4f.js",
-      "_GeneralLink-26f3d961.js"
+      "_AnimatedText-3c618d39.js",
+      "_Button-f772ca9a.js",
+      "_GeneralLink-a6dfc4c2.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/home/Home.tsx"
@@ -143,12 +143,12 @@
     "css": [
       "assets/Portfolio-b046ecfb.css"
     ],
-    "file": "assets/Portfolio-a219c582.js",
+    "file": "assets/Portfolio-96345b19.js",
     "imports": [
       "index.html",
-      "_Close-0dc181a0.js",
-      "_AnimatedText-30c905c8.js",
-      "_GeneralLink-26f3d961.js"
+      "_Close-5f76ec9b.js",
+      "_AnimatedText-3c618d39.js",
+      "_GeneralLink-a6dfc4c2.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/portfolio/Portfolio.tsx"
@@ -161,12 +161,12 @@
     "css": [
       "assets/Skills-d397743a.css"
     ],
-    "file": "assets/Skills-5315c5af.js",
+    "file": "assets/Skills-ccc9bd3f.js",
     "imports": [
       "index.html",
-      "_Tabs-23399b12.js",
-      "_Close-0dc181a0.js",
-      "_GeneralLink-26f3d961.js"
+      "_Tabs-59702f47.js",
+      "_Close-5f76ec9b.js",
+      "_GeneralLink-a6dfc4c2.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/skills/Skills.tsx"
@@ -179,11 +179,11 @@
     "css": [
       "assets/Timeline-d597706a.css"
     ],
-    "file": "assets/Timeline-e88b71ec.js",
+    "file": "assets/Timeline-2ea84560.js",
     "imports": [
       "index.html",
-      "_AnimatedText-30c905c8.js",
-      "_GeneralLink-26f3d961.js"
+      "_AnimatedText-3c618d39.js",
+      "_GeneralLink-a6dfc4c2.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/timeline/Timeline.tsx"
@@ -196,11 +196,11 @@
     "css": [
       "assets/Tips-f322dde3.css"
     ],
-    "file": "assets/Tips-f3a75e3f.js",
+    "file": "assets/Tips-f19ac009.js",
     "imports": [
       "index.html",
-      "_Tabs-23399b12.js",
-      "_GeneralLink-26f3d961.js"
+      "_Tabs-59702f47.js",
+      "_GeneralLink-a6dfc4c2.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/tips/Tips.tsx"
