@@ -19,47 +19,47 @@
     "file": "assets/Tabs-26b53319.css",
     "src": "Tabs.css"
   },
-  "_AnimatedText-358e68b8.js": {
+  "_AnimatedText-6aac8648.js": {
     "css": [
       "assets/AnimatedText-edb5c94a.css"
     ],
-    "file": "assets/AnimatedText-358e68b8.js",
+    "file": "assets/AnimatedText-6aac8648.js",
     "imports": [
       "index.html"
     ]
   },
-  "_Button-de0c91ac.js": {
+  "_Button-f724c368.js": {
     "css": [
       "assets/Button-e6e70d5a.css"
     ],
-    "file": "assets/Button-de0c91ac.js",
+    "file": "assets/Button-f724c368.js",
     "imports": [
       "index.html"
     ]
   },
-  "_Close-189fcfe5.js": {
+  "_Close-1c58a2b9.js": {
     "css": [
       "assets/Close-4da80220.css"
     ],
-    "file": "assets/Close-189fcfe5.js",
+    "file": "assets/Close-1c58a2b9.js",
     "imports": [
       "index.html"
     ]
   },
-  "_GeneralLink-3acd8c2a.js": {
+  "_GeneralLink-7add8f1a.js": {
     "css": [
       "assets/GeneralLink-47eefb83.css"
     ],
-    "file": "assets/GeneralLink-3acd8c2a.js",
+    "file": "assets/GeneralLink-7add8f1a.js",
     "imports": [
       "index.html"
     ]
   },
-  "_Tabs-66068b41.js": {
+  "_Tabs-f26f3778.js": {
     "css": [
       "assets/Tabs-26b53319.css"
     ],
-    "file": "assets/Tabs-66068b41.js",
+    "file": "assets/Tabs-f26f3778.js",
     "imports": [
       "index.html"
     ]
@@ -81,7 +81,7 @@
       "src/UI/pages/contact/Contact.tsx",
       "src/UI/pages/tips/Tips.tsx"
     ],
-    "file": "assets/index-7fb3589a.js",
+    "file": "assets/index-ed260cde.js",
     "isEntry": true,
     "src": "index.html"
   },
@@ -93,7 +93,7 @@
     "css": [
       "assets/Certificates-9912f2ee.css"
     ],
-    "file": "assets/Certificates-71c881eb.js",
+    "file": "assets/Certificates-29c0e50d.js",
     "imports": [
       "index.html"
     ],
@@ -108,29 +108,29 @@
     "css": [
       "assets/Contact-b1f08433.css"
     ],
-    "file": "assets/Contact-1bab4a22.js",
+    "file": "assets/Contact-82953f5c.js",
     "imports": [
       "index.html",
-      "_AnimatedText-358e68b8.js",
-      "_Button-de0c91ac.js"
+      "_AnimatedText-6aac8648.js",
+      "_Button-f724c368.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/contact/Contact.tsx"
   },
   "src/UI/pages/home/Home.css": {
-    "file": "assets/Home-ecd3909b.css",
+    "file": "assets/Home-aaeb365c.css",
     "src": "src/UI/pages/home/Home.css"
   },
   "src/UI/pages/home/Home.tsx": {
     "css": [
-      "assets/Home-ecd3909b.css"
+      "assets/Home-aaeb365c.css"
     ],
-    "file": "assets/Home-ea5a02e5.js",
+    "file": "assets/Home-146a1af8.js",
     "imports": [
       "index.html",
-      "_AnimatedText-358e68b8.js",
-      "_Button-de0c91ac.js",
-      "_GeneralLink-3acd8c2a.js"
+      "_AnimatedText-6aac8648.js",
+      "_Button-f724c368.js",
+      "_GeneralLink-7add8f1a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/home/Home.tsx"
@@ -143,12 +143,12 @@
     "css": [
       "assets/Portfolio-b046ecfb.css"
     ],
-    "file": "assets/Portfolio-b46fcc79.js",
+    "file": "assets/Portfolio-b9cde18f.js",
     "imports": [
       "index.html",
-      "_Close-189fcfe5.js",
-      "_AnimatedText-358e68b8.js",
-      "_GeneralLink-3acd8c2a.js"
+      "_Close-1c58a2b9.js",
+      "_AnimatedText-6aac8648.js",
+      "_GeneralLink-7add8f1a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/portfolio/Portfolio.tsx"
@@ -161,12 +161,12 @@
     "css": [
       "assets/Skills-d397743a.css"
     ],
-    "file": "assets/Skills-945760ba.js",
+    "file": "assets/Skills-6d69b69c.js",
     "imports": [
       "index.html",
-      "_Tabs-66068b41.js",
-      "_Close-189fcfe5.js",
-      "_GeneralLink-3acd8c2a.js"
+      "_Tabs-f26f3778.js",
+      "_Close-1c58a2b9.js",
+      "_GeneralLink-7add8f1a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/skills/Skills.tsx"
@@ -179,11 +179,11 @@
     "css": [
       "assets/Timeline-d597706a.css"
     ],
-    "file": "assets/Timeline-d3ec0bc1.js",
+    "file": "assets/Timeline-b3e345f2.js",
     "imports": [
       "index.html",
-      "_AnimatedText-358e68b8.js",
-      "_GeneralLink-3acd8c2a.js"
+      "_AnimatedText-6aac8648.js",
+      "_GeneralLink-7add8f1a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/timeline/Timeline.tsx"
@@ -196,11 +196,11 @@
     "css": [
       "assets/Tips-f322dde3.css"
     ],
-    "file": "assets/Tips-d6e3c6bd.js",
+    "file": "assets/Tips-08ff32d2.js",
     "imports": [
       "index.html",
-      "_Tabs-66068b41.js",
-      "_GeneralLink-3acd8c2a.js"
+      "_Tabs-f26f3778.js",
+      "_GeneralLink-7add8f1a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/UI/pages/tips/Tips.tsx"
